@@ -1,4 +1,4 @@
-# TEMA 1: Edición, compilación y enlazado de un programa
+# Edición, compilación y enlazado de un programa
 
 ## Introducción
 Un programa es un conjunto de instrucciones escritas en un lenguaje de programación que permiten resolver un problema o realizar una tarea en la computadora. Sin embargo, la computadora no entiende directamente estos lenguajes, sino que necesita que el código sea transformado a lenguaje máquina.
