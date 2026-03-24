@@ -1,0 +1,154 @@
+# ¿Qué es un algoritmo?
+
+Un **algoritmo** es un conjunto de **pasos ordenados, finitos y precisos** que se siguen para resolver un problema o realizar una tarea.
+
+En otras palabras, es como una **receta** que indica exactamente qué hacer, en qué orden, para obtener un resultado.
+
+---
+
+## Características de un algoritmo
+
+Un buen algoritmo debe cumplir con estas propiedades:
+
+- **Finito**: debe terminar en algún momento.
+- **Definido**: cada paso debe ser claro y sin ambigüedades.
+- **Ordenado**: los pasos siguen una secuencia lógica.
+- **Efectivo**: debe resolver el problema correctamente.
+- **Entrada y salida**:
+  - Tiene datos de entrada (input).
+  - Produce un resultado (output).
+
+---
+
+## Ejemplo sencillo
+
+Problema: hacer un té
+
+**Algoritmo:**
+1. Hervir agua.
+2. Colocar una bolsita de té en una taza.
+3. Verter el agua caliente en la taza.
+4. Esperar unos minutos.
+5. Retirar la bolsita.
+6. Servir.
+
+Este es un algoritmo porque tiene pasos ordenados y un resultado claro.
+
+---
+
+## Algoritmos en programación
+
+En informátic , 
+--
+---
+
+## 🔁 Tipos de algoritmos
+
+- **Secuenciales**: pasos uno tras otro.
+- **Condicionales**: toman decisiones (si pasa algo, hacer otra cosa).
+- **Repetitivos (bucles)**: repiten acciones varias veces.
+
+---
+
+## 🎯 ¿Para qué sirven?
+
+Los algoritmos permiten:
+
+- Resolver problemas de manera lógica
+- Automatizar procesos
+- Crear programas y aplicaciones
+- Mejorar la eficiencia en tareas
+
+---
+
+## 🧩 Resumen corto
+
+Un algoritmo es una **serie de pasos ordenados para resolver un problema**, muy usado en la vida diaria y fundamental en la programación.-
+
+## 🔁 Tipos de algoritmos
+
+- **Secuenciales**: pasos uno tras otro.
+- **Condicionales**: toman decisiones (si pasa algo, hacer otra cosa).
+- **Repetitivos (bucles)**: repiten acciones varias veces.
+
+---
+
+## 🎯 ¿Para qué sirven?
+
+Los algoritmos permiten:
+
+- Resolver problemas de manera lógica
+- Automatizar procesos
+- Crear programas y aplicaciones
+- Mejorar la eficiencia en tareas
+
+---
+
+## 🧩 Resumen corto
+
+Un algoritmo es una **serie de pasos ordenados para resolver un problema**, muy usado en la vida diaria y fundamental en la programación.
+---
+
+## 🔁 Tipos de algoritmos
+
+- **Secuenciales**: pasos uno tras otro.
+- **Condicionales**: toman decisiones (si pasa algo, hacer otra cosa).
+- **Repetitivos (bucles)**: repiten acciones varias veces.
+
+---
+
+## 🎯 ¿Para qué sirven?
+
+Los algoritmos permiten:
+
+- Resolver problemas de manera lógica
+- Automatizar procesos
+- Crear programas y aplicaciones
+- Mejorar la eficiencia en tareas
+
+---
+
+## 🧩 Resumen corto
+
+Un algoritmo es una **serie de pasos ordenados para resolver un problema**, muy usado en la vida diaria y fundamental en la programación.los algoritmos son la base de los programas. Se usan para:
+
+- Resolver cálculos
+- Procesar datos
+- Tomar decisiones
+- Automatizar tareas
+
+### Ejemplo en pseudocódigo:
+
+```
+Inicio
+  Leer número
+  Si número > 0 entonces
+    Mostrar "Es positivo"
+  Si no
+    Mostrar "No es positivo"
+Fin
+```
+---
+
+## Tipos de algoritmos
+
+- **Secuenciales**: pasos uno tras otro.
+- **Condicionales**: toman decisiones (si pasa algo, hacer otra cosa).
+- **Repetitivos (bucles)**: repiten acciones varias veces.
+
+---
+
+## ¿Para qué sirven?
+
+Los algoritmos permiten:
+
+- Resolver problemas de manera lógica
+- Automatizar procesos
+- Crear programas y aplicaciones
+- Mejorar la eficiencia en tareas
+
+---
+
+## Resumen corto
+
+Un algoritmo es una **serie de pasos ordenados para resolver un problema**, muy usado en la vida diaria y fundamental en la programación.
