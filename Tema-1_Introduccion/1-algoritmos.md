@@ -1,4 +1,4 @@
-# Tema 1: Algoritmos
+# Algoritmos
 
 ## ¿Qué es un algoritmo?
 
