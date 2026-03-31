@@ -1,4 +1,4 @@
-# Tema 7: Instrucciones de Control
+# Instrucciones de Control
 
 ---
 
