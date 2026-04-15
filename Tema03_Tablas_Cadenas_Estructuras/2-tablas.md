@@ -6,47 +6,46 @@
 
 Un **arreglo** (también llamado **vector o tabla**) es una estructura que permite almacenar **varios datos del mismo tipo** en una sola variable.
 
-Sirve para evitar crear muchas variables individuales.
+Permite organizar información sin necesidad de crear muchas variables individuales.
 
-### Sin arreglo:
+Ejemplo conceptual:
 
-* nota1, nota2, nota3, nota4...
-
-### Con arreglo:
-
-* notas[ ]
+* Sin arreglo: nota1, nota2, nota3
+* Con arreglo: notas[ ]
 
 ---
 
-## ¿Cómo funciona?
+## ¿Cómo funciona un arreglo?
 
 Un arreglo funciona como una **lista ordenada de posiciones**.
 
 Cada posición tiene:
 
-* Un número (índice)
-* Un valor almacenado
+* Un **índice** (posición)
+* Un **valor almacenado**
 
 ---
 
-## Índices (MUY IMPORTANTE)
+## Índices (Importante)
 
-Los arreglos comienzan en **posición 0**
+Los arreglos comienzan en la posición **0**.
+
+Ejemplo:
 
 ```
 Posición:   0   1   2   3
 Valores:   10  20  30  40
 ```
 
-- notas[0] → 10
-- notas[3] → 40
+* notas[0] → 10
+* notas[3] → 40
 
 ---
 
 ## Error común
 
-- Pensar que empieza en 1
-- Siempre empieza en 0
+* Pensar que el índice inicia en 1
+* En la mayoría de los lenguajes inicia en 0
 
 ---
 
@@ -56,7 +55,9 @@ Valores:   10  20  30  40
 
 ### 1. Arreglo unidimensional (Vector)
 
-Es una lista simple.
+Es una lista simple de elementos.
+
+Ejemplo:
 
 ```
 Edades = [18, 20, 22, 25]
@@ -64,9 +65,11 @@ Edades = [18, 20, 22, 25]
 
 ---
 
-### 2. Arreglo bidimensional (Matriz / Tabla)
+### 2. Arreglo bidimensional (Matriz o tabla)
 
-Tiene filas y columnas.
+Organiza los datos en filas y columnas.
+
+Ejemplo:
 
 ```
         Col0  Col1  Col2
@@ -77,188 +80,37 @@ Fila1  │ 40 │ 50 │ 60 │
        └────┴────┴────┘
 ```
 
-- [0][1] → 20
-- [1][2] → 60
+* [0][1] → 20
+* [1][2] → 60
 
 ---
 
-## Operaciones con arreglos
+## Operaciones básicas (concepto)
 
----
+En los arreglos se pueden realizar acciones como:
 
-### 1. Recorrer un arreglo
-
-Se usa una variable (i) para pasar por todas las posiciones.
-
----
-
-## Diagrama de flujo (recorrido)
-
-```
-        ┌───────────┐
-        │  INICIO   │
-        └─────┬─────┘
-              │
-        ┌───────────┐
-        │ i = 0     │ ← Proceso
-        └─────┬─────┘
-              │
-        ┌──────────────┐
-        │ ¿i < 4?      │ ← Decisión
-        └───┬────┬─────┘
-            │    │
-           Sí    No
-            │    │
-   ┌──────────────────┐
-   │ Mostrar A[i]     │ ← Salida
-   └─────┬────────────┘
-         │
-   ┌──────────────┐
-   │ i = i + 1    │
-   └─────┬────────┘
-         │
-         └────────────── (regresa)
-              │
-        ┌───────────┐
-        │   FIN     │
-        └───────────┘
-```
-
----
-
-## Prueba de escritorio
-
-A = [10, 20, 30, 40]
-
-| Paso        | i | A[i] |
-| ----------- | - | ---- |
-| Inicializar | 0 | -    |
-| Mostrar     | 0 | 10   |
-| Incremento  | 1 | -    |
-| Mostrar     | 1 | 20   |
-| Incremento  | 2 | -    |
-| Mostrar     | 2 | 30   |
-| Incremento  | 3 | -    |
-| Mostrar     | 3 | 40   |
-| Incremento  | 4 | -    |
-
----
-
-### 2. Cargar datos en un arreglo
-
----
-
-## Diagrama de flujo (carga)
-
-```
-        ┌───────────┐
-        │  INICIO   │
-        └─────┬─────┘
-              │
-        ┌───────────┐
-        │ i = 0     │
-        └─────┬─────┘
-              │
-        ┌──────────────┐
-        │ ¿i < 3?      │
-        └───┬────┬─────┘
-            │    │
-           Sí    No
-            │    │
-   ┌──────────────────┐
-   │ Leer A[i]        │ ← Entrada
-   └─────┬────────────┘
-         │
-   ┌──────────────┐
-   │ i = i + 1    │
-   └─────┬────────┘
-         │
-         └────────────── (regresa)
-              │
-        ┌───────────┐
-        │   FIN     │
-        └───────────┘
-```
-
----
-
-## Prueba de escritorio
-
-| Paso | i | A[i] |
-| ---- | - | ---- |
-| Leer | 0 | 5    |
-| Leer | 1 | 8    |
-| Leer | 2 | 3    |
-
----
-
-### 3. Buscar un valor
-
----
-
-## Diagrama de flujo (búsqueda)
-
-```
-        ┌───────────┐
-        │  INICIO   │
-        └─────┬─────┘
-              │
-        ┌───────────┐
-        │ i = 0     │
-        └─────┬─────┘
-              │
-        ┌──────────────┐
-        │ ¿i < 3?      │
-        └───┬────┬─────┘
-            │    │
-           Sí    No
-            │    │
-   ┌──────────────────┐
-   │ ¿A[i] == valor?  │ ← Decisión
-   └───┬────┬─────────┘
-       │    │
-      Sí    No
-       │     │
-  "Encontrado" │
-       │     │
-       │  ┌──────────────┐
-       │  │ i = i + 1    │
-       │  └─────┬────────┘
-       │        │
-       └────────┘ (regresa)
-            │
-        ┌───────────┐
-        │   FIN     │
-        └───────────┘
-```
-
----
-
-## Prueba de escritorio
-
-Buscar 8 en A = [5, 8, 3]
-
-| Paso | i | A[i] | Resultado |
-| ---- | - | ---- | --------- |
-| 1    | 0 | 5    | No        |
-| 2    | 1 | 8    | Sí        |
+* Recorrer todos los elementos
+* Leer o ingresar datos
+* Buscar un valor
+* Modificar información
 
 ---
 
 ## Ventajas de los arreglos
 
-* Organizan datos fácilmente
+* Permiten organizar grandes cantidades de datos
 * Evitan repetir variables
-* Facilitan cálculos
-* Permiten trabajar con grandes cantidades de información
+* Facilitan el manejo de información
+* Hacen más eficiente el trabajo con datos
 
 ---
 
 ## Errores comunes
 
 * Usar índices incorrectos
-* Salirse del tamaño del arreglo
-* Confundir posición con valor
+* Acceder a posiciones que no existen
+* Confundir el índice con el valor
+* No controlar el tamaño del arreglo
 
 ---
 
@@ -271,22 +123,17 @@ Buscar 8 en A = [5, 8, 3]
 
 ---
 
-## Símbolos utilizados
+## Conclusión
 
-* Inicio / Fin → óvalo
-* Proceso → rectángulo
-* Entrada → paralelogramo
-* Salida → documento
-* Decisión → rombo
+Los arreglos son estructuras fundamentales que permiten organizar y manejar múltiples datos de forma eficiente.
 
 ---
 
 ## Resumen
 
-* Un arreglo guarda múltiples datos
-* Se accede por índice (desde 0)
-* Puede ser vector o matriz
-* Se usa con ciclos
-* Permite buscar, recorrer y almacenar datos
+* Un arreglo almacena varios datos del mismo tipo
+* Se accede mediante índices (desde 0)
+* Puede ser unidimensional o bidimensional
+* Permite organizar y manipular información
 
 ---
