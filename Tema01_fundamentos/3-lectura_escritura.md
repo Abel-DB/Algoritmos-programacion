@@ -4,7 +4,7 @@
 
 ## ¿Qué es la entrada y salida de datos?
 
-En un programa, es necesario interactuar con el usuario.
+En un programa es necesario interactuar con el usuario.
 
 * **Entrada (lectura):** permite ingresar datos al programa
 * **Salida (escritura):** permite mostrar resultados
@@ -13,7 +13,7 @@ En un programa, es necesario interactuar con el usuario.
 
 ## Entrada de datos (Lectura)
 
-La **lectura de información** consiste en recibir datos desde el exterior.
+La **lectura de información** consiste en recibir datos desde el exterior del programa.
 
 ### Ejemplos:
 
@@ -25,7 +25,7 @@ La **lectura de información** consiste en recibir datos desde el exterior.
 
 ## Salida de datos (Escritura)
 
-La **escritura de información** consiste en mostrar resultados.
+La **escritura de información** consiste en mostrar resultados hacia el exterior.
 
 ### Ejemplos:
 
@@ -37,85 +37,60 @@ La **escritura de información** consiste en mostrar resultados.
 
 ## Relación Entrada → Proceso → Salida
 
-Todo programa sigue esta estructura básica:
+Todo programa sigue una estructura básica:
 
-```text
 Entrada → Proceso → Salida
-```
+
+* **Entrada:** se reciben los datos
+* **Proceso:** se realizan operaciones
+* **Salida:** se muestran los resultados
 
 ---
 
-## Ejemplo lógico
+## Ejemplo conceptual
 
 **Problema:** Calcular la suma de dos números
 
 * **Entrada:** número A, número B
-* **Proceso:** suma (A + B)
+* **Proceso:** A + B
 * **Salida:** resultado
 
 ---
 
-## Representación en algoritmo
+## Tipos de entrada
 
-1. Leer A
-2. Leer B
-3. Sumar A + B
-4. Mostrar resultado
-
----
-
-## Diagrama de flujo del ejemplo
-
-```
-   ┌───────────┐
-   │  INICIO   │
-   └─────┬─────┘
-         │
-   ┌───────────────┐
-   │ Leer A, B     │  ← Entrada (paralelogramo)
-   └─────┬─────────┘
-         │
-   ┌───────────────┐
-   │ Suma = A + B  │  ← Proceso (rectángulo)
-   └─────┬─────────┘
-         │
-   ┌──────────────────┐
-   │ Mostrar resultado│  ← Salida (documento o pantalla)
-   └─────┬────────────┘
-         │
-   ┌───────────┐
-   │   FIN     │
-   └───────────┘
-```
+* Entrada manual (teclado)
+* Entrada desde archivos
+* Entrada desde otros sistemas
 
 ---
 
 ## Tipos de salida
 
-### Salida en pantalla
-
-* Se muestra directamente al usuario
-
-### Salida en documento
-
-* Se genera un archivo o impresión
+* Salida en pantalla
+* Salida en documentos o archivos
+* Salida en dispositivos externos
 
 ---
 
 ## Importancia
 
 * Permite la interacción con el usuario
-* Hace que el programa sea útil
-* Sin entrada y salida, el programa no tendría aplicación práctica
+* Hace que el programa tenga utilidad práctica
+* Es fundamental en cualquier sistema
+
+---
+
+## Conclusión
+
+La entrada y salida de información son elementos esenciales en cualquier programa, ya que permiten recibir datos, procesarlos y mostrar resultados.
 
 ---
 
 ## Resumen
 
-* La entrada permite ingresar datos al programa
+* La entrada permite ingresar datos
 * La salida muestra resultados
 * Todo programa sigue la estructura: entrada → proceso → salida
-* Los diagramas de flujo ayudan a representar esta estructura
 
 ---
-
