@@ -4,244 +4,142 @@
 
 ## ¿Qué es una macro?
 
-Una **macro** es una instrucción que permite **definir un texto o valor que será reemplazado automáticamente** antes de ejecutar el programa.
+Una **macro** es una instrucción que permite definir un valor o expresión que será **reemplazado automáticamente** antes de la compilación de un programa.
 
-Es decir:
-
-* No se ejecuta como código
-* Se **sustituye antes de la ejecución**
+No se ejecuta como una instrucción normal, sino que actúa como una **sustitución de texto**.
 
 ---
 
 ## Idea clave
 
-Una macro funciona como un **reemplazo automático de texto**.
+Una macro funciona como un **reemplazo automático** que ocurre antes de que el programa sea procesado.
 
 ---
 
-## Ejemplo conceptual
+## ¿Dónde se utilizan?
 
-```id="x2p9lw"
-PI → 3.1416
-```
-
-Cuando el programa usa **PI**, en realidad se reemplaza por **3.1416**.
-
----
-
-## ¿Dónde se usan?
-
-En la etapa de:
+Las macros se utilizan en la etapa de:
 
 **Preprocesamiento**
 
----
+Flujo general:
 
-## Flujo del programa
-
-```id="q7v2mz"
-Código → Preprocesador → Compilación → Ejecución
-```
-
-- Las macros actúan **antes de compilar**
+Código → Preprocesamiento → Compilación → Ejecución
 
 ---
 
-# Tipos de macros
+## Tipos de macros
 
 ---
 
-## 1. Macros constantes
+### 1. Macros constantes
 
-Definen valores fijos.
+Definen valores fijos que pueden reutilizarse.
 
-Ejemplo:
+Ejemplos conceptuales:
 
-```id="k8v1dn"
-MAX = 100
-PI = 3.14
-```
-
-- Evitan repetir valores en el programa
+* PI → 3.1416
+* MAX → 100
 
 ---
 
-## 2. Macros con parámetros
+### 2. Macros con parámetros
 
-Funcionan como funciones simples.
+Permiten definir expresiones que reciben valores.
 
-Ejemplo:
+Ejemplo conceptual:
 
-```id="1m7zqs"
-SUMA(a, b) → a + b
-```
+* SUMA(a, b) → a + b
 
 ---
 
-## Ejemplo práctico
+## Características
 
-```id="3c0gpa"
-SUMA(2,3) → 2 + 3 → 5
-```
-
----
-
-# Diagrama de funcionamiento
-
-```id="p9r2xk"
-   ┌──────────────┐
-   │ Código fuente│
-   └─────┬────────┘
-         │
-   ┌──────────────┐
-   │ Preprocesador│ ← Aplica macros
-   └─────┬────────┘
-         │
-   ┌──────────────┐
-   │ Código final │
-   └─────┬────────┘
-         │
-   ┌──────────────┐
-   │ Compilación  │
-   └──────────────┘
-```
+* Se expanden antes de la compilación
+* No tienen tipo de dato
+* No realizan validaciones
+* Son sustituciones directas de texto
 
 ---
 
-# Ventajas
+## Ventajas
 
-- Reduce repetición de código
-- Hace el código más legible
-- Facilita cambios globales
-- Mejora la organización
-
----
-
-# Desventajas
-
-- No tienen control de tipos
-- Pueden generar errores difíciles
-- No respetan prioridad de operaciones
-- Difíciles de depurar
+* Evitan la repetición de valores
+* Facilitan cambios globales
+* Simplifican expresiones
+* Mejoran la organización
 
 ---
 
-# Problema clásico
+## Desventajas
+
+* No validan tipos de datos
+* Pueden generar errores difíciles de detectar
+* No respetan siempre la prioridad de operaciones
+* Pueden reducir la claridad si se usan en exceso
 
 ---
 
-## Ejemplo incorrecto
+## Diferencia con funciones
 
-```id="2r5tpa"
-CUADRADO(x) → x * x
-```
-
-Uso:
-
-```id="6j3f1a"
-CUADRADO(2 + 3)
-```
-
-Resultado:
-
-```id="9q8t1z"
-2 + 3 * 2 + 3 = 11
-```
-
-- Error por prioridad de operaciones
+| Macro                | Función           |
+| -------------------- | ----------------- |
+| Sustitución de texto | Código ejecutable |
+| No valida tipos      | Sí valida         |
+| Más rápida           | Más segura        |
+| Menos control        | Más control       |
 
 ---
 
-## Forma correcta
+## Buenas prácticas
 
-```id="z0h3ks"
-CUADRADO(x) → (x * x)
-```
-
----
-
-# Prueba de escritorio
-
-| Expresión   | Reemplazo | Resultado |
-| ----------- | --------- | --------- |
-| SUMA(2,3)   | 2 + 3     | 5         |
-| CUADRADO(4) | 4 * 4     | 16        |
+* Usarlas principalmente para constantes
+* Escribir sus nombres en mayúsculas
+* Utilizar paréntesis en expresiones
+* Evitar macros complejas
 
 ---
 
-# Diferencia con funciones
+## Conceptos relacionados
 
-| Macro              | Función           |
-| ------------------ | ----------------- |
-| Reemplazo de texto | Código ejecutable |
-| No valida tipos    | Sí valida         |
-| Más rápida         | Más segura        |
-| Más peligrosa      | Más controlada    |
+### Preprocesador
+
+Es el encargado de transformar el código antes de compilarlo.
 
 ---
 
-# Buenas prácticas
+### Sustitución textual
 
-- Usar para constantes
-- Usar nombres en MAYÚSCULAS
-- Usar paréntesis en operaciones
-- Evitar macros complejas
+Proceso en el cual el contenido de la macro reemplaza directamente al texto original.
 
 ---
 
-# Aplicaciones
+### Expansión de macros
 
-* Definir constantes
-* Simplificar cálculos
-* Configuración de programas
-* Optimización
+Es el proceso mediante el cual se realiza el reemplazo automático.
 
 ---
 
-# Conceptos clave
+## Errores comunes
 
----
-
-## 1. Preprocesador
-
-Programa que transforma el código antes de compilar.
-
----
-
-## 2. Sustitución textual
-
-Reemplazo directo sin interpretación.
-
----
-
-## 3. Expansión de macros
-
-Proceso de reemplazo automático.
-
----
-
-# Errores comunes
-
-* No usar paréntesis
-* Usar macros como funciones complejas
+* No usar paréntesis en expresiones
+* Usar macros como si fueran funciones complejas
 * Confundir macros con variables
-* No entender el preprocesamiento
+* No considerar el proceso de preprocesamiento
 
 ---
 
-# Conclusión
+## Conclusión
 
-Las macros son una herramienta poderosa pero peligrosa.
-
-- Se deben usar con cuidado.
+Las macros permiten simplificar y organizar el código mediante reemplazos automáticos, pero deben utilizarse con cuidado debido a sus limitaciones.
 
 ---
 
-# Resumen
+## Resumen
 
-* Son reemplazos de texto
-* Se ejecutan antes del programa
+* Son reemplazos automáticos de texto
+* Se aplican antes de la compilación
 * No son funciones reales
-* Útiles para constantes y simplificación
+* Son útiles principalmente para constantes
 
 ---
