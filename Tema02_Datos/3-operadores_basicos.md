@@ -1,29 +1,41 @@
-# Operadores Basicos
+# Operadores Básicos
 
 ---
 
 ## ¿Qué es un operador?
 
-Un **operador** es un símbolo que indica una operación sobre uno o más valores (operandos).
-Se utiliza para **realizar cálculos, comparaciones o decisiones**.
+Un **operador** es un símbolo que se utiliza para realizar una operación sobre uno o más valores (operandos).
+
+Permiten realizar:
+
+* Cálculos
+* Comparaciones
+* Evaluaciones lógicas
 
 ---
 
 ## Tipos de operadores
 
+---
+
 ### 1. Operadores aritméticos
 
-| Operador | Significado    | Ejemplo       |
-| -------- | -------------- | ------------- |
-| +        | Suma           | A + B         |
-| -        | Resta          | A - B         |
-| *        | Multiplicación | A * B         |
-| /        | División       | A / B         |
-| %        | Módulo         | A % B (resto) |
+Se utilizan para realizar operaciones matemáticas.
+
+| Operador | Significado    | Ejemplo |
+| -------- | -------------- | ------- |
+| +        | Suma           | A + B   |
+| -        | Resta          | A - B   |
+| *        | Multiplicación | A * B   |
+| /        | División       | A / B   |
+| %        | Módulo (resto) | A % B   |
 
 ---
 
-### 2. Operadores de comparacion - relacionales
+### 2. Operadores de comparación (relacionales)
+
+Se utilizan para comparar valores.
+El resultado siempre es verdadero o falso.
 
 | Operador | Significado   | Ejemplo |
 | -------- | ------------- | ------- |
@@ -38,100 +50,58 @@ Se utiliza para **realizar cálculos, comparaciones o decisiones**.
 
 ### 3. Operadores lógicos
 
-| Operador | Significado | Ejemplo        |
-| -------- | ----------- | -------------- |
-| &&       | Y lógico    | (A > 0 && B>0) |
-| ||       | O lógico    | (A > 0 || B>0) |
-| !        | Negación    | !(A == B)      |
+Se utilizan para combinar condiciones.
+
+| Operador | Significado | Ejemplo          |
+| -------- | ----------- | ---------------- |
+| &&       | Y lógico    | (A > 0 && B > 0) |
+| ||       | O lógico    | (A > 0 || B > 0) |
+| !        | Negación    | !(A == B)        |
 
 ---
 
-### 4. Operadores de asignación - abreviados
+### 4. Operadores de asignación (Abreviados)
 
-| Operador | Significado    | Ejemplo            |
-| -------- | -------------- | ------------------ |
-|  =       | asignación     | A = 5              |
-| +=       | Suma y asigna  | A += 5 → A = A + 5 |
-| -=       | Resta y asigna | A -= 3 → A = A - 3 |
-| *=       | Multiplica     | A *= 2 → A = A * 2 |
-| /=       | Divide         | A /= 4 → A = A / 4 |
-| %=       | Módulo         | A %= 2 → A = A % 2 |
+Se utilizan para asignar valores a variables.
 
----
-
-## Ejemplo lógico con operadores
-
-**Problema:** Sumar dos números y verificar si el resultado es mayor que 10
-
-### Algoritmo
-
-1. Leer A
-2. Leer B
-3. Suma = A + B
-4. Si Suma > 10 → mostrar "Mayor que 10"
-5. Sino → mostrar "10 o menor"
+| Operador | Significado         | Ejemplo            |
+| -------- | ------------------- | ------------------ |
+| =        | Asignación          | A = 5              |
+| +=       | Suma y asigna       | A += 5 → A = A + 5 |
+| -=       | Resta y asigna      | A -= 3 → A = A - 3 |
+| *=       | Multiplica y asigna | A *= 2 → A = A * 2 |
+| /=       | Divide y asigna     | A /= 4 → A = A / 4 |
+| %=       | Módulo y asigna     | A %= 2 → A = A % 2 |
 
 ---
 
-### Diagrama de flujo con símbolos
+## Reglas importantes
 
-* **Óvalo:** Inicio/Fin
-* **Paralelogramo:** Entrada/Salida
-* **Rectángulo:** Proceso
-* **Rombo:** Decisión
-
-```text id="9t2xq5"
-   ┌───────────┐       ← Óvalo (INICIO)
-   │  INICIO   │
-   └─────┬─────┘
-         │
-   ┌───────────────┐    ← Paralelogramo (Entrada)
-   │ Leer A, B     │
-   └─────┬─────────┘
-         │
-   ┌───────────────┐    ← Rectángulo (Proceso)
-   │ Suma = A + B  │
-   └─────┬─────────┘
-         │
-   ┌────────────────────────┐  ← Rombo (Decisión)
-   │ Suma > 10?             │
-   └─────┬───────────┬─────┘
-       Sí│           │No
-         │           │
- ┌───────────────┐ ┌───────────────┐
- │ Mostrar "Mayor"│ │ Mostrar "10 o ≤"│
- │ (Paralelogramo)│ │ (Paralelogramo)│
- └─────┬─────────┘ └─────┬─────────┘
-       │                 │
-       └───────┬─────────┘
-               │
-           ┌───────────┐    ← Óvalo (FIN)
-           │   FIN     │
-           └───────────┘
-```
+* Usar el operador correcto según la operación
+* Tener en cuenta el tipo de datos
+* Evitar errores en comparaciones (por ejemplo: = no es lo mismo que ==)
+* Comprender el orden de las operaciones
 
 ---
 
-## Prueba de escritorio
+## Importancia
 
-Supongamos:
+* Permiten realizar cálculos
+* Permiten tomar decisiones
+* Son fundamentales en cualquier programa
 
-* A = 6
-* B = 5
+---
 
-| Paso    | A | B | Suma | Condición    | Salida         |
-| ------- | - | - | ---- | ------------ | -------------- |
-| Leer A  | 6 | - | -    | -            | -              |
-| Leer B  | 6 | 5 | -    | -            | -              |
-| Proceso | 6 | 5 | 11   | 11 > 10 = Sí | -              |
-| Mostrar | 6 | 5 | 11   | Sí           | "Mayor que 10" |
+## Conclusión
+
+Los operadores son herramientas esenciales para manipular datos y evaluar condiciones dentro de un programa.
 
 ---
 
 ## Resumen
 
-* Los operadores permiten **cálculos, comparaciones y decisiones**
-
-* Diagramas y prueba de escritorio ayudan a **verificar la lógica antes de programar**
+* Los operadores permiten realizar operaciones
+* Existen operadores aritméticos, relacionales, lógicos y de asignación
+* Son fundamentales para el funcionamiento de cualquier programa
 
 ---
