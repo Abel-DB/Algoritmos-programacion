@@ -1,195 +1,85 @@
-# Instrucciones de Control
+# Símbolos de Diagramas de Flujo
+
+| Símbolo | Nombre | Descripción |
+|--------|--------|-------------|
+| ```text
+   _________
+  /         \
+ |  INICIO   |
+  \_________/
+``` | Óvalo / Terminal | Representa el **inicio** o **fin** del algoritmo. |
+| ```text
+ ┌───────────┐
+ │ Proceso   │
+ └───────────┘
+``` | Rectángulo | Indica una **operación**, cálculo o instrucción. |
+| ```text
+   /──────────/
+  / Entrada  /
+ /__________/
+``` | Paralelogramo | Representa **entrada o salida de datos**. |
+| ```text
+      /\
+     /  \
+    / ?  \
+    \    /
+     \  /
+      \/
+``` | Diamante / Rombo | Representa una **decisión** o condición (`if`, `while`, `switch`). |
+| ```text
+      ________
+     /        \
+    /          \
+    \          /
+     \________/
+``` | Hexágono | Representa **preparación / inicialización** (`for`, variables iniciales). |
+| ```text
+      ________
+     /        |
+    /         |
+    \         |
+     \________|
+``` | Hexágono lateral | Representación didáctica para ciclo **while**. |
+| ```text
+ ┌───────────┐
+ │ Documento │~
+ └───────────┘
+``` | Documento | Representa una **salida impresa** o reporte. |
+| ```text
+      ○
+``` | Conector | Une partes del diagrama cuando continúa en otro punto. |
+| ```text
+────────────►
+``` | Flecha / Línea de flujo | Indica la **dirección** del proceso. |
+| ```text
+   _________
+  /         \
+ | Subrutina |
+ |-----------|
+  \_________/
+``` | Proceso predefinido | Llamada a una función o procedimiento ya definido. |
+| ```text
+    _______
+   / _____ \
+  | |     | |
+  | |_____| |
+   \_______/
+``` | Base de datos / Almacenamiento | Representa almacenamiento de datos o archivos. |
 
 ---
 
-## ¿Qué son las instrucciones de control?
+# Resumen rápido
 
-Las **instrucciones de control** permiten dirigir el flujo de un algoritmo, indicando:
-
-* El orden en que se ejecutan las instrucciones
-* Las decisiones que se deben tomar
-* Las repeticiones de procesos
-
-Son fundamentales para construir la lógica de cualquier programa.
-
----
-
-## Tipos de instrucciones de control
-
-1. Secuenciales
-2. Selectivas (condicionales)
-3. Repetitivas (ciclos)
-
----
-
-# 1. Estructura Secuencial
-
-Las instrucciones se ejecutan una tras otra, sin interrupciones.
-
----
-
-## Diagrama de flujo
-
-```
-   ┌───────────┐
-   │  INICIO   │      ← Inicio/Fin (óvalo)
-   └─────┬─────┘
-         │
-   ┌───────────────┐
-   │ Leer A, B     │  ← Entrada (paralelogramo)
-   └─────┬─────────┘
-         │
-   ┌───────────────┐
-   │ Suma = A + B  │  ← Proceso (rectángulo)
-   └─────┬─────────┘
-         │
-   ┌──────────────────┐
-   │ Mostrar resultado│  ← Salida (documento)
-   └─────┬────────────┘
-         │
-   ┌───────────┐
-   │   FIN     │
-   └───────────┘
-```
-
----
-
-## Prueba de escritorio
-
-| Paso    | A   | B  | Suma |
-| ------- | --- | -- | ---- |
-| Leer A  | 123 | -  | -    |
-| Leer B  | 123 | 77 | -    |
-| Proceso | 123 | 77 | 200  |
-| Mostrar | 123 | 77 | 200  |
-
----
-
-# 2. Estructura Selectiva (Condicional)
-
-Permite tomar decisiones según una condición.
-
----
-
-## Diagrama de flujo
-
-```
-        ┌───────────┐
-        │  INICIO   │
-        └─────┬─────┘
-              │
-        ┌──────────────┐
-        │ Leer número  │  ← Entrada
-        └─────┬────────┘
-              │
-        ┌──────────────┐
-        │ ¿Número > 0? │  ← Decisión (rombo)
-        └───┬─────┬────┘
-            │     │
-           Sí     No
-            │     │
-   ┌────────────┐ ┌────────────┐
-   │ "Positivo" │ │ "Negativo" │ ← Salida (documento)
-   └─────┬──────┘ └─────┬──────┘
-         │              │
-         └──────┬───────┘
-                │
-        ┌───────────┐
-        │   FIN     │
-        └───────────┘
-```
-
----
-
-## Prueba de escritorio
-
-| Paso     | Número | Resultado |
-| -------- | ------ | --------- |
-| Leer     | 5      | -         |
-| Decisión | 5      | Positivo  |
-| Mostrar  | 5      | Positivo  |
-
----
-
-# 3. Estructura Repetitiva (Ciclo)
-
-Permite repetir instrucciones varias veces.
-
----
-
-## Diagrama de flujo
-
-```
-        ┌───────────┐
-        │  INICIO   │
-        └─────┬─────┘
-              │
-        ┌───────────┐
-        │ i = 1     │  ← Proceso
-        └─────┬─────┘
-              │
-        ┌────────────┐
-        │ ¿i ≤ 3?    │  ← Decisión
-        └───┬────┬───┘
-            │    │
-           Sí    No
-            │    │
-   ┌────────────┐ │
-   │ Mostrar i  │ │ ← Salida (documento)
-   └─────┬──────┘ │
-         │        │
-   ┌────────────┐ │
-   │ i = i + 1  │ │ ← Proceso
-   └─────┬──────┘ │
-         │        │
-         └────────┘ ← Regresa a la condición
-              │
-        ┌───────────┐
-        │   FIN     │
-        └───────────┘
-```
-
----
-
-## Prueba de escritorio
-
-| Paso        | i | Salida |
-| ----------- | - | ------ |
-| Inicializar | 1 | -      |
-| Mostrar     | 1 | 1      |
-| Incremento  | 2 | -      |
-| Mostrar     | 2 | 2      |
-| Incremento  | 3 | -      |
-| Mostrar     | 3 | 3      |
-
----
-
-## Símbolos utilizados
-
-* Inicio / Fin → óvalo
-* Proceso → rectángulo
-* Entrada → paralelogramo
-* Salida → documento
-* Decisión → rombo
-
----
-
-## Importancia
-
-Las instrucciones de control permiten:
-
-* Resolver problemas complejos
-* Tomar decisiones dentro de un algoritmo
-* Automatizar procesos repetitivos
-
----
-
-## Resumen
-
-* Secuencial → ejecución en orden
-* Selectiva → toma de decisiones
-* Repetitiva → repetición de procesos
-
-Son la base de la lógica en programación.
+| Símbolo | Uso |
+|--------|-----|
+| Óvalo | Inicio / Fin |
+| Rectángulo | Proceso |
+| Paralelogramo | Entrada / Salida |
+| Diamante | Decisión |
+| Hexágono | Inicialización |
+| Documento | Reporte |
+| Flecha | Dirección |
+| Conector | Unión |
+| Base de datos | Almacenamiento |
 
 ---
