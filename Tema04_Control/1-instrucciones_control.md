@@ -5,12 +5,11 @@
 
 ```
 graph TD
-    A([Inicio]) --> B[/Leer número n/]
-    B --> C{¿n > 0?}
-    C -- Sí --> D[Imprimir 'Positivo']
-    C -- No --> E[Imprimir 'Negativo']
-    D --> F([Fin])
-    E --> F([Fin])
+    A([Inicio]) --> B[Proceso]
+    B --> C([Fin])
+    
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style C fill:#00ff00,stroke:#333
 ```
 
 | ```text
