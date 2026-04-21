@@ -3,7 +3,7 @@
 | Símbolo | Nombre | Descripción |
 |--------|--------|-------------|
 
-
+```
 graph TD
     A([Inicio]) --> B[/Leer número n/]
     B --> C{¿n > 0?}
@@ -11,7 +11,7 @@ graph TD
     C -- No --> E[Imprimir 'Negativo']
     D --> F([Fin])
     E --> F([Fin])
-
+```
 
 | ```text
    _________
