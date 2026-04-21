@@ -2,6 +2,13 @@
 
 | Símbolo | Nombre | Descripción |
 |--------|--------|-------------|
+
+
+graph TD
+    A([Inicio]) --> B[Proceso]
+    B --> C([Fin])
+
+
 | ```text
    _________
   /         \
