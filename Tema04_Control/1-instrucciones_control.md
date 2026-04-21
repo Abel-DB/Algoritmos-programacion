@@ -3,13 +3,13 @@
 | Símbolo | Nombre | Descripción |
 |--------|--------|-------------|
 
-```
-graph TD
-    A([Inicio]) --> B[Proceso]
-    B --> C([Fin])
-    
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style C fill:#00ff00,stroke:#333
+```mermaid
+flowchart TD
+    A[Inicio] --> B{¿Hay datos?}
+    B -- Sí --> C[Procesar]
+    B -- No --> D[Esperar]
+    C --> E[Fin]
+    D --> E
 ```
 
 | ```text
