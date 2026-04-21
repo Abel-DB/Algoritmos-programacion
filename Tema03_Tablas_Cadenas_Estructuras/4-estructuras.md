@@ -4,15 +4,15 @@
 
 ## ¿Qué es una estructura?
 
-Una **estructura** es un tipo de dato compuesto que permite **agrupar múltiples datos de diferentes tipos** bajo un mismo nombre.
+Una **estructura** (también llamada **registro**) es un tipo de dato compuesto que permite **agrupar varios datos relacionados** bajo un mismo nombre.
 
-Se utiliza cuando un solo dato no es suficiente para representar una entidad.
+Sirve para representar información formada por varios elementos.
 
 ---
 
-## Idea clave
+## Idea principal
 
-Una estructura representa un **objeto del mundo real**.
+Una estructura reúne datos de una misma entidad.
 
 Ejemplos:
 
@@ -20,335 +20,258 @@ Ejemplos:
 * Estudiante
 * Producto
 * Vehículo
+* Empleado
 
 ---
 
 ## Ejemplo conceptual
 
-```id="h2s8dk"
+```text
 Estudiante
-┌────────────────────┐
-│ Nombre   → "Ana"   │ (cadena)
-│ Edad     → 21      │ (entero)
-│ Promedio → 8.5     │ (decimal)
-└────────────────────┘
+
+Nombre    : Ana
+Edad      : 21
+Promedio  : 8.5
+Carrera   : Sistemas
 ```
+
+Todos esos datos pertenecen al mismo estudiante.
+
+---
+
+## ¿Por qué se usan?
+
+Sin estructuras habría que manejar muchas variables separadas:
+
+```text
+nombre
+edad
+promedio
+carrera
+```
+
+Con estructura, todo queda agrupado en una sola unidad lógica.
 
 ---
 
 ## Componentes de una estructura
 
-Una estructura está formada por:
+### 1. Nombre
 
-### 1. Campos (atributos)
+Identifica la estructura.
 
-Son las variables internas.
+Ejemplo:
+
+```text
+Estudiante
+```
+
+---
+
+### 2. Campos o atributos
+
+Son los datos internos.
 
 Ejemplo:
 
 * nombre
 * edad
 * promedio
+* carrera
 
 ---
 
-### 2. Tipos de datos
+### 3. Tipo de cada campo
 
-Cada campo tiene su tipo:
+Cada campo puede guardar un tipo distinto de dato.
 
 | Campo    | Tipo   |
 | -------- | ------ |
 | nombre   | cadena |
 | edad     | entero |
 | promedio | real   |
+| activo   | lógico |
 
 ---
 
-### 3. Identificador
+## Características principales
 
-Es el nombre de la estructura.
-
-Ejemplo:
-
-```id="u4x0pl"
-Estudiante
-```
+* Agrupan datos relacionados
+* Admiten distintos tipos de datos
+* Mejoran el orden de la información
+* Facilitan mantenimiento
+* Representan objetos reales
 
 ---
 
-# Tipos de estructuras
+## Tipos de estructuras
 
----
-
-## 1. Estructura simple
+### 1. Estructura simple
 
 Contiene un solo registro.
 
-```id="7f1k9m"
-Persona → Juan, 20
+```text
+Producto:
+Nombre = Mouse
+Precio = 45
+Stock = 20
 ```
 
 ---
 
-## 2. Arreglo de estructuras
+### 2. Conjunto de estructuras
 
-Contiene múltiples registros.
+Varios registros del mismo tipo.
 
-```id="jv93la"
-Personas[3]
+```text
+Alumnos
+Productos
+Empleados
+Clientes
 ```
 
 ---
 
-## 3. Estructuras anidadas
+### 3. Estructuras anidadas
 
 Una estructura dentro de otra.
 
----
-
-### Ejemplo
-
-```id="k9dm21"
-Dirección
-┌──────────────┐
-│ Ciudad       │
-│ Calle        │
-└──────────────┘
-
+```text
 Persona
-┌────────────────────┐
-│ Nombre             │
-│ Edad               │
-│ Dirección          │ ← estructura
-└────────────────────┘
+ ├─ Nombre
+ ├─ Edad
+ └─ Dirección
+      ├─ Ciudad
+      └─ Zona
 ```
 
 ---
 
-# Operaciones con estructuras
+## Operaciones comunes
+
+### Crear
+
+Definir una estructura.
+
+### Guardar datos
+
+Asignar información a sus campos.
+
+### Consultar
+
+Leer datos almacenados.
+
+### Modificar
+
+Cambiar información existente.
+
+### Mostrar
+
+Presentar todos los datos.
 
 ---
 
-## 1. Declarar
+## Ejemplo práctico
 
-Definir la estructura.
+### Registro de estudiante
 
----
-
-## 2. Crear (instanciar)
-
-Crear una variable de ese tipo.
-
----
-
-## 3. Asignar valores
-
-Guardar datos en los campos.
+```text
+Nombre   : Carlos
+Edad     : 20
+Nota     : 87
+Carrera  : Informática
+```
 
 ---
 
-## 4. Acceder a los campos
+## Diferencia con otros temas
+
+### Estructura vs Variable simple
+
+| Variable simple | Estructura          |
+| --------------- | ------------------- |
+| Guarda un dato  | Guarda varios datos |
+| edad            | persona             |
+
+---
+
+### Estructura vs Arreglo
+
+| Arreglo              | Estructura                   |
+| -------------------- | ---------------------------- |
+| Muchos datos iguales | Datos distintos relacionados |
+| notas                | alumno                       |
+
+---
+
+## Ventajas
+
+* Organizan información compleja
+* Reducen variables separadas
+* Facilitan comprensión
+* Mejoran diseño de programas
+* Representan mejor la realidad
+
+---
+
+## Desventajas
+
+* Más complejas que una variable simple
+* Requieren planificación
+* Si se diseñan mal, desordenan el sistema
+
+---
+
+## Aplicaciones reales
+
+* Sistema de alumnos
+* Inventario de productos
+* Registro de clientes
+* Nómina de empleados
+* Hospitales (pacientes)
+* Juegos (personajes, objetos)
+
+---
+
+## Errores comunes
+
+* Confundir estructura con arreglo
+* Definir campos innecesarios
+* Elegir tipos incorrectos
+* No organizar los datos
+* Usar nombres poco claros
+
+---
+
+## Buenas prácticas
+
+* Usar nombres descriptivos
+* Guardar solo datos necesarios
+* Agrupar información relacionada
+* Mantener orden lógico
+* Evitar estructuras demasiado grandes
+
+---
+
+## Concepto importante
+
+Las estructuras permiten **modelar objetos reales** mediante datos organizados.
 
 Ejemplo:
 
-```id="u9d2sx"
-Persona.nombre
-Persona.edad
+```text
+Persona  → nombre, edad, dirección
+Producto → código, precio, stock
 ```
 
 ---
 
-## 5. Modificar datos
-
-Cambiar valores existentes.
-
----
-
-## 6. Mostrar información
-
-Imprimir todos los campos.
-
----
-
-# Diagrama de flujo (completo)
-
-```id="z8p1wq"
-   ┌───────────┐
-   │  INICIO   │
-   └─────┬─────┘
-         │
-   ┌──────────────────────┐
-   │ Leer Nombre, Edad    │ ← Entrada (paralelogramo)
-   └─────┬────────────────┘
-         │
-   ┌──────────────────────┐
-   │ Guardar en estructura│ ← Proceso (rectángulo)
-   └─────┬────────────────┘
-         │
-   ┌──────────────────────┐
-   │ Mostrar datos        │ ← Salida (documento)
-   └─────┬────────────────┘
-         │
-   ┌───────────┐
-   │   FIN     │
-   └───────────┘
-```
-
----
-
-# Prueba de escritorio
-
-| Paso    | Nombre | Edad | Acción  |
-| ------- | ------ | ---- | ------- |
-| Leer    | Ana    | 21   | Entrada |
-| Guardar | Ana    | 21   | Proceso |
-| Mostrar | Ana    | 21   | Salida  |
-
----
-
-# Diferencias importantes
-
----
-
-## Estructura vs Arreglo
-
-| Característica | Estructura | Arreglo |
-| -------------- | ---------- | ------- |
-| Tipos          | Diferentes | Igual   |
-| Uso            | Complejo   | Simple  |
-| Ejemplo        | Persona    | Lista   |
-
----
-
-## Estructura vs Variable simple
-
-| Variable | Estructura   |
-| -------- | ------------ |
-| Un dato  | Varios datos |
-| Simple   | Compuesta    |
-
----
-
-# Conceptos clave importantes
-
----
-
-## 1. Abstracción
-
-Las estructuras permiten representar entidades reales de forma simplificada.
-
----
-
-## 2. Modularidad
-
-Permiten organizar mejor el programa.
-
----
-
-## 3. Reutilización
-
-Se pueden usar varias veces.
-
----
-
-## 4. Organización de datos
-
-Evitan tener muchas variables sueltas.
-
----
-
-# Ventajas
-
-- Ordenan la información
-- Facilitan el mantenimiento
-- Representan mejor la realidad
-- Escalan a programas grandes
-
----
-
-# Desventajas
-
-- Más complejas que variables simples
-- Requieren planificación
-
----
-
-# Aplicaciones reales
-
-* Sistemas de alumnos
-* Inventarios
-* Registros de usuarios
-* Bases de datos simples
-* Videojuegos (personajes, objetos)
-
----
-
-# Errores comunes
-
-* Confundir con arreglos
-* No definir bien los campos
-* Usar tipos incorrectos
-* No organizar la información
-
----
-
-# Relación con otros temas
-
-Las estructuras se combinan con:
-
-* Arreglos → listas de registros
-* Cadenas → nombres, textos
-* Funciones → manipulación de datos
-
----
-
-# Nivel avanzado (importante)
-
----
-
-## Colecciones de estructuras
-
-Ejemplo:
-
-```id="r2k8tx"
-Estudiantes[100]
-```
-
-Base de sistemas reales.
-
----
-
-## Paso de estructuras
-
-Se pueden pasar a funciones para trabajar con ellas.
-
----
-
-## Modelado de problemas
-
-Este es el uso MÁS importante:
-
-Transformar un problema real en datos organizados.
-
----
-
-# Conclusión
-
-Las estructuras son fundamentales para representar información compleja.
-
-Son el puente entre:
-
-* Problema real
-* Solución en programación
-
----
-
-# Resumen
-
-* Agrupan datos diferentes
-* Representan objetos reales
-* Se componen de campos
-* Pueden combinarse con arreglos
-* Son base de sistemas grandes
+## Resumen
+
+* Una estructura agrupa varios datos en una sola unidad
+* Puede contener distintos tipos de datos
+* Representa entidades reales
+* Mejora organización de la información
+* Es fundamental en programas medianos y grandes
 
 ---
