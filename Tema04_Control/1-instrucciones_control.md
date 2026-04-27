@@ -193,47 +193,88 @@ Incluyen:
 
 ### Ejemplo IF
 
+**Problema:** Leer una nota y clasificarla:
+
+* Si la nota es mayor o igual a 51 → Aprobado
+* Si además es mayor o igual a 90 → Excelente
+* Si no llega a 51 → Reprobado
+
 ```mermaid
 flowchart TD
 
 A([Inicio])
-B@{ shape: lean-r, label: "Leer N" }
+B@{ shape: lean-r, label: "Leer nota" }
 
-C@{ shape: diamond, label: "N > 0 ?" }
+C@{ shape: diamond, label: "nota >= 51 ?" }
 
-D@{ shape: doc, label: "Positivo" }
-E@{ shape: doc, label: "No positivo" }
+D@{ shape: diamond, label: "nota >= 90 ?" }
 
-F([Fin])
+E@{ shape: doc, label: "Excelente" }
+F@{ shape: doc, label: "Aprobado" }
+G@{ shape: doc, label: "Reprobado" }
+
+H([Fin])
 
 A --> B --> C
-C -->|Sí| D --> F
-C -->|No| E --> F
+
+C -->|Sí| D
+C -->|No| G --> H
+
+D -->|Sí| E --> H
+D -->|No| F --> H
 ```
 
 ---
 
 ### Ejemplo SWITCH
 
+**Problema:** Leer dos números `A` y `B`, luego elegir una operación matemática mediante una opción.
+
+* 1 → Sumar
+* 2 → Restar
+* 3 → Multiplicar
+* 4 → Dividir
+* Otro valor → Error
+
 ```mermaid
 flowchart TD
 
 A([Inicio])
-B@{ shape: lean-r, label: "Leer opción" }
 
-C@{ shape: diamond, label: "Switch(opción)" }
+B@{ shape: lean-r, label: "Leer A, B" }
+C@{ shape: lean-r, label: "Leer opción" }
 
-D@{ shape: doc, label: "Sumar" }
-E@{ shape: doc, label: "Restar" }
-F@{ shape: doc, label: "Otro" }
+D@{ shape: diamond, label: "Switch(opción)" }
 
-G([Fin])
+E@{ shape: rect, label: "S = A + B" }
+F@{ shape: doc, label: "Mostrar S" }
 
-A --> B --> C
+G@{ shape: rect, label: "R = A - B" }
+H@{ shape: doc, label: "Mostrar R" }
 
-C -->|1| D --> G
-C -->|2| E --> G
-C -->|Default| F --> G
+I@{ shape: rect, label: "M = A * B" }
+J@{ shape: doc, label: "Mostrar M" }
+
+K@{ shape: diamond, label: "B != 0 ?" }
+L@{ shape: rect, label: "D = A / B" }
+M@{ shape: doc, label: "Mostrar D" }
+
+N@{ shape: doc, label: "Error: división por 0" }
+O@{ shape: doc, label: "Opción inválida" }
+
+P([Fin])
+
+A --> B --> C --> D
+
+D -->|1| E --> F --> P
+D -->|2| G --> H --> P
+D -->|3| I --> J --> P
+D -->|4| K
+
+K -->|Sí| L --> M --> P
+K -->|No| N --> P
+
+D -->|Default| O --> P
 ```
 
 ---
@@ -252,67 +293,99 @@ Incluyen:
 
 ### Ejemplo WHILE
 
+**Problema:** Un cajero automático permite hasta 3 intentos para ingresar la contraseña correcta.
+Si la contraseña es correcta, muestra **Acceso permitido**.
+Si falla 3 veces, muestra **Cuenta bloqueada**.
+
 ```mermaid
 flowchart TD
 
 A([Inicio])
-B@{ shape: rect, label: "i = 1" }
 
-C@{ shape: diamond, label: "i <= 5 ?" }
+B@{ shape: rect, label: "intentos = 0" }
 
-D@{ shape: doc, label: "Mostrar i" }
-E@{ shape: rect, label: "i = i + 1" }
+C@{ shape: diamond, label: "intentos < 3 ?" }
 
-F([Fin])
+D@{ shape: lean-r, label: "Leer contraseña" }
+
+E@{ shape: diamond, label: "contraseña correcta ?" }
+
+F@{ shape: doc, label: "Acceso permitido" }
+
+G@{ shape: rect, label: "intentos = intentos + 1" }
+
+H@{ shape: doc, label: "Cuenta bloqueada" }
+
+I([Fin])
 
 A --> B --> C
-C -->|Sí| D --> E --> C
-C -->|No| F
+
+C -->|Sí| D --> E
+C -->|No| H --> I
+
+E -->|Sí| F --> I
+E -->|No| G --> C
 ```
 
 ---
 
 ### Ejemplo DO WHILE
 
+**Problema:** Solicitar una edad válida.
+La edad debe ser mayor o igual a `0`.
+Primero se pide el dato y luego se verifica, por eso se usa **do while**.
+
 ```mermaid
 flowchart TD
 
 A([Inicio])
 
-B@{ shape: rect, label: "i = 1" }
+B@{ shape: lean-r, label: "Leer edad" }
 
-C@{ shape: doc, label: "Mostrar i" }
+C@{ shape: diamond, label: "edad < 0 ?" }
 
-D@{ shape: rect, label: "i = i + 1" }
+D@{ shape: doc, label: "Edad inválida" }
 
-E@{ shape: diamond, label: "i <= 5 ?" }
+E@{ shape: doc, label: "Edad registrada" }
 
 F([Fin])
 
-A --> B --> C --> D --> E
-E -->|Sí| C
-E -->|No| F
+A --> B --> C
+
+C -->|Sí| D --> B
+C -->|No| E --> F
 ```
 
 ---
 
 ### Ejemplo FOR
 
+**Problema:** Leer `5` números, sumarlos y mostrar la suma total.
+Se utiliza **for** porque se conoce desde el inicio la cantidad de repeticiones.
+
 ```mermaid
 flowchart TD
 
 A([Inicio])
 
-B@{ shape: hex, label: "i = 1; i <= 5; i++" }
+B@{ shape: rect, label: "suma = 0" }
 
-C@{ shape: doc, label: "Mostrar i" }
+C@{ shape: hex, label: "i = 1; i <= 5; i++" }
 
-D([Fin])
+D@{ shape: lean-r, label: "Leer número" }
 
-A --> B
-B -->|Sí| C --> B
-B -->|No| D
+E@{ shape: rect, label: "suma = suma + número" }
+
+F@{ shape: doc, label: "Mostrar suma" }
+
+G([Fin])
+
+A --> B --> C
+
+C -->|Sí| D --> E --> C
+C -->|No| F --> G
 ```
+
 ---
 
 # Ventajas
