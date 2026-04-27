@@ -48,9 +48,9 @@ Todo diagrama de flujo está compuesto por:
 
 ~~~mermaid
 flowchart TD
-A([Inicio])
-B([Fin])
-A --> B
+A@{ shape: stadium, label: "Inicio" }
+B@{ shape: stadium, label: "Fin"}
+A-->B
 ~~~
 
 ---
@@ -59,7 +59,7 @@ A --> B
 
 ~~~mermaid
 flowchart TD
-A[Calcular suma]
+A@{ shape: rect, label: "Calcular suma" }
 ~~~
 
 ---
@@ -68,9 +68,9 @@ A[Calcular suma]
 
 ~~~mermaid
 flowchart TD
-A[/Leer número/]
-B[/Mostrar resultado/]
-A --> B
+A@{ shape: lean-r, label: "Leer número" }
+B@{ shape: doc, label: "Mostrar resultado" }
+A-->B
 ~~~
 
 ---
@@ -79,36 +79,58 @@ A --> B
 
 ~~~mermaid
 flowchart TD
-A{¿Edad >= 18?}
-A -->|Sí| B[Mayor]
-A -->|No| C[Menor]
+A@{ shape: diamond, label: "Condición" }
 ~~~
 
 ---
 
-## 5. Preparación / Inicialización
+## 5. Lineas de flujo de informacion
 
 ~~~mermaid
-flowchart TD
-A{{i = 0}}
+flowchart LR
+A(( )) --> B(( ))
 ~~~
 
 ---
 
-## 6. Conector
+## 6. Seleccion multiple "Switch"
 
 ~~~mermaid
 flowchart TD
-A((A))
+A@{ shape: diamond, label: "switch(opción)" }
+
+A -->|1| B@{ shape: rect, label: "Case 1" }
+A -->|2| C@{ shape: rect, label: "Case 2" }
+A -->|3| D@{ shape: rect, label: "Case 3" }
+A -->|default| E@{ shape: rect, label: "Otro" }
 ~~~
 
----
-
-## 7. Almacenamiento
+## 7. Repetitiva While
 
 ~~~mermaid
 flowchart TD
-A[(Datos)]
+A@{ shape: diamond, label: "while i < 10" }
+
+A -->|No| B@{ shape: rect, label: "Salir" }
+B --> A
+A -->|Si| C@{ shape: rect, label: "Proceso" }
+~~~
+
+## 8. Repetitiva Do While
+
+~~~mermaid
+flowchart TD
+A@{ shape: rect, label: "Proceso" }
+B@{ shape: diamond, label: "Do While" }
+
+A --> B
+~~~
+
+## 9. Repetitiva For
+
+~~~mermaid
+flowchart TD
+A@{ shape: hex, label: "i=0; i-1; i++" }
 ~~~
 
 ---
@@ -126,119 +148,171 @@ A[(Datos)]
 
 # Tipos de estructuras en diagramas
 
-## 1. Secuencial
+Por ahora trabajaremos solo con diagramas de flujo, enfocados en las 3 estructuras principales:
 
-~~~mermaid
-flowchart TD
-A([Inicio])
-B[/Leer A, B/]
-C[Sumar A+B]
-D[/Mostrar resultado/]
-E([Fin])
-
-A --> B --> C --> D --> E
-~~~
+1. Secuencial
+2. Selectivas
+3. Repetitivas
 
 ---
 
-## 2. Selectiva (If)
+## 1. Estructura Secuencial
 
-~~~mermaid
+Se ejecutan instrucciones una tras otra, en orden.
+
+### Ejemplo:
+
+Leer dos números, sumarlos y mostrar resultado.
+
+```mermaid
 flowchart TD
+
 A([Inicio])
-B[/Leer número/]
-C{¿Número > 0?}
-D[/Positivo/]
-E[/Negativo o Cero/]
+B@{ shape: lean-r, label: "Leer A" }
+C@{ shape: lean-r, label: "Leer B" }
+D@{ shape: rect, label: "Suma = A + B" }
+E@{ shape: doc, label: "Mostrar Suma" }
+F([Fin])
+
+A --> B --> C --> D --> E --> F
+```
+
+---
+
+## 2. Estructuras Selectivas
+
+Permiten tomar decisiones.
+
+Incluyen:
+
+* If simple
+* If else
+* Switch
+
+---
+
+### Ejemplo IF
+
+```mermaid
+flowchart TD
+
+A([Inicio])
+B@{ shape: lean-r, label: "Leer N" }
+
+C@{ shape: diamond, label: "N > 0 ?" }
+
+D@{ shape: doc, label: "Positivo" }
+E@{ shape: doc, label: "No positivo" }
+
 F([Fin])
 
 A --> B --> C
-C -->|Sí| D
-C -->|No| E
-D --> F
-E --> F
-~~~
+C -->|Sí| D --> F
+C -->|No| E --> F
+```
 
 ---
 
-## 3. Repetitiva (While)
+### Ejemplo SWITCH
 
-~~~mermaid
+```mermaid
 flowchart TD
+
 A([Inicio])
-B{{i = 1}}
-C{¿i <= 3?}
-D[/Mostrar i/]
-E[i = i + 1]
-F([Fin])
+B@{ shape: lean-r, label: "Leer opción" }
 
-A --> B --> C
-C -->|Sí| D
-D --> E
-E --> C
-C -->|No| F
-~~~
+C@{ shape: diamond, label: "Switch(opción)" }
 
----
+D@{ shape: doc, label: "Sumar" }
+E@{ shape: doc, label: "Restar" }
+F@{ shape: doc, label: "Otro" }
 
-## 4. Ciclo For
-
-~~~mermaid
-flowchart TD
-A([Inicio])
-B{{i = 1}}
-C{¿i <= 5?}
-D[/Mostrar i/]
-E[i++]
-F([Fin])
-
-A --> B --> C
-C -->|Sí| D
-D --> E
-E --> C
-C -->|No| F
-~~~
-
----
-
-## 5. Switch
-
-~~~mermaid
-flowchart TD
-A([Inicio])
-B[/Leer opción/]
-C{Opción}
-D[Caso 1]
-E[Caso 2]
-F[Otro caso]
 G([Fin])
 
 A --> B --> C
-C -->|1| D
-C -->|2| E
-C -->|Otro| F
-D --> G
-E --> G
-F --> G
-~~~
+
+C -->|1| D --> G
+C -->|2| E --> G
+C -->|Default| F --> G
+```
 
 ---
 
-# Ejemplo completo
+## 3. Estructuras Repetitivas
 
-## Problema: Sumar dos números
+Repiten instrucciones.
 
-~~~mermaid
+Incluyen:
+
+* While
+* Do While
+* For
+
+---
+
+### Ejemplo WHILE
+
+```mermaid
 flowchart TD
+
 A([Inicio])
-B[/Leer A, B/]
-C[Resultado = A + B]
-D[/Mostrar resultado/]
-E([Fin])
+B@{ shape: rect, label: "i = 1" }
+
+C@{ shape: diamond, label: "i <= 5 ?" }
+
+D@{ shape: doc, label: "Mostrar i" }
+E@{ shape: rect, label: "i = i + 1" }
+
+F([Fin])
+
+A --> B --> C
+C -->|Sí| D --> E --> C
+C -->|No| F
+```
+
+---
+
+### Ejemplo DO WHILE
+
+```mermaid
+flowchart TD
+
+A([Inicio])
+
+B@{ shape: rect, label: "i = 1" }
+
+C@{ shape: doc, label: "Mostrar i" }
+
+D@{ shape: rect, label: "i = i + 1" }
+
+E@{ shape: diamond, label: "i <= 5 ?" }
+
+F([Fin])
 
 A --> B --> C --> D --> E
-~~~
+E -->|Sí| C
+E -->|No| F
+```
 
+---
+
+### Ejemplo FOR
+
+```mermaid
+flowchart TD
+
+A([Inicio])
+
+B@{ shape: hex, label: "i = 1; i <= 5; i++" }
+
+C@{ shape: doc, label: "Mostrar i" }
+
+D([Fin])
+
+A --> B
+B -->|Sí| C --> B
+B -->|No| D
+```
 ---
 
 # Ventajas
@@ -282,11 +356,11 @@ A --> B --> C --> D --> E
 
 # Diferencia con pseudocódigo
 
-| Diagrama de flujo | Pseudocódigo |
-|------------------|-------------|
-| Visual | Texto |
-| Usa símbolos | Usa instrucciones |
-| Más gráfico | Más parecido al código |
+| Diagrama de flujo | Pseudocódigo           |
+|-------------------|------------------------|
+| Visual            | Texto                  |
+| Usa símbolos      | Usa instrucciones      |
+| Más gráfico       | Más parecido al código |
 
 ---
 
