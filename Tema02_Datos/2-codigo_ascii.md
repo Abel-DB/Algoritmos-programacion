@@ -1,175 +1,191 @@
 # Código ASCII
 
----
-
 ## ¿Qué es el código ASCII?
 
-El **código ASCII (American Standard Code for Information Interchange)** es un sistema que permite representar caracteres (letras, números y símbolos) mediante valores numéricos.
+ASCII (*American Standard Code for Information Interchange*) es un estándar que asigna un valor numérico a caracteres, letras, números y símbolos para que puedan ser almacenados y procesados por una computadora.
 
-Gracias a ASCII, las computadoras pueden almacenar y procesar texto.
-
----
-
-## Breve historia
-
-El código ASCII fue creado en **1963** por el *Comité Estadounidense de Estándares (ASA)*, que luego pasó a llamarse **ANSI** en 1969.
-
-* En **1967** se estableció el estándar con **128 caracteres (0–127)**
-* Inicialmente incluía letras mayúsculas, números y símbolos
-* Luego se añadieron letras minúsculas y caracteres de control
-
-En **1981**, IBM desarrolló una versión extendida de 8 bits:
-
-**ASCII extendido (0–255)**
-
-Incluye:
-
-* Letras con acento (á, é, ñ, etc.)
-* Símbolos adicionales
-* Caracteres gráficos
+Cada carácter posee una representación numérica única.
 
 ---
 
-## Clasificación del ASCII
+# Importancia
 
-### 1. Caracteres de control (0–31)
+El código ASCII permite:
 
-* No son visibles
-* Se usan para controlar dispositivos
-
-Ejemplos:
-
-* 10 → salto de línea
-* 13 → retorno de carro
-* 9 → tabulación
+* Representar caracteres mediante números.
+* Facilitar el intercambio de información entre sistemas.
+* Almacenar texto en memoria.
+* Realizar conversiones entre caracteres y valores numéricos.
 
 ---
 
-### 2. Caracteres imprimibles (32–127)
+# Funcionamiento
 
-Son los caracteres visibles:
+Internamente, las computadoras almacenan información utilizando valores numéricos.
 
-* 48–57 → números (0–9)
-* 65–90 → letras mayúsculas (A–Z)
-* 97–122 → letras minúsculas (a–z)
-* 64 → @
+Por ejemplo:
 
----
-
-### 3. ASCII extendido (128–255)
-
-Incluye caracteres adicionales:
-
-* Letras con acento → á, é, í, ó, ú
-* Letra ñ → 164 (ñ), 165 (Ñ)
-* Símbolos especiales
-
-> Puede variar según el sistema
+| Carácter | Código ASCII |
+| -------- | ------------ |
+| A        | 65           |
+| B        | 66           |
+| C        | 67           |
+| a        | 97           |
+| b        | 98           |
+| c        | 99           |
+| 0        | 48           |
+| 1        | 49           |
+| 2        | 50           |
 
 ---
 
-## ¿Cómo funciona?
+# Estructura básica
 
-Cada carácter tiene un número asociado.
-
-Ejemplos:
-
-* A → 65
-* a → 97
-* @ → 64
-* Ñ → 165
-
-La computadora guarda números, no letras directamente.
+| Rango    | Descripción             |
+| -------- | ----------------------- |
+| 0 - 31   | Caracteres de control   |
+| 32       | Espacio                 |
+| 48 - 57  | Dígitos (0-9)           |
+| 65 - 90  | Letras mayúsculas (A-Z) |
+| 97 - 122 | Letras minúsculas (a-z) |
+| 127      | Suprimir (DEL)          |
 
 ---
 
-## Uso del código ASCII
+# Caracteres de control
 
-Se utiliza para:
+Los primeros códigos ASCII fueron diseñados para controlar dispositivos de entrada y salida.
 
-* Representar texto en computadoras
-* Almacenar datos en archivos
-* Comunicación entre sistemas
-* Procesamiento de información
-
----
-
-## Diferencias entre sistemas
-
-El código ASCII es el mismo, pero la forma de usarlo cambia.
-
-### Windows
-
-* Usa códigos ASCII en decimal
-* Se ingresan con:
-
-Alt + número
-
-Ejemplo:
-Alt + 64 → @
+| Código | Significado           |
+| ------ | --------------------- |
+| 9      | Tabulación (TAB)      |
+| 10     | Salto de línea (LF)   |
+| 13     | Retorno de carro (CR) |
+| 27     | Escape (ESC)          |
 
 ---
 
-### Linux
+# Tabla ASCII básica
 
-* No usa Alt + número
-* Usa Unicode
-
-Método:
-
-Ctrl + Shift + U → código → Enter
-
-Ejemplo:
-40 → @
-
----
-
-## Ejemplos de uso
-
-### Símbolo @
-
-* Código ASCII: 64
-
-Formas de escribir:
-
-* Teclado inglés → Shift + 2
-* Teclado español → AltGr + Q
+| Carácter | Valor |
+| -------- | ----- |
+| A        | 65    |
+| Z        | 90    |
+| a        | 97    |
+| z        | 122   |
+| 0        | 48    |
+| 9        | 57    |
+| Espacio  | 32    |
+| !        | 33    |
+| @        | 64    |
+| #        | 35    |
 
 ---
 
-### Letra Ñ
+# Relación con C++
 
-* ASCII extendido:
+En C++, el tipo de dato `char` almacena un carácter utilizando su código ASCII correspondiente.
 
-  * Ñ → 165
-  * ñ → 164
+### Ejemplo
 
-Formas de escribir:
+```cpp
+#include <iostream>
 
-* Teclado español → tecla directa
-* Linux → cambiar idioma del teclado
+using namespace std;
+
+int main() {
+    char letra = 'A';
+
+    cout << letra << endl;
+    cout << (int)letra << endl;
+
+    return 0;
+}
+```
+
+### Salida
+
+```text
+A
+65
+```
+
+---
+
+# Conversión entre caracteres y números
+
+Los caracteres pueden convertirse a su valor ASCII y viceversa.
+
+### Ejemplo
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char letra = 'B';
+
+    cout << (int)letra << endl;
+
+    return 0;
+}
+```
+
+### Resultado
+
+```text
+66
+```
 
 ---
 
-## Recurso adicional
+# Aplicaciones
 
-Para ver la tabla completa:
+El código ASCII se utiliza en:
 
-https://elcodigoascii.com.ar/
+* Procesamiento de texto.
+* Validación de caracteres.
+* Conversión de datos.
+* Comunicaciones entre sistemas.
+* Archivos de texto.
 
-Ahí encontrarás todos los caracteres y códigos.
+---
+
+# Errores comunes
+
+| Error                              | Descripción                        |
+| ---------------------------------- | ---------------------------------- |
+| Confundir caracteres con números   | '1' es diferente de 1              |
+| Ignorar mayúsculas y minúsculas    | 'A' y 'a' poseen valores distintos |
+| Utilizar valores ASCII incorrectos | Produce resultados inesperados     |
 
 ---
 
-## Resumen
+# Curiosidades
 
-* ASCII representa caracteres mediante números
-* Tiene 3 grupos:
+| Expresión | Resultado |
+| --------- | --------- |
+| 'A' + 1   | 'B'       |
+| 'a' + 1   | 'b'       |
+| '0' + 1   | '1'       |
 
-  * Control (0–31)
-  * Imprimibles (32–127)
-  * Extendido (128–255)
-* Es fundamental en la informática
-* La forma de ingresar caracteres depende del sistema operativo
+Esto es posible porque los caracteres se almacenan internamente como números.
 
 ---
+
+# Conclusión
+
+El código ASCII es un estándar fundamental para la representación de caracteres en las computadoras. Comprender su funcionamiento facilita el manejo de texto, caracteres y conversiones dentro de los programas.
+
+---
+
+# Resumen
+
+| Concepto    | Idea principal                                    |
+| ----------- | ------------------------------------------------- |
+| ASCII       | Sistema de codificación de caracteres.            |
+| Carácter    | Representado mediante un valor numérico.          |
+| char        | Tipo de dato utilizado para almacenar caracteres. |
+| Conversión  | Permite obtener el valor numérico de un carácter. |
+| Importancia | Base para el procesamiento de texto.              |

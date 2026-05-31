@@ -1,96 +1,177 @@
 # Lectura y Escritura de Información
 
----
-
 ## ¿Qué es la entrada y salida de datos?
 
-En un programa es necesario interactuar con el usuario.
+Todo programa necesita interactuar con el exterior para recibir información y mostrar resultados.
 
-* **Entrada (lectura):** permite ingresar datos al programa
-* **Salida (escritura):** permite mostrar resultados
+Esta comunicación se realiza mediante dos procesos fundamentales:
 
----
-
-## Entrada de datos (Lectura)
-
-La **lectura de información** consiste en recibir datos desde el exterior del programa.
-
-### Ejemplos:
-
-* Ingresar un número
-* Escribir un nombre
-* Introducir datos desde el teclado
+* **Entrada (Lectura):** recepción de datos.
+* **Salida (Escritura):** presentación de resultados.
 
 ---
 
-## Salida de datos (Escritura)
+# Importancia
 
-La **escritura de información** consiste en mostrar resultados hacia el exterior.
+La entrada y salida de datos permiten:
 
-### Ejemplos:
+* Interactuar con el usuario.
+* Procesar información.
+* Mostrar resultados.
+* Dar utilidad práctica a los programas.
 
-* Mostrar un mensaje
-* Imprimir un resultado
-* Generar un reporte
+Sin entrada ni salida, un programa no podría comunicarse con el exterior.
 
 ---
 
-## Relación Entrada → Proceso → Salida
+# Conceptos fundamentales
+
+| Concepto        | Descripción                             |
+| --------------- | --------------------------------------- |
+| Entrada (Input) | Datos que ingresan al programa.         |
+| Proceso         | Operaciones realizadas sobre los datos. |
+| Salida (Output) | Resultados generados por el programa.   |
+
+---
+
+# Modelo Entrada → Proceso → Salida
 
 Todo programa sigue una estructura básica:
 
+```text
 Entrada → Proceso → Salida
+```
 
-* **Entrada:** se reciben los datos
-* **Proceso:** se realizan operaciones
-* **Salida:** se muestran los resultados
+### Descripción
 
----
-
-## Ejemplo conceptual
-
-**Problema:** Calcular la suma de dos números
-
-* **Entrada:** número A, número B
-* **Proceso:** A + B
-* **Salida:** resultado
+1. Se reciben los datos de entrada.
+2. Se realizan operaciones o cálculos.
+3. Se muestran los resultados obtenidos.
 
 ---
 
-## Tipos de entrada
+# Ejemplo conceptual
 
-* Entrada manual (teclado)
-* Entrada desde archivos
-* Entrada desde otros sistemas
+## Problema
 
----
+Calcular la suma de dos números.
 
-## Tipos de salida
-
-* Salida en pantalla
-* Salida en documentos o archivos
-* Salida en dispositivos externos
+| Etapa   | Información          |
+| ------- | -------------------- |
+| Entrada | Número A, Número B   |
+| Proceso | A + B                |
+| Salida  | Resultado de la suma |
 
 ---
 
-## Importancia
+# Entrada de datos (Lectura)
 
-* Permite la interacción con el usuario
-* Hace que el programa tenga utilidad práctica
-* Es fundamental en cualquier sistema
+La lectura consiste en recibir información desde el exterior del programa.
+
+### Ejemplos
+
+* Ingresar una edad.
+* Escribir un nombre.
+* Introducir una calificación.
+* Leer información desde el teclado.
+
+### Tipos de entrada
+
+| Tipo            | Descripción                           |
+| --------------- | ------------------------------------- |
+| Manual          | Datos ingresados por el usuario.      |
+| Archivo         | Datos obtenidos desde un archivo.     |
+| Sistema externo | Datos provenientes de otros sistemas. |
 
 ---
 
-## Conclusión
+# Salida de datos (Escritura)
 
-La entrada y salida de información son elementos esenciales en cualquier programa, ya que permiten recibir datos, procesarlos y mostrar resultados.
+La escritura consiste en mostrar información hacia el exterior.
+
+### Ejemplos
+
+* Mostrar mensajes.
+* Imprimir resultados.
+* Presentar reportes.
+* Visualizar información en pantalla.
+
+### Tipos de salida
+
+| Tipo                | Descripción                                 |
+| ------------------- | ------------------------------------------- |
+| Pantalla            | Información mostrada al usuario.            |
+| Archivo             | Información almacenada en archivos.         |
+| Dispositivo externo | Impresoras, pantallas u otros dispositivos. |
 
 ---
 
-## Resumen
+# Relación con C++
 
-* La entrada permite ingresar datos
-* La salida muestra resultados
-* Todo programa sigue la estructura: entrada → proceso → salida
+En C++, la entrada y salida básica se realiza mediante:
+
+| Instrucción | Función                          |
+| ----------- | -------------------------------- |
+| `cin`       | Leer datos desde el teclado.     |
+| `cout`      | Mostrar información en pantalla. |
+
+### Ejemplo
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int edad;
+
+    cout << "Ingrese su edad: ";
+    cin >> edad;
+
+    cout << "Su edad es: " << edad << endl;
+
+    return 0;
+}
+```
 
 ---
+
+# Aplicaciones
+
+La entrada y salida de datos están presentes en prácticamente todos los programas:
+
+* Calculadoras.
+* Sistemas bancarios.
+* Videojuegos.
+* Aplicaciones móviles.
+* Sistemas de inventario.
+* Software empresarial.
+
+---
+
+# Errores comunes
+
+| Error                            | Descripción                                    |
+| -------------------------------- | ---------------------------------------------- |
+| No solicitar datos correctamente | El usuario no sabe qué ingresar.               |
+| Mostrar información confusa      | Los resultados no son claros.                  |
+| No validar entradas              | Se aceptan datos incorrectos.                  |
+| Omitir resultados                | El programa procesa datos pero no los muestra. |
+
+---
+
+# Conclusión
+
+La lectura y escritura de información son elementos fundamentales en cualquier programa. Permiten recibir datos, procesarlos y comunicar resultados al usuario, constituyendo la base de la interacción entre una aplicación y su entorno.
+
+---
+
+# Resumen
+
+| Concepto    | Idea principal                                  |
+| ----------- | ----------------------------------------------- |
+| Entrada     | Recepción de datos.                             |
+| Proceso     | Transformación de la información.               |
+| Salida      | Presentación de resultados.                     |
+| C++         | Utiliza `cin` para leer y `cout` para escribir. |
+| Importancia | Permite la interacción con el usuario.          |

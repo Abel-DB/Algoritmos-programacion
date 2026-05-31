@@ -1,103 +1,173 @@
 # Edición, Compilación y Enlazado
 
----
+## ¿Qué es el proceso de desarrollo de un programa?
 
-## ¿Qué es el proceso de un programa?
+Antes de que un programa pueda ejecutarse, debe pasar por varias etapas que transforman el código escrito por el programador en un archivo ejecutable.
 
-Antes de que un programa funcione, pasa por varias etapas.
-
-Estas etapas permiten transformar el código escrito por el programador en un programa ejecutable.
+Estas etapas permiten detectar errores y preparar el programa para su ejecución.
 
 ---
 
-## Etapas del proceso
+# Importancia
 
-### 1. Edición
+Comprender este proceso permite:
 
-Es la etapa donde se escribe el código fuente.
-
-* Se utiliza un editor de texto o un entorno de desarrollo (IDE)
-* El archivo contiene instrucciones del programa
-
----
-
-### 2. Compilación
-
-Es el proceso donde el código fuente se traduce a lenguaje máquina.
-
-* Se utiliza un compilador
-* Detecta errores de sintaxis
+* Entender cómo se construye un programa.
+* Identificar errores durante el desarrollo.
+* Diferenciar las etapas de creación de software.
+* Facilitar la corrección de problemas.
 
 ---
 
-### Tipos de errores en compilación
+# Etapas del proceso
 
-* Errores de sintaxis (mal escrito)
-* Instrucciones incorrectas
-* Variables no definidas
-
----
-
-### 3. Enlazado
-
-En esta etapa se unen las partes del programa con las librerías necesarias.
-
-* Permite que el programa funcione correctamente
-* Si falta alguna librería → error de enlazado
+| Etapa       | Descripción                                    |
+| ----------- | ---------------------------------------------- |
+| Edición     | Escritura del código fuente.                   |
+| Compilación | Traducción del código a lenguaje máquina.      |
+| Enlazado    | Unión del código con las librerías necesarias. |
+| Ejecución   | Funcionamiento del programa.                   |
 
 ---
 
-### Resultado final
+# 1. Edición
 
-Después del enlazado se obtiene:
+Es la etapa donde el programador escribe el código fuente utilizando un editor de texto o un entorno de desarrollo integrado (IDE).
 
-* Un programa ejecutable
+Durante esta etapa se crean y modifican los archivos que contienen las instrucciones del programa.
+
+### Herramientas comunes
+
+| Herramienta        | Tipo   |
+| ------------------ | ------ |
+| Neovim (nvim)      | Editor |
+| Vim                | Editor |
+| Visual Studio Code | Editor |
+| Code::Blocks       | IDE    |
+| Dev-C++            | IDE    |
+| Visual Studio      | IDE    |
+| CLion              | IDE    |
+
+### Nota
+
+La etapa de edición no depende de una herramienta específica. Un programa puede escribirse utilizando editores ligeros como **Neovim** o **Vim**, o mediante entornos de desarrollo completos (IDE) como **Code::Blocks**, **Visual Studio** o **CLion**.
 
 ---
 
-## Resumen del proceso
+# 2. Compilación
+
+Es el proceso mediante el cual el compilador traduce el código fuente a lenguaje máquina.
+
+Su función principal es verificar que las instrucciones estén correctamente escritas y generar un archivo intermedio que posteriormente será enlazado.
+
+### Funciones principales
+
+* Traducir el código fuente.
+* Detectar errores de sintaxis.
+* Generar código objeto.
+
+### Errores de compilación
+
+| Tipo de error  | Descripción                 |
+| -------------- | --------------------------- |
+| Sintaxis       | Instrucciones mal escritas. |
+| Variables      | Variables no declaradas.    |
+| Tipos de datos | Uso incorrecto de tipos.    |
+
+---
+
+# 3. Enlazado
+
+Es la etapa donde se unen los archivos generados durante la compilación con las librerías necesarias para el funcionamiento del programa.
+
+### Funciones principales
+
+* Incorporar librerías.
+* Resolver referencias externas.
+* Generar el ejecutable final.
+
+### Posibles errores
+
+| Error               | Causa                                  |
+| ------------------- | -------------------------------------- |
+| Librería faltante   | No se encuentra una dependencia.       |
+| Función no definida | Existe una llamada sin implementación. |
+
+---
+
+# 4. Ejecución
+
+Una vez generado el ejecutable, el sistema operativo carga el programa en memoria y comienza su ejecución.
+
+Durante esta etapa pueden aparecer errores de ejecución o errores lógicos.
+
+---
+
+# Flujo general del proceso
 
 ```text
-Código fuente → Compilación → Enlazado → Programa ejecutable
+Código Fuente
+      ↓
+    Edición
+      ↓
+  Compilación
+      ↓
+   Enlazado
+      ↓
+ Programa Ejecutable
+      ↓
+   Ejecución
 ```
 
 ---
 
-## Ejemplo del proceso
+# Tipos de errores
 
-1. Se escribe el programa (edición)
-2. Se compila (traducción y revisión de errores)
-3. Se enlaza (se agregan librerías)
-4. Se ejecuta el programa
-
----
-
-## Tipos de errores
-
-### Error de sintaxis
-
-Error al escribir el código.
+| Tipo      | Momento en que aparece                                     |
+| --------- | ---------------------------------------------------------- |
+| Sintaxis  | Durante la compilación.                                    |
+| Enlazado  | Durante el enlazado.                                       |
+| Ejecución | Mientras el programa se ejecuta.                           |
+| Lógico    | El programa funciona, pero produce resultados incorrectos. |
 
 ---
 
-### Error de ejecución
+# Ejemplo del proceso
 
-Ocurre cuando el programa se está ejecutando.
-
----
-
-### Error lógico
-
-El programa se ejecuta, pero da resultados incorrectos.
-
----
-
-## Resumen
-
-* La edición es escribir el programa
-* La compilación traduce el código
-* El enlazado une librerías
-* El resultado final es un programa ejecutable
+1. Escribir un programa en C++.
+2. Guardar el archivo fuente.
+3. Compilar el programa.
+4. Corregir errores si existen.
+5. Enlazar las librerías necesarias.
+6. Generar el ejecutable.
+7. Ejecutar el programa.
 
 ---
 
+# Aplicaciones
+
+Este proceso se utiliza en la mayoría de los lenguajes compilados:
+
+* C
+* C++
+* Rust
+* Go
+* Pascal
+
+---
+
+# Conclusión
+
+La edición, compilación y enlazado son etapas fundamentales en el desarrollo de software. Comprender este proceso permite identificar errores con mayor facilidad y entender cómo un programa pasa de ser código fuente a convertirse en una aplicación ejecutable.
+
+---
+
+# Resumen
+
+| Concepto        | Idea principal                              |
+| --------------- | ------------------------------------------- |
+| Edición         | Escritura y modificación del código fuente. |
+| Compilación     | Traducción del código a lenguaje máquina.   |
+| Enlazado        | Unión del código con librerías y recursos.  |
+| Ejecución       | Funcionamiento del programa.                |
+| Resultado final | Programa ejecutable.                        |

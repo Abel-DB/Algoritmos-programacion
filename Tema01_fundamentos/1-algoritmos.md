@@ -2,92 +2,113 @@
 
 ## ¿Qué es un algoritmo?
 
-Un **algoritmo** es un conjunto de pasos **ordenados, finitos y precisos** que permiten resolver un problema o realizar una tarea.
+Un **algoritmo** es un conjunto de pasos **ordenados, finitos y precisos** que permiten resolver un problema o realizar una tarea específica.
 
-En programación, un algoritmo representa la **lógica** que se debe seguir para obtener un resultado.
-
----
-
-## Importancia
-
-Los algoritmos son la base de la programación, ya que:
-
-* Permiten organizar ideas antes de programar
-* Ayudan a resolver problemas de manera lógica
-* Facilitan la creación de soluciones correctas y eficientes
+En programación, un algoritmo representa la **lógica** que debe seguirse para obtener un resultado determinado.
 
 ---
 
-## Ejemplo cotidiano
+# Importancia
 
-**Problema:** Preparar un té
+Los algoritmos constituyen la base de la programación porque permiten:
 
-**Algoritmo:**
-
-1. Hervir agua
-2. Colocar la bolsita de té en una taza
-3. Verter el agua caliente en la taza
-4. Esperar unos minutos
-5. Retirar la bolsita
-6. Servir
+* Organizar ideas antes de escribir código.
+* Resolver problemas de forma lógica.
+* Diseñar soluciones correctas y eficientes.
+* Facilitar el desarrollo y mantenimiento de programas.
 
 ---
 
-## Ejemplo lógico
+# Ejemplo cotidiano
 
-**Problema:** Sumar dos números
+### Problema
 
-**Algoritmo:**
+Preparar una taza de té.
 
-1. Leer el primer número
-2. Leer el segundo número
-3. Sumar ambos números
-4. Mostrar el resultado
+### Algoritmo
 
----
-
-## Características de un algoritmo
-
-Un algoritmo debe cumplir con:
-
-* **Finito:** Tiene un inicio y un final
-* **Ordenado:** Los pasos siguen una secuencia lógica
-* **Preciso:** No debe ser ambiguo
-* **Efectivo:** Debe resolver el problema planteado
+1. Hervir agua.
+2. Colocar una bolsita de té en una taza.
+3. Verter el agua caliente.
+4. Esperar unos minutos.
+5. Retirar la bolsita.
+6. Servir.
 
 ---
 
-## Tipos de algoritmos
+# Ejemplo lógico
 
-* **Secuenciales:** Pasos ejecutados uno tras otro
-* **Condicionales:** Incluyen decisiones (sí / no)
-* **Repetitivos:** Repiten acciones varias veces
+### Problema
 
----
+Sumar dos números.
 
-## Representación de algoritmos
+### Algoritmo
 
-Los algoritmos pueden representarse de diferentes formas:
-
-* Lenguaje natural (texto)
-* Diagramas de flujo
-* Pseudocódigo
-* Código en un lenguaje de programación
+1. Leer el primer número.
+2. Leer el segundo número.
+3. Calcular la suma.
+4. Mostrar el resultado.
 
 ---
 
-## Conclusión
+# Características de un algoritmo
 
-Un algoritmo es la base para resolver problemas de manera estructurada.
+| Característica | Descripción                                                  |
+| -------------- | ------------------------------------------------------------ |
+| Finito         | Tiene un inicio y un final definidos.                        |
+| Ordenado       | Los pasos siguen una secuencia lógica.                       |
+| Preciso        | Las instrucciones son claras y sin ambigüedades.             |
+| Efectivo       | Resuelve correctamente el problema planteado.                |
+| Determinístico | Para las mismas entradas produce siempre el mismo resultado. |
 
-Antes de programar, es fundamental definir correctamente el algoritmo, ya que esto facilita el desarrollo de soluciones claras y eficientes.
+---
+
+# Tipos de algoritmos
+
+| Tipo        | Descripción                                       |
+| ----------- | ------------------------------------------------- |
+| Secuencial  | Los pasos se ejecutan uno tras otro.              |
+| Condicional | Incluye decisiones según una condición.           |
+| Repetitivo  | Repite acciones mientras se cumpla una condición. |
 
 ---
 
-## Resumen
+# Representación de algoritmos
 
-* Un algoritmo es una secuencia de pasos
-* Permite resolver problemas de forma lógica
-* Es la base de cualquier solución en programación
+| Forma de representación | Descripción                                     |
+| ----------------------- | ----------------------------------------------- |
+| Lenguaje natural        | Descripción mediante texto común.               |
+| Diagrama de flujo       | Representación gráfica mediante símbolos.       |
+| Pseudocódigo            | Descripción estructurada similar a un programa. |
+| Código fuente           | Implementación en un lenguaje de programación.  |
 
 ---
+
+# Aplicaciones
+
+Los algoritmos se utilizan en:
+
+* Desarrollo de software.
+* Aplicaciones móviles.
+* Videojuegos.
+* Sistemas bancarios.
+* Inteligencia artificial.
+* Automatización de procesos.
+
+---
+
+# Conclusión
+
+Los algoritmos permiten resolver problemas de forma organizada y lógica. Antes de desarrollar un programa, es fundamental diseñar correctamente el algoritmo para obtener soluciones claras, eficientes y fáciles de mantener.
+
+---
+
+# Resumen
+
+| Concepto        | Idea principal                                         |
+| --------------- | ------------------------------------------------------ |
+| Algoritmo       | Secuencia ordenada de pasos para resolver un problema. |
+| Características | Finito, ordenado, preciso, efectivo y determinístico.  |
+| Tipos           | Secuencial, condicional y repetitivo.                  |
+| Representación  | Texto, diagramas, pseudocódigo o código.               |
+| Importancia     | Base fundamental de la programación.                   |

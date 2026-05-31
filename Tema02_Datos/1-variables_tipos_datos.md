@@ -1,121 +1,256 @@
 # Variables y Tipos de Datos
 
----
-
 ## ¿Qué es una variable?
 
-Una **variable** es un espacio en memoria que se utiliza para almacenar datos.
+Una **variable** es un espacio de memoria utilizado para almacenar información que puede cambiar durante la ejecución de un programa.
 
-* Su valor puede cambiar durante la ejecución
-* Cada variable tiene:
+Cada variable posee:
 
-  * Un **nombre**
-  * Un **tipo**
-  * Un **valor**
-
----
-
-## Cómo nombrar variables correctamente
-
-### Reglas generales
-
-1. Debe comenzar con una letra o guion bajo (`_`)
-2. No puede contener espacios
-3. No debe usar palabras reservadas
-4. Debe ser descriptiva
-
-Ejemplos correctos:
-
-* `edad`
-* `suma_total`
-* `nombre_usuario`
+* Un nombre.
+* Un tipo de dato.
+* Un valor.
 
 ---
 
-### Buenas prácticas
+# Importancia
 
-* Usar **camelCase** → `numeroIngresado`
-* Usar **snake_case** → `numero_ingresado`
-* Evitar abreviaturas confusas
+Las variables permiten:
 
----
+* Almacenar información.
+* Realizar cálculos.
+* Manipular datos.
+* Interactuar con el usuario.
+* Construir algoritmos y programas.
 
-## ¿Qué es un tipo de dato?
-
-Un **tipo de dato** define el tipo de información que una variable puede almacenar.
-
----
-
-## Clasificación de tipos de datos
+Sin variables sería imposible guardar información temporal durante la ejecución de un programa.
 
 ---
 
-### 🔹 Tipos enteros
+# Componentes de una variable
 
-Se utilizan para números sin decimales.
+| Componente | Descripción                                       |
+| ---------- | ------------------------------------------------- |
+| Nombre     | Identificador utilizado para acceder al dato.     |
+| Tipo       | Define qué clase de información puede almacenar.  |
+| Valor      | Información almacenada en un momento determinado. |
 
-| Tipo      | Tamaño aproximado | Uso principal       |
-| --------- | ----------------- | ------------------- |
-| byte      | 1 byte            | Valores pequeños    |
-| short     | 2 bytes           | Números pequeños    |
-| int       | 4 bytes           | Uso general         |
-| long      | 8 bytes           | Valores grandes     |
-| long long | 8 bytes o más     | Valores muy grandes |
+### Ejemplo
 
-> Nota: El tamaño puede variar según el sistema.
-
----
-
-### 🔹 Tipos reales
-
-Se utilizan para números con decimales.
-
-| Tipo        | Precisión aproximada | Uso principal     |
-| ----------- | -------------------- | ----------------- |
-| float       | Baja                 | Uso general       |
-| double      | Media/Alta           | Mayor precisión   |
-| long double | Alta                 | Cálculos precisos |
+```text
+Nombre : edad
+Tipo   : int
+Valor  : 20
+```
 
 ---
 
-### 🔹 Otros tipos de datos
+# Reglas para nombrar variables
 
-| Tipo   | Descripción                    | Ejemplo     |
-| ------ | ------------------------------ | ----------- |
-| char   | Un solo carácter               | 'A', 'b'    |
-| string | Cadena de caracteres           | "Hola"      |
-| bool   | Valor lógico (verdadero/falso) | true, false |
-
----
-
-## Reglas importantes
-
-* Elegir el tipo de dato adecuado según el problema
-* No mezclar tipos incompatibles
-* Usar nombres claros y descriptivos
-* Evitar errores por mal uso de variables
+| Regla                             | Ejemplo            |
+| --------------------------------- | ------------------ |
+| Debe comenzar con una letra o `_` | edad, _contador    |
+| No puede contener espacios        | nombre_usuario     |
+| No puede usar palabras reservadas | int, while, if     |
+| Debe ser descriptiva              | promedio, cantidad |
 
 ---
 
-## Importancia
+## Ejemplos correctos
 
-* Permiten almacenar información
-* Son la base para realizar operaciones
-* Facilitan la organización de datos en un programa
-
----
-
-## Conclusión
-
-Las variables y los tipos de datos son fundamentales en programación, ya que permiten representar y manipular información de manera adecuada.
+```text
+edad
+nombre
+promedio
+cantidadEstudiantes
+```
 
 ---
 
-## Resumen
+## Ejemplos incorrectos
 
-* Una variable almacena datos
-* Tiene nombre, tipo y valor
-* Los tipos de datos definen qué se puede almacenar
-* Elegir bien el tipo evita errores
+```text
+2edad
+mi nombre
+while
+int
+```
 
 ---
+
+# Buenas prácticas
+
+| Recomendación                        | Ejemplo                            |
+| ------------------------------------ | ---------------------------------- |
+| Utilizar nombres descriptivos        | promedioFinal                      |
+| Evitar abreviaturas confusas         | cantidadEstudiantes                |
+| Mantener un estilo consistente       | utilizar siempre el mismo criterio |
+| Relacionar el nombre con el problema | salario, nota, totalVentas         |
+
+## Información complementaria
+
+Para conocer las convenciones de nombres utilizadas en proyectos de C++, consulte:
+
+- [Convenciones de nombres](../Anexos/convenciones_nombres.md)
+
+---
+
+# ¿Qué es un tipo de dato?
+
+Un **tipo de dato** define la clase de información que una variable puede almacenar.
+
+Determina:
+
+* El espacio utilizado en memoria.
+* El rango de valores permitidos.
+* Las operaciones que pueden realizarse.
+
+---
+
+# Clasificación de tipos de datos
+
+## Tipos enteros
+
+Se utilizan para almacenar números sin decimales.
+
+| Tipo      | Tamaño aproximado | Rango aproximado    | Uso principal       |
+| --------- | ----------------- | ------------------- | ------------------- |
+| short     | 2 bytes           | -32,768 a 32,767    | Valores pequeños    |
+| int       | 4 bytes           | ±2 mil millones     | Uso general         |
+| long      | 4 u 8 bytes       | Depende del sistema | Valores grandes     |
+| long long | 8 bytes           | Muy amplio          | Valores muy grandes |
+
+---
+
+## Tipos reales
+
+Se utilizan para almacenar números con decimales.
+
+| Tipo        | Tamaño aproximado | Precisión                  |
+| ----------- | ----------------- | -------------------------- |
+| float       | 4 bytes           | ~7 dígitos significativos  |
+| double      | 8 bytes           | ~15 dígitos significativos |
+| long double | 8 a 16 bytes      | Mayor precisión            |
+
+---
+
+## Tipos de caracteres
+
+Se utilizan para almacenar un único carácter.
+
+| Tipo | Tamaño aproximado | Ejemplo       |
+| ---- | ----------------- | ------------- |
+| char | 1 byte            | 'A', 'b', '9' |
+
+---
+
+## Tipos de texto
+
+Se utilizan para almacenar cadenas de caracteres.
+
+| Tipo   | Descripción             | Ejemplo      |
+| ------ | ----------------------- | ------------ |
+| string | Secuencia de caracteres | "Hola Mundo" |
+
+---
+
+## Tipos lógicos
+
+Se utilizan para representar condiciones verdaderas o falsas.
+
+| Tipo | Tamaño aproximado | Valores posibles |
+| ---- | ----------------- | ---------------- |
+| bool | 1 byte            | true, false      |
+
+> **Nota:** Los tamaños y rangos pueden variar según el compilador y la arquitectura del sistema.
+
+---
+
+# Declaración de variables en C++
+
+## Sintaxis general
+
+```cpp
+tipo nombre;
+```
+
+### Ejemplos
+
+```cpp
+int edad;
+float promedio;
+char inicial;
+bool activo;
+string nombre;
+```
+
+---
+
+# Inicialización de variables
+
+Consiste en asignar un valor inicial al momento de declararlas.
+
+### Ejemplos
+
+```cpp
+int edad = 20;
+float promedio = 85.5;
+char letra = 'A';
+bool activo = true;
+string nombre = "Juan";
+```
+
+---
+
+# Relación entre variable y memoria
+
+Cuando se declara una variable, el sistema reserva un espacio de memoria para almacenar su valor.
+
+```text
+Variable      Valor
+edad          20
+promedio      85.5
+activo        true
+```
+
+---
+
+# Errores comunes
+
+| Error                    | Descripción                           |
+| ------------------------ | ------------------------------------- |
+| Nombre poco descriptivo  | Dificulta la comprensión del código.  |
+| Usar palabras reservadas | Genera errores de compilación.        |
+| Tipo incorrecto          | Produce resultados inesperados.       |
+| No inicializar variables | Puede generar valores indeterminados. |
+
+---
+
+# Aplicaciones
+
+Las variables se utilizan en:
+
+* Sistemas bancarios.
+* Videojuegos.
+* Aplicaciones móviles.
+* Sistemas empresariales.
+* Programas científicos.
+* Bases de datos.
+
+---
+
+# Conclusión
+
+Las variables permiten almacenar y manipular información dentro de un programa. Su correcto uso, junto con la elección adecuada de tipos de datos, constituye una de las bases fundamentales de la programación.
+
+---
+
+# Resumen
+
+| Concepto       | Idea principal                                |
+| -------------- | --------------------------------------------- |
+| Variable       | Espacio de memoria para almacenar datos.      |
+| Componentes    | Nombre, tipo y valor.                         |
+| Tipos de datos | Enteros, reales, caracteres, texto y lógicos. |
+| Declaración    | Define una variable dentro del programa.      |
+| Inicialización | Asigna un valor inicial.                      |
+| Importancia    | Permite almacenar y manipular información.    |
