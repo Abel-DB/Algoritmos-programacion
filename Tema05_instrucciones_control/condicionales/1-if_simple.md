@@ -244,11 +244,11 @@ If - Else
 
 Para comprender los operadores utilizados en las condiciones consulte:
 
-* [Operadores básicos](../../Tema02_Datos/03-operadores_basicos.md)
+* [Operadores básicos](../../Tema02_Datos/3-operadores_basicos.md)
 
 Para conocer la teoría general de las estructuras condicionales consulte:
 
-* [Condicionales](../03-condicionales.md)
+* [Condicionales](../3-condicionales.md)
 
 ---
 

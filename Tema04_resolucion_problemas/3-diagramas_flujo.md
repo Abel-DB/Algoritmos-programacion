@@ -133,13 +133,22 @@ Representa una selección entre varias alternativas.
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Ingresar opción/]
+    C{Opción}
 
-A{switch(opción)}
+    A --> B
+    B --> C
 
-A -->|1| B[Case 1]
-A -->|2| C[Case 2]
-A -->|3| D[Case 3]
-A -->|Default| E[Otro]
+    C -->|1| D[Acción 1]
+    C -->|2| E[Acción 2]
+    C -->|3| F[Acción 3]
+    C -->|Otro| G[Acción por defecto]
+
+    D --> H([Fin])
+    E --> H
+    F --> H
+    G --> H
 ```
 
 ### Uso
@@ -307,15 +316,15 @@ Los diagramas de flujo se utilizan en:
 
 Para comprender cómo se construyen los algoritmos representados en diagramas de flujo, consulte:
 
-* [Algoritmos](../Tema01_Fundamentos/01-algoritmos.md)
+* [Algoritmos](../Tema01_fundamentos/1-algoritmos.md)
 
 Para conocer la representación textual de los algoritmos, consulte:
 
-* [Pseudocódigo](02-pseudocodigo.md)
+* [Pseudocódigo](../Tema04_resolucion_problemas/2-pseudocodigo.md)
 
 Para entender dónde se utilizan dentro del proceso de resolución de problemas, consulte:
 
-* [Etapas de resolución](01-etapas_resolucion.md)
+* [Etapas de resolución](../Tema04_resolucion_problemas/1-etapas_resolucion.md)
 
 ---
 

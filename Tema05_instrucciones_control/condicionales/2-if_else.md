@@ -277,15 +277,15 @@ Switch
 
 Para comprender los operadores utilizados en las condiciones consulte:
 
-* [Operadores básicos](../../Tema02_Datos/03-operadores_basicos.md)
+* [Operadores básicos](../../Tema02_Datos/3-operadores_basicos.md)
 
 Para conocer el If Simple consulte:
 
-* [If Simple](01-if_simple.md)
+* [If Simple](../condicionales/1-if_simple.md)
 
 Para comprender la teoría general de las estructuras condicionales consulte:
 
-* [Condicionales](../03-condicionales.md)
+* [Condicionales](../3-condicionales.md)
 
 ---
 

@@ -332,13 +332,13 @@ Se recomienda cuando:
 
 Para comprender las estructuras condicionales relacionadas consulte:
 
-* [If Simple](01-if_simple.md)
-* [If Else](02-if_else.md)
-* [If Anidado](03-if_anidado.md)
+* [If Simple](../condicionales/1-if_simple.md)
+* [If Else](../condicionales/2-if_else.md)
+* [If Anidado](../condicionales/3-if_anidado.md)
 
 Para conocer la teoría general consulte:
 
-* [Condicionales](../03-condicionales.md)
+* [Condicionales](../3-condicionales.md)
 
 ---
 

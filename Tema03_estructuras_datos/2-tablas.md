@@ -206,7 +206,7 @@ Esto permite acceder rápidamente a cualquier elemento.
 
 Para comprender cómo recorrer tablas mediante estructuras repetitivas, consulte:
 
-* [Instrucciones de control](../Tema04_Control/01-instrucciones_control.md)
+* [Instrucciones de control](../Tema05_instrucciones_control/repetitivas/)
 
 ---
 

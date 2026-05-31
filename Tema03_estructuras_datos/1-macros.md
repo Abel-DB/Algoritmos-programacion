@@ -182,7 +182,7 @@ Las macros se utilizan para:
 
 Para conocer la convención utilizada para constantes, consulte:
 
-* [Convenciones de nombres](../Anexos/convenciones_nombres.md)
+* [Convenciones de nombres](../Anexos/convensiones_nombres.md)
 
 ---
 

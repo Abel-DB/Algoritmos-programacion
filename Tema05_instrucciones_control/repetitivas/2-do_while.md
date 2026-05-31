@@ -294,15 +294,15 @@ Este ciclo nunca finaliza.
 
 Para comprender la teoría general de ciclos consulte:
 
-* [Estructuras repetitivas](../04-repetitivas.md)
+* [Estructuras repetitivas](../4-repetitivas.md)
 
 Para conocer el ciclo While consulte:
 
-* [While](01-while.md)
+* [While](../repetitivas/1-while.md)
 
 Para comprender los operadores utilizados en las condiciones consulte:
 
-* [Operadores básicos](../../Tema02_Datos/03-operadores_basicos.md)
+* [Operadores básicos](../../Tema02_Datos/3-operadores_basicos.md)
 
 ---
 

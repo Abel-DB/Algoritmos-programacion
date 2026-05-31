@@ -249,8 +249,8 @@ Las cadenas se utilizan en:
 
 Para comprender mejor los conceptos relacionados, consulte:
 
-* [Código ASCII](../Tema02_Datos/02-codigo_ascii.md)
-* [Tablas](02-tablas.md)
+* [Código ASCII](../Tema02_Datos/2-codigo_ascii.md)
+* [Tablas](../Tema03_estructuras_datos/2-tablas.md)
 
 ---
 

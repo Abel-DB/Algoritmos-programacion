@@ -345,16 +345,16 @@ Se recomienda cuando:
 
 Para comprender las estructuras condicionales básicas consulte:
 
-* [If Simple](01-if_simple.md)
-* [If Else](02-if_else.md)
+* [If Simple](../condicionales/1-if_simple.md)
+* [If Else](../condicionales/2-if_else.md)
 
 Para conocer la teoría general consulte:
 
-* [Condicionales](../03-condicionales.md)
+* [Condicionales](../3-condicionales.md)
 
 Para comprender los operadores utilizados en las condiciones consulte:
 
-* [Operadores básicos](../../Tema02_Datos/03-operadores_basicos.md)
+* [Operadores básicos](../../Tema02_Datos/3-operadores_basicos.md)
 
 ---
 

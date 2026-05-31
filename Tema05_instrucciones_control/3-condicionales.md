@@ -302,11 +302,11 @@ Las estructuras condicionales se utilizan en:
 
 Para comprender los operadores utilizados en las condiciones consulte:
 
-* [Operadores básicos](../Tema02_Datos/03-operadores_basicos.md)
+* [Operadores básicos](../Tema02_Datos/3-operadores_basicos.md)
 
 Para conocer la representación gráfica de estas estructuras consulte:
 
-* [Diagramas de flujo](../Tema04_Resolucion_Problemas/03-diagramas_flujo.md)
+* [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
 
 ---
 

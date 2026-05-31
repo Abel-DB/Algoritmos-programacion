@@ -234,10 +234,10 @@ Tanto las estructuras condicionales como las repetitivas están formadas interna
 
 Para comprender cómo se diseñan los algoritmos secuenciales consulte:
 
-* [Algoritmos](../Tema01_Fundamentos/01-algoritmos.md)
-* [Pseudocódigo](../Tema04_Resolucion_Problemas/02-pseudocodigo.md)
-* [Diagramas de flujo](../Tema04_Resolucion_Problemas/03-diagramas_flujo.md)
-* [Pruebas de escritorio](../Tema04_Resolucion_Problemas/04-pruebas_escritorio.md)
+* [Algoritmos](../Tema01_fundamentos/1-algoritmos.md)
+* [Pseudocódigo](../Tema04_resolucion_problemas/2-pseudocodigo.md)
+* [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
+* [Pruebas de escritorio](../Tema04_resolucion_problemas/4-pruebas_escritorio.md)
 
 ---
 

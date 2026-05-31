@@ -202,15 +202,15 @@ Las pruebas de escritorio son especialmente útiles para:
 
 Para comprender el proceso completo de resolución de problemas consulte:
 
-* [Etapas de resolución](01-etapas_resolucion.md)
+* [Etapas de resolución](../Tema04_resolucion_problemas/1-etapas_resolucion.md)
 
 Para conocer la representación textual de algoritmos consulte:
 
-* [Pseudocódigo](02-pseudocodigo.md)
+* [Pseudocódigo](../Tema04_resolucion_problemas/2-pseudocodigo.md)
 
 Para conocer la representación gráfica de algoritmos consulte:
 
-* [Diagramas de flujo](03-diagramas_flujo.md)
+* [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
 
 ---
 

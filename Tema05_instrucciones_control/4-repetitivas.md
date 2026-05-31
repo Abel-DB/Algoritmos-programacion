@@ -236,15 +236,15 @@ Las estructuras repetitivas se utilizan en:
 
 Para comprender los operadores utilizados en las condiciones consulte:
 
-* [Operadores básicos](../Tema02_Datos/03-operadores_basicos.md)
+* [Operadores básicos](../Tema02_Datos/3-operadores_basicos.md)
 
 Para comprender la teoría general de las instrucciones de control consulte:
 
-* [Instrucciones de control](01-introduccion.md)
+* [Instrucciones de control](../Tema05_instrucciones_control/repetitivas/)
 
 Para comprender las estructuras condicionales consulte:
 
-* [Condicionales](03-condicionales.md)
+* [Condicionales](../Tema05_instrucciones_control/condicionales/)
 
 ---
 

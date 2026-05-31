@@ -174,10 +174,10 @@ Pruebas y Corrección
 
 Para profundizar en cada etapa consulte:
 
-* [Pseudocódigo](02-pseudocodigo.md)
-* [Diagramas de flujo](03-diagramas_flujo.md)
-* [Pruebas de escritorio](04-pruebas_escritorio.md)
-* [Algoritmos](../Tema01_Fundamentos/01-algoritmos.md)
+* [Pseudocódigo](../Tema04_resolucion_problemas/2-pseudocodigo.md)
+* [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
+* [Pruebas de escritorio](../Tema04_resolucion_problemas/4-pruebas_escritorio.md)
+* [Algoritmos](../Tema01_fundamentos/1-algoritmos.md)
 
 ---
 

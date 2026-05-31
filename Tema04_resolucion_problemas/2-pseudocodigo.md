@@ -189,11 +189,11 @@ El pseudocódigo se utiliza en:
 
 Para comprender cómo se integra el pseudocódigo dentro de la resolución de problemas, consulte:
 
-* [Etapas de resolución](01-etapas_resolucion.md)
+* [Etapas de resolución](../Tema04_resolucion_problemas/1-etapas_resolucion.md)
 
 Para conocer una representación gráfica de los algoritmos, consulte:
 
-* [Diagramas de flujo](03-diagramas_flujo.md)
+* [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
 
 ---
 

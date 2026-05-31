@@ -354,12 +354,12 @@ El ciclo For se utiliza en:
 
 Para comprender la teoría general de ciclos consulte:
 
-* [Estructuras repetitivas](../04-repetitivas.md)
+* [Estructuras repetitivas](../4-repetitivas.md)
 
 Para conocer otros ciclos consulte:
 
-* [While](01-while.md)
-* [Do While](02-do_while.md)
+* [While](../repetitivas/1-while.md)
+* [Do While](../repetitivas/2-do_while.md)
 
 ---
 

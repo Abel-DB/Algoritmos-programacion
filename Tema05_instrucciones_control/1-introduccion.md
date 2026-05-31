@@ -193,10 +193,10 @@ Prácticamente cualquier programa utiliza instrucciones de control.
 
 Para comprender las herramientas utilizadas antes de programar consulte:
 
-* [Etapas de resolución](../Tema04_Resolucion_Problemas/01-etapas_resolucion.md)
-* [Pseudocódigo](../Tema04_Resolucion_Problemas/02-pseudocodigo.md)
-* [Diagramas de flujo](../Tema04_Resolucion_Problemas/03-diagramas_flujo.md)
-* [Pruebas de escritorio](../Tema04_Resolucion_Problemas/04-pruebas_escritorio.md)
+* [Etapas de resolución](../Tema04_resolucion_problemas/1-etapas_resolucion.md)
+* [Pseudocódigo](../Tema04_resolucion_problemas/2-pseudocodigo.md)
+* [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
+* [Pruebas de escritorio](../Tema04_resolucion_problemas/4-pruebas_escritorio.md)
 
 ---
 
