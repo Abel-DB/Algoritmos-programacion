@@ -90,7 +90,7 @@ int
 
 Para conocer las convenciones de nombres utilizadas en proyectos de C++, consulte:
 
-- [Convenciones de nombres](../Anexos/convenciones_nombres.md)
+- [Convenciones de nombres](../Anexos/convensiones_nombres.md)
 
 ---
 
