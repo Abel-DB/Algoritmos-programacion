@@ -240,7 +240,7 @@ Los operadores se utilizan en:
 
 Los operadores relacionales y lógicos serán utilizados ampliamente en:
 
-- [Instrucciones de control](../Tema04_Control/1-instrucciones_control.md)
+- [Instrucciones de control](../Tema05_instrucciones_control/)
 
 ---
 
