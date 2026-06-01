@@ -2,9 +2,9 @@
 
 ## Enunciado
 
-Solicitar la edad del usuario y calcular su año de nacimiento (considerando el año actual 2025).
+Solicitar la edad del usuario y calcular su año de nacimiento (considerando el año actual 2026).
 
-Luego, estimar cuántos años bisiestos han ocurrido desde su nacimiento hasta 2025.
+Luego, estimar cuántos años bisiestos han ocurrido desde su nacimiento hasta 2026.
 
 ---
 
@@ -23,7 +23,7 @@ Luego, estimar cuántos años bisiestos han ocurrido desde su nacimiento hasta 2
 1. Leer la edad del usuario.
 2. Calcular el año de nacimiento.
 3. Inicializar un contador de años bisiestos.
-4. Recorrer los años desde el año de nacimiento hasta 2025.
+4. Recorrer los años desde el año de nacimiento hasta 2026.
 5. Verificar si cada año es bisiesto.
 6. Incrementar el contador cuando corresponda.
 7. Mostrar los resultados.
@@ -60,7 +60,7 @@ O
 ## Secuencia Lógica
 
 1. Inicio.
-2. Definir `anio_actual = 2025`.
+2. Definir `anio_actual = 2026`.
 3. Inicializar `bisiestos = 0`.
 4. Solicitar la edad del usuario.
 5. Verificar que la edad sea válida.
@@ -79,7 +79,7 @@ O
 | Variable        | Tipo | Descripción                   |
 | --------------- | ---- | ----------------------------- |
 | edad            | int  | Edad ingresada por el usuario |
-| anio_actual     | int  | Año de referencia (2025)      |
+| anio_actual     | int  | Año de referencia (2026)      |
 | anio_nacimiento | int  | Año calculado de nacimiento   |
 | anio            | int  | Variable de control del ciclo |
 | bisiestos       | int  | Contador de años bisiestos    |
@@ -113,7 +113,7 @@ Permite verificar si un año es bisiesto.
 Ciclo repetitivo (for)
 ```
 
-Permite recorrer todos los años desde el nacimiento hasta 2025.
+Permite recorrer todos los años desde el nacimiento hasta 2026.
 
 ---
 
@@ -122,7 +122,7 @@ Permite recorrer todos los años desde el nacimiento hasta 2025.
 ### Año de Nacimiento
 
 ```text
-anio_nacimiento = 2025 - edad
+anio_nacimiento = 2026 - edad
 ```
 
 ### Año Bisiesto
@@ -146,7 +146,7 @@ INICIO
     Definir bisiestos Como Entero
     Definir anio Como Entero
 
-    anio_actual ← 2025
+    anio_actual ← 2026
     bisiestos ← 0
 
     Escribir "Ingrese su edad:"
@@ -188,7 +188,7 @@ flowchart TD
 
     D[anio_nacimiento = anio_actual - edad]
 
-    E[Recorrer años desde nacimiento hasta 2025]
+    E[Recorrer años desde nacimiento hasta 2026]
 
     F{"¿Año bisiesto?"}
 
@@ -225,18 +225,18 @@ flowchart TD
 
 | Edad | Año Actual | Año Nacimiento | Años Bisiestos |
 | ---- | ---------- | -------------- | -------------- |
-| 20   | 2025       | 2005           | 5              |
-| 30   | 2025       | 1995           | 8              |
-| 40   | 2025       | 1985           | 10             |
+| 20   | 2026       | 2006           | 5              |
+| 30   | 2026       | 1996           | 8              |
+| 40   | 2026       | 1986           | 10             |
 
 ### Verificación del primer caso
 
 ```text
 Edad = 20
 
-Año de nacimiento = 2025 - 20
+Año de nacimiento = 2026 - 20
 
-Año de nacimiento = 2005
+Año de nacimiento = 2006
 ```
 
 Años bisiestos:
@@ -272,7 +272,7 @@ int main() {
     int bisiestos;
     int anio;
 
-    anio_actual = 2025;
+    anio_actual = 2026;
     bisiestos = 0;
 
     cout << "Ingrese su edad: ";
