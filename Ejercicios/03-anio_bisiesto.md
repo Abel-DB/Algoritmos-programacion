@@ -182,7 +182,7 @@ flowchart TD
 
     A([Inicio])
 
-    B[anio_actual = 2025<br/>bisiestos = 0]
+    B[anio_actual = 2026<br/>bisiestos = 0]
 
     C[/Leer edad/]
 
