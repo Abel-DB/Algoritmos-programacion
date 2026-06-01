@@ -1,15 +1,14 @@
-# Ejercicio 02 - Consumo de Combustible de una Motocicleta
+# Ejercicio 02 - Consumo de una Motocicleta
 
 ## Enunciado
 
-Una motocicleta consume 5 litros de combustible por cada 100 kilómetros recorridos. Construir un algoritmo que permita ingresar los datos de una motocicleta y calcular el combustible consumido según la distancia recorrida.
+Registrar los datos de una motocicleta (construir una estructura):
 
-Datos de la motocicleta:
+* Nombre del conductor.
+* Kilómetros recorridos.
+* Litros consumidos.
 
-* Marca
-* Modelo
-* Año de fabricación
-* Kilómetros recorridos
+Mostrar el consumo de la motocicleta.
 
 ---
 
@@ -19,29 +18,28 @@ Datos de la motocicleta:
 
 | Dato       | Tipo   |
 | ---------- | ------ |
-| marca      | string |
-| modelo     | string |
-| anio       | int    |
-| kilometros | float  |
+| conductor  | string |
+| kilometros | double |
+| litros     | double |
 
 ---
 
 ## Proceso
 
-1. Leer los datos de la motocicleta.
-2. Leer los kilómetros recorridos.
-3. Calcular el combustible consumido.
-4. Mostrar los datos ingresados.
-5. Mostrar el combustible consumido.
+1. Registrar los datos de la motocicleta.
+2. Verificar que los litros consumidos sean mayores que cero.
+3. Calcular el consumo de combustible.
+4. Mostrar los resultados.
 
 ---
 
 ## Salidas
 
-| Salida                  |
-| ----------------------- |
-| Datos de la motocicleta |
-| Litros consumidos       |
+| Salida                                       |
+| -------------------------------------------- |
+| Datos de la motocicleta                      |
+| Consumo en km/L                              |
+| Mensaje de error si los litros son inválidos |
 
 ---
 
@@ -50,52 +48,75 @@ Datos de la motocicleta:
 ## Secuencia Lógica
 
 1. Inicio.
-2. Ingresar marca de la motocicleta.
-3. Ingresar modelo.
-4. Ingresar año de fabricación.
-5. Ingresar kilómetros recorridos.
-6. Calcular combustible consumido.
-7. Mostrar los datos de la motocicleta.
-8. Mostrar el combustible consumido.
+2. Crear la estructura `Motocicleta`.
+3. Solicitar el nombre del conductor.
+4. Solicitar los kilómetros recorridos.
+5. Solicitar los litros consumidos.
+6. Verificar si los litros consumidos son mayores que cero.
+7. Si la condición es verdadera:
+
+   * Calcular el consumo.
+   * Mostrar los datos de la motocicleta.
+   * Mostrar el consumo calculado.
+8. Si la condición es falsa:
+
+   * Mostrar mensaje de error.
 9. Fin.
 
 ---
 
 ## Variables Utilizadas
 
-| Variable    | Tipo   | Descripción              |
-| ----------- | ------ | ------------------------ |
-| marca       | string | Marca de la motocicleta  |
-| modelo      | string | Modelo de la motocicleta |
-| anio        | int    | Año de fabricación       |
-| kilometros  | float  | Distancia recorrida      |
-| combustible | float  | Litros consumidos        |
+| Variable | Tipo        | Descripción                          |
+| -------- | ----------- | ------------------------------------ |
+| moto     | Motocicleta | Almacena los datos de la motocicleta |
+| consumo  | double      | Consumo calculado en km/L            |
+
+---
+
+## Operadores Utilizados
+
+| Operador | Tipo       | Uso                      |
+| -------- | ---------- | ------------------------ |
+| /        | Aritmético | Calcular consumo         |
+| >        | Relacional | Verificar litros válidos |
+| =        | Asignación | Almacenar valores        |
 
 ---
 
 ## Estructura Utilizada
 
+```text
+Condicional (if - else)
+```
+
+Permite validar que los litros consumidos sean mayores que cero antes de realizar la división.
+
+---
+
+## Estructura de Datos Utilizada
+
 ```cpp
 struct Motocicleta
 ```
 
-Permite agrupar información relacionada en una sola variable.
+Permite agrupar los datos relacionados con una motocicleta.
 
 ---
 
 ## Fórmula Utilizada
 
-La motocicleta consume:
-
 ```text
-5 litros → 100 km
+consumo = kilometros / litros
 ```
 
-Por regla de tres:
+### Unidad de Medida
 
 ```text
-combustible = (kilometros * 5) / 100
+km/L
 ```
+
+Kilómetros recorridos por cada litro de combustible consumido.
 
 ---
 
@@ -104,17 +125,40 @@ combustible = (kilometros * 5) / 100
 ```text
 INICIO
 
-    Definir motocicleta
+    Estructura Motocicleta
 
-    Leer marca
-    Leer modelo
-    Leer año
-    Leer kilómetros
+        conductor : String
+        kilometros : Double
+        litros : Double
 
-    combustible ← (kilómetros * 5) / 100
+    FinEstructura
 
-    Mostrar datos de la motocicleta
-    Mostrar combustible consumido
+    Definir moto Como Motocicleta
+    Definir consumo Como Double
+
+    Escribir "Ingrese nombre del conductor:"
+    Leer moto.conductor
+
+    Escribir "Ingrese kilometros recorridos:"
+    Leer moto.kilometros
+
+    Escribir "Ingrese litros consumidos:"
+    Leer moto.litros
+
+    Si moto.litros > 0 Entonces
+
+        consumo ← moto.kilometros / moto.litros
+
+        Mostrar "Conductor: ", moto.conductor
+        Mostrar "Kilometros: ", moto.kilometros
+        Mostrar "Litros: ", moto.litros
+        Mostrar "Consumo: ", consumo, " km/L"
+
+    Sino
+
+        Mostrar "Error: litros no puede ser 0"
+
+    FinSi
 
 FIN
 ```
@@ -125,23 +169,20 @@ FIN
 
 ```mermaid
 flowchart TD
+
     A([Inicio])
 
-    B[Crear estructura motocicleta]
+    B[Crear estructura Motocicleta]
 
-    C[/Leer conductor<br>Leer kilómetros<br>Leer litros/]
+    C[/Ingresar conductor<br/>Ingresar kilómetros<br/>Ingresar litros/]
 
-    D{"¿Litros > 0?"}
+    D{"¿litros > 0?"}
 
-    E[Error: Los litros no pueden ser 0]
+    E[consumo = kilometros / litros]
 
-    F[Consumo = Kilómetros / Litros]
+    F[Mostrar conductor<br/>Mostrar kilómetros<br/>Mostrar litros<br/>Mostrar consumo]
 
-    G["Mostrar:
-    Conductor
-    Kilómetros
-    Litros consumidos
-    Consumo"]
+    G[Mostrar error:<br/>litros no puede ser 0]
 
     H([Fin])
 
@@ -149,11 +190,12 @@ flowchart TD
     B --> C
     C --> D
 
-    D -->|No| E
-    D -->|Sí| F
+    D -->|Sí| E
+    D -->|No| G
 
-    E --> H
-    F --> G
+    E --> F
+
+    F --> H
     G --> H
 ```
 
@@ -161,12 +203,11 @@ flowchart TD
 
 # Prueba de Escritorio
 
-| Kilómetros | Cálculo         | Combustible |
-| ---------- | --------------- | ----------- |
-| 100        | (100 × 5) / 100 | 5 L         |
-| 200        | (200 × 5) / 100 | 10 L        |
-| 350        | (350 × 5) / 100 | 17.5 L      |
-| 500        | (500 × 5) / 100 | 25 L        |
+| Conductor | Kilómetros | Litros | Fórmula  | Consumo               |
+| --------- | ---------- | ------ | -------- | --------------------- |
+| Carlos    | 240        | 12     | 240 / 12 | 20 km/L               |
+| María     | 180        | 6      | 180 / 6  | 30 km/L               |
+| José      | 100        | 0      | Error    | Litros no puede ser 0 |
 
 ---
 
@@ -180,42 +221,48 @@ using namespace std;
 
 struct Motocicleta {
 
-    string marca;
-    string modelo;
-    int anio;
-    float kilometros;
+    string conductor;
+    double kilometros;
+    double litros;
 
 };
 
 int main() {
 
     Motocicleta moto;
+    double consumo;
 
-    float combustible;
+    cout << "Ingrese nombre del conductor: ";
+    getline(cin, moto.conductor);
 
-    cout << "Marca: ";
-    cin >> moto.marca;
-
-    cout << "Modelo: ";
-    cin >> moto.modelo;
-
-    cout << "Año: ";
-    cin >> moto.anio;
-
-    cout << "Kilometros recorridos: ";
+    cout << "Ingrese kilometros recorridos: ";
     cin >> moto.kilometros;
 
-    combustible = (moto.kilometros * 5) / 100;
+    cout << "Ingrese litros consumidos: ";
+    cin >> moto.litros;
 
-    cout << "\n--- Datos de la motocicleta ---\n";
+    if (moto.litros > 0) {
 
-    cout << "Marca: " << moto.marca << endl;
-    cout << "Modelo: " << moto.modelo << endl;
-    cout << "Año: " << moto.anio << endl;
-    cout << "Kilometros: " << moto.kilometros << endl;
+        consumo = moto.kilometros / moto.litros;
 
-    cout << "Combustible consumido: "
-         << combustible << " litros" << endl;
+        cout << "\nConductor: "
+             << moto.conductor << endl;
+
+        cout << "Kilometros: "
+             << moto.kilometros << endl;
+
+        cout << "Litros: "
+             << moto.litros << endl;
+
+        cout << "Consumo: "
+             << consumo << " km/L" << endl;
+
+    } else {
+
+        cout << "Error: litros no puede ser 0"
+             << endl;
+
+    }
 
     return 0;
 }
@@ -226,49 +273,35 @@ int main() {
 # Ejemplo de Ejecución
 
 ```text
-Marca: Yamaha
-Modelo: FZ25
-Año: 2022
-Kilometros recorridos: 250
+Ingrese nombre del conductor: Carlos
 
---- Datos de la motocicleta ---
+Ingrese kilometros recorridos: 240
 
-Marca: Yamaha
-Modelo: FZ25
-Año: 2022
-Kilometros: 250
+Ingrese litros consumidos: 12
 
-Combustible consumido: 12.5 litros
+Conductor: Carlos
+Kilometros: 240
+Litros: 12
+Consumo: 20 km/L
 ```
 
 ---
 
 # Observaciones
 
-* Es un ejercicio secuencial, ya que no utiliza decisiones ni ciclos.
-* Introduce el uso de estructuras (`struct`).
-* Aplica una fórmula matemática simple mediante una regla de tres.
-* Permite agrupar varios datos relacionados en una sola entidad.
+* El ejercicio introduce el uso de estructuras (`struct`).
+* Se utiliza una validación para evitar divisiones entre cero.
+* El consumo se expresa en kilómetros por litro (km/L).
+* La solución utiliza una estructura condicional para validar los datos antes del cálculo.
 
 ---
 
 # Temas Relacionados
 
 * Variables y Tipos de Datos
-* Estructuras (`struct`)
 * Operadores Aritméticos
-* Entrada y Salida
+* Operadores Relacionales
+* Estructuras (`struct`)
+* Condicionales
 * Diagramas de Flujo
 * Pruebas de Escritorio
-
----
-
-# Resumen
-
-| Concepto               | Aplicación                    |
-| ---------------------- | ----------------------------- |
-| struct                 | Agrupar datos                 |
-| float                  | Kilómetros y combustible      |
-| string                 | Marca y modelo                |
-| Operadores aritméticos | Cálculo del consumo           |
-| Secuencial             | Flujo principal del algoritmo |
