@@ -254,28 +254,23 @@ int main() {
 
     for (int i = 0; i < 3; i++) {
 
-        cout << "Ingrese nota "
-             << i + 1 << ": ";
+        cout << "Ingrese nota " << i + 1 << ": ";
 
         cin >> nota[i];
 
     }
 
-    nota[3] =
-        (nota[0] + nota[1] + nota[2]) / 3;
+    nota[3] = (nota[0] + nota[1] + nota[2]) / 3;
 
-    if (nota[3] >= 0 &&
-        nota[3] <= 50) {
+    if (nota[3] >= 0 && nota[3] <= 50) {
 
         desempeno = "Deficiente";
 
-    } else if (nota[3] >= 51 &&
-               nota[3] <= 70) {
+    } else if (nota[3] >= 51 && nota[3] <= 70) {
 
         desempeno = "Regular";
 
-    } else if (nota[3] >= 71 &&
-               nota[3] <= 90) {
+    } else if (nota[3] >= 71 && nota[3] <= 90) {
 
         desempeno = "Notable";
 
@@ -293,11 +288,9 @@ int main() {
 
     }
 
-    cout << "\nPromedio: "
-         << nota[3] << endl;
+    cout << "\nPromedio: " << nota[3] << endl;
 
-    cout << "Desempeño: "
-         << desempeno << endl;
+    cout << "Desempeño: " << desempeno << endl;
 
     return 0;
 }

@@ -245,22 +245,17 @@ int main() {
 
         consumo = moto.kilometros / moto.litros;
 
-        cout << "\nConductor: "
-             << moto.conductor << endl;
+        cout << "\nConductor: " << moto.conductor << endl;
 
-        cout << "Kilometros: "
-             << moto.kilometros << endl;
+        cout << "Kilometros: " << moto.kilometros << endl;
 
-        cout << "Litros: "
-             << moto.litros << endl;
+        cout << "Litros: " << moto.litros << endl;
 
-        cout << "Consumo: "
-             << consumo << " km/L" << endl;
+        cout << "Consumo: " << consumo << " km/L" << endl;
 
     } else {
 
-        cout << "Error: litros no puede ser 0"
-             << endl;
+        cout << "Error: litros no puede ser 0" << endl;
 
     }
 

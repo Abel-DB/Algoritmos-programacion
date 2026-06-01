@@ -167,8 +167,7 @@ INICIO
 
     Mostrar "Año de nacimiento: ", anio_nacimiento
 
-    Mostrar "Cantidad de años bisiestos: ",
-            bisiestos
+    Mostrar "Cantidad de años bisiestos: ", bisiestos
 
 FIN
 ```
@@ -280,13 +279,9 @@ int main() {
 
     anio_nacimiento = anio_actual - edad;
 
-    for (anio = anio_nacimiento;
-         anio <= anio_actual;
-         anio++) {
+    for (anio = anio_nacimiento; anio <= anio_actual; anio++) {
 
-        if ((anio % 4 == 0 &&
-             anio % 100 != 0) ||
-             anio % 400 == 0) {
+        if ((anio % 4 == 0 && anio % 100 != 0) || anio % 400 == 0) {
 
             bisiestos++;
 
@@ -294,11 +289,9 @@ int main() {
 
     }
 
-    cout << "\nAño de nacimiento: "
-         << anio_nacimiento << endl;
+    cout << "\nAño de nacimiento: " << anio_nacimiento << endl;
 
-    cout << "Cantidad de años bisiestos: "
-         << bisiestos << endl;
+    cout << "Cantidad de años bisiestos: " << bisiestos << endl;
 
     return 0;
 }
