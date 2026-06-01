@@ -241,50 +241,53 @@ flowchart TD
 using namespace std;
 
 int main() {
+  int num1, num2, num3;
+  int mayor, menor, medio;
+  int vector[3];
 
-    int num1, num2, num3;
-    int mayor, menor, medio;
-    int vector[3];
+  cout << "Ingrese el primer numero: ";
+  cin >> num1;
 
-    cout << "Ingrese tres numeros: ";
-    cin >> num1 >> num2 >> num3;
+  cout << "Ingrese el segundo numero: ";
+  cin >> num2;
 
-    mayor = num1;
-    menor = num1;
+  cout << "Ingrese el tercer numero: ";
+  cin >> num3;
 
-    if (num2 > mayor)
-        mayor = num2;
+  mayor = num1;
+  menor = num1;
 
-    if (num3 > mayor)
-        mayor = num3;
+  if (num2 > mayor)
+    mayor = num2;
 
-    if (num2 < menor)
-        menor = num2;
+  if (num3 > mayor)
+    mayor = num3;
 
-    if (num3 < menor)
-        menor = num3;
+  if (num2 < menor)
+    menor = num2;
 
-    medio = (num1 + num2 + num3) - mayor - menor;
+  if (num3 < menor)
+    menor = num3;
 
-    vector[0] = menor;
-    vector[1] = medio;
-    vector[2] = mayor;
+  medio = (num1 + num2 + num3) - mayor - menor;
 
-    cout << "\nMayor: " << mayor << endl;
+  vector[0] = menor;
+  vector[1] = medio;
+  vector[2] = mayor;
 
-    cout << "Menor: " << menor << endl;
+  cout << "\nMayor: " << mayor << endl;
 
-    cout << "Vector ordenado: ";
+  cout << "Menor: " << menor << endl;
 
-    for (int i = 0; i < 3; i++) {
+  cout << "Vector ordenado: ";
 
-        cout << vector[i] << " ";
+  for (int i = 0; i < 3; i++) {
+    cout << vector[i] << " ";
+  }
 
-    }
+  cout << endl;
 
-    cout << endl;
-
-    return 0;
+  return 0;
 }
 ```
 
