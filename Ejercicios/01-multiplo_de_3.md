@@ -101,17 +101,11 @@ FIN
 
 ```mermaid
 flowchart TD
-
     A([Inicio])
-
     B[/Ingresar número/]
-
-    C{numero % 3 == 0}
-
-    D[Mostrar "Es múltiplo de 3"]
-
-    E[Mostrar "No es múltiplo de 3"]
-
+    C{"¿numero % 3 == 0?"}
+    D[Es múltiplo de 3]
+    E[No es múltiplo de 3]
     F([Fin])
 
     A --> B
