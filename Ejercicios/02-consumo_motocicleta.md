@@ -125,24 +125,36 @@ FIN
 
 ```mermaid
 flowchart TD
-
     A([Inicio])
 
-    B[/Leer marca, modelo, año y kilómetros/]
+    B[Crear estructura motocicleta]
 
-    C[combustible = (kilometros * 5) / 100]
+    C[/Leer conductor<br>Leer kilómetros<br>Leer litros/]
 
-    D[Mostrar datos]
+    D{"¿Litros > 0?"}
 
-    E[Mostrar combustible consumido]
+    E[Error: Los litros no pueden ser 0]
 
-    F([Fin])
+    F[Consumo = Kilómetros / Litros]
+
+    G["Mostrar:
+    Conductor
+    Kilómetros
+    Litros consumidos
+    Consumo"]
+
+    H([Fin])
 
     A --> B
     B --> C
     C --> D
-    D --> E
-    E --> F
+
+    D -->|No| E
+    D -->|Sí| F
+
+    E --> H
+    F --> G
+    G --> H
 ```
 
 ---
