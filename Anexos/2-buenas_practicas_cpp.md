@@ -53,7 +53,7 @@ float salario_mensual;
 void calcularPromedio();
 ```
 
-> Consulte: [Convenciones de nombres](01-convenciones_nombres.md)
+> Consulte: [Convenciones de nombres](../Anexos/1-convensiones_nombres.md)
 
 ---
 
@@ -191,7 +191,7 @@ Antes de considerar terminado un programa:
 * Probar casos límite.
 * Realizar pruebas de escritorio cuando sea necesario.
 
-> Consulte: [Pruebas de escritorio](../Tema04_Resolucion_Problemas/04-pruebas_escritorio.md)
+> Consulte: [Pruebas de escritorio](../Tema04_resolucion_problemas/4-pruebas_escritorio.md)
 
 ---
 
