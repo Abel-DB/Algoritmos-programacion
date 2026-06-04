@@ -234,7 +234,7 @@ promedio → 85.5
 
 Para conocer la convención utilizada para nombrar estructuras, consulte:
 
-* [Convenciones de nombres](../Anexos/convensiones_nombres.md)
+* [Convenciones de nombres](../herramientas/01-convensiones-nombres.md)
 
 Para comprender los tipos de datos utilizados dentro de una estructura, consulte:
 
