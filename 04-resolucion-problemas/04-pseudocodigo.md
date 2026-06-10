@@ -44,6 +44,36 @@ El pseudocódigo permite:
 
 ---
 
+# Relación con la resolución de problemas
+
+El pseudocódigo forma parte del proceso completo de resolución de problemas.
+
+Antes de escribir un pseudocódigo es necesario comprender el problema y diseñar una solución.
+
+## Flujo de trabajo
+
+```text
+Problema
+    ↓
+Análisis del problema
+    ↓
+Diseño de la solución
+    ↓
+Pseudocódigo
+    ↓
+Diagrama de flujo
+    ↓
+Prueba de escritorio
+    ↓
+Implementación
+    ↓
+Pruebas y corrección
+```
+
+El pseudocódigo no es la primera etapa de resolución. Antes de escribirlo se debe realizar el análisis del problema y el diseño de la solución.
+
+---
+
 # Estructura general
 
 ```text
@@ -55,6 +85,77 @@ Fin
 ```
 
 Todo algoritmo debe poseer un inicio y un final claramente definidos.
+
+---
+
+# Estructuras básicas del pseudocódigo
+
+Los algoritmos suelen construirse utilizando tres estructuras fundamentales.
+
+## 1. Estructura secuencial
+
+Las instrucciones se ejecutan una después de otra.
+
+### Ejemplo
+
+```text
+Inicio
+
+    Leer A
+    Leer B
+
+    Suma ← A + B
+
+    Escribir Suma
+
+Fin
+```
+
+---
+
+## 2. Estructura condicional
+
+Permite tomar decisiones según se cumpla o no una condición.
+
+### Ejemplo
+
+```text
+Inicio
+
+    Leer edad
+
+    Si edad >= 18 Entonces
+
+        Escribir "Mayor de edad"
+
+    Sino
+
+        Escribir "Menor de edad"
+
+    FinSi
+
+Fin
+```
+
+---
+
+## 3. Estructura repetitiva
+
+Permite ejecutar instrucciones varias veces.
+
+### Ejemplo
+
+```text
+Inicio
+
+    Para i ← 1 Hasta 10
+
+        Escribir i
+
+    FinPara
+
+Fin
+```
 
 ---
 
@@ -194,6 +295,27 @@ Para comprender cómo se integra el pseudocódigo dentro de la resolución de pr
 Para conocer una representación gráfica de los algoritmos, consulte:
 
 * [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
+
+---
+
+# Convenciones utilizadas
+
+Para mantener uniformidad en todos los algoritmos se utilizarán las siguientes convenciones.
+
+| Acción               | Sintaxis                 |
+| -------------------- | ------------------------ |
+| Inicio del algoritmo | Inicio                   |
+| Fin del algoritmo    | Fin                      |
+| Entrada de datos     | Leer                     |
+| Salida de datos      | Escribir                 |
+| Asignación           | ←                        |
+| Condicional          | Si ... Entonces          |
+| Alternativa          | Sino                     |
+| Fin de condicional   | FinSi                    |
+| Ciclo Para           | Para ... FinPara         |
+| Ciclo Mientras       | Mientras ... FinMientras |
+
+Estas convenciones serán utilizadas en todos los ejercicios desarrollados durante el curso.
 
 ---
 

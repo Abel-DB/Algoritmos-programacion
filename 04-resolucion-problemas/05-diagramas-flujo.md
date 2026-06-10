@@ -20,6 +20,41 @@ Los diagramas de flujo permiten:
 
 ---
 
+# Relación con la resolución de problemas
+
+Los diagramas de flujo forman parte del proceso completo de resolución de problemas.
+
+Su objetivo es representar gráficamente la lógica previamente definida durante el análisis y el diseño de la solución.
+
+## Flujo de trabajo
+
+```text
+Problema
+    ↓
+Análisis del problema
+    ↓
+Diseño de la solución
+    ↓
+Pseudocódigo
+    ↓
+Diagrama de flujo
+    ↓
+Prueba de escritorio
+    ↓
+Implementación
+    ↓
+Pruebas y corrección
+```
+
+Antes de elaborar un diagrama de flujo se recomienda:
+
+1. Analizar el problema.
+2. Diseñar la solución.
+3. Elaborar el pseudocódigo.
+4. Construir el diagrama de flujo.
+
+---
+
 # Elementos básicos
 
 Todo diagrama de flujo está compuesto por:
@@ -28,6 +63,20 @@ Todo diagrama de flujo está compuesto por:
 * Flechas.
 * Texto descriptivo.
 * Secuencia lógica.
+
+---
+
+# Estructuras representadas en diagramas de flujo
+
+Los diagramas de flujo permiten representar las tres estructuras fundamentales de los algoritmos.
+
+| Estructura | Descripción |
+| ---------- | ----------- |
+| Secuencial | Las instrucciones se ejecutan una después de otra. |
+| Condicional | Permite tomar decisiones según una condición. |
+| Repetitiva | Permite ejecutar acciones varias veces. |
+
+Estas estructuras constituyen la base de la mayoría de los algoritmos.
 
 ---
 
@@ -325,6 +374,21 @@ Para conocer la representación textual de los algoritmos, consulte:
 Para entender dónde se utilizan dentro del proceso de resolución de problemas, consulte:
 
 * [Etapas de resolución](../Tema04_resolucion_problemas/1-etapas_resolucion.md)
+
+---
+
+# Buenas prácticas
+
+Al elaborar diagramas de flujo se recomienda:
+
+* Mantener un flujo de arriba hacia abajo.
+* Utilizar nombres claros y descriptivos.
+* Evitar cruces innecesarios entre líneas.
+* Utilizar un único inicio y un único fin.
+* Mantener una distribución ordenada de los símbolos.
+* Verificar que todas las decisiones tengan salidas claramente identificadas.
+* Utilizar símbolos estandarizados.
+* Mantener la simplicidad y claridad del diagrama.
 
 ---
 

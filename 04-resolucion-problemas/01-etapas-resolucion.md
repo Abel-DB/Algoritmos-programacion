@@ -44,6 +44,16 @@ Es la etapa donde se estudia el problema para comprender exactamente qué se nec
 * ¿Qué resultados se esperan?
 * ¿Qué operaciones deben realizarse?
 
+### Estructura práctica del análisis
+
+Todo análisis debe identificar:
+
+| Elemento | Pregunta                                   |
+| -------- | ------------------------------------------ |
+| Entrada  | ¿Qué datos recibe el algoritmo?            |
+| Proceso  | ¿Qué operaciones o cálculos se realizarán? |
+| Salida   | ¿Qué resultado se mostrará?                |
+
 ### Ejemplo
 
 **Problema:** Calcular el área de un rectángulo.
@@ -60,14 +70,67 @@ Es la etapa donde se estudia el problema para comprender exactamente qué se nec
 
 Consiste en definir los pasos necesarios para resolver el problema.
 
+### Estructura práctica del diseño
+
+Todo diseño debe incluir:
+
+#### Secuencia lógica
+
+Describe los pasos necesarios para resolver el problema.
+
+#### Variables utilizadas
+
+Datos que almacenará el algoritmo.
+
+#### Operadores utilizados
+
+Operaciones matemáticas, relacionales o lógicas necesarias para resolver el problema.
+
+#### Estructuras utilizadas
+
+Permiten controlar el flujo del algoritmo.
+
+Ejemplos:
+
+* Condicionales (if, if-else)
+* Ciclos (for, while, do-while)
+
+#### Fórmulas utilizadas
+
+Expresiones matemáticas necesarias para obtener los resultados.
+
 ### Ejemplo
 
 Problema: Calcular el área de un rectángulo.
+
+#### Secuencia lógica
 
 1. Leer la base.
 2. Leer la altura.
 3. Calcular el área.
 4. Mostrar el resultado.
+
+#### Variables utilizadas
+
+| Variable | Tipo |
+| -------- | ---- |
+| base     | Real |
+| altura   | Real |
+| area     | Real |
+
+#### Operadores utilizados
+
+| Operador | Uso            |
+| -------- | -------------- |
+| *        | Multiplicación |
+
+#### Estructuras utilizadas
+
+Secuencial.
+
+#### Fórmulas utilizadas
+
+area = base × altura
 
 ---
 
@@ -133,7 +196,7 @@ Una vez implementado el programa, se realizan pruebas para verificar su funciona
 ```text
 Problema
     ↓
-Análisis
+Análisis del problema
     ↓
 Diseño de la solución
     ↓
@@ -145,6 +208,62 @@ Implementación
     ↓
 Pruebas y Corrección
 ```
+
+---
+
+# Plantilla para resolver ejercicios
+
+## ANÁLISIS DEL PROBLEMA
+
+### Entradas
+
+Datos que recibe el algoritmo.
+
+### Proceso
+
+Operaciones o cálculos que se realizarán.
+
+### Salidas
+
+Resultados que mostrará el algoritmo.
+
+---
+
+## DISEÑO DE LA SOLUCIÓN
+
+### Secuencia lógica
+
+Pasos necesarios para resolver el problema.
+
+### Variables utilizadas
+
+Variables necesarias para almacenar datos.
+
+### Operadores utilizados
+
+Operadores aritméticos, relacionales o lógicos.
+
+### Estructuras utilizadas
+
+Condicionales y ciclos requeridos.
+
+### Fórmulas utilizadas
+
+Expresiones matemáticas utilizadas.
+
+---
+
+## REPRESENTACIÓN
+
+### Pseudocódigo
+
+### Diagrama de flujo
+
+---
+
+## PRUEBA DE ESCRITORIO
+
+Verificación manual del algoritmo utilizando datos de prueba.
 
 ---
 
@@ -170,30 +289,6 @@ Pruebas y Corrección
 
 ---
 
-# Información complementaria
-
-Para profundizar en cada etapa consulte:
-
-* [Pseudocódigo](../Tema04_resolucion_problemas/2-pseudocodigo.md)
-* [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
-* [Pruebas de escritorio](../Tema04_resolucion_problemas/4-pruebas_escritorio.md)
-* [Algoritmos](../Tema01_fundamentos/1-algoritmos.md)
-
----
-
 # Conclusión
 
 La resolución de problemas constituye la base del desarrollo de software. Seguir un proceso estructurado permite comprender el problema, diseñar soluciones adecuadas y reducir errores durante la implementación.
-
----
-
-# Resumen
-
-| Concepto             | Idea principal                     |
-| -------------------- | ---------------------------------- |
-| Análisis             | Comprender el problema.            |
-| Diseño               | Definir los pasos de solución.     |
-| Representación       | Utilizar pseudocódigo o diagramas. |
-| Prueba de escritorio | Verificar la lógica del algoritmo. |
-| Implementación       | Traducir la solución a código.     |
-| Pruebas              | Validar y corregir errores.        |

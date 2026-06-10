@@ -20,6 +20,34 @@ Las pruebas de escritorio permiten:
 
 ---
 
+# Relación con la resolución de problemas
+
+La prueba de escritorio forma parte del proceso de validación de una solución antes de su implementación.
+
+Permite verificar que el análisis del problema, el diseño de la solución, el pseudocódigo y el diagrama de flujo producen los resultados esperados.
+
+## Flujo de trabajo
+
+```text
+Problema
+    ↓
+Análisis del problema
+    ↓
+Diseño de la solución
+    ↓
+Pseudocódigo
+    ↓
+Diagrama de flujo
+    ↓
+Prueba de escritorio
+    ↓
+Implementación
+    ↓
+Pruebas y corrección
+```
+
+---
+
 # Objetivo
 
 El objetivo principal es responder la pregunta:
@@ -211,6 +239,19 @@ Para conocer la representación textual de algoritmos consulte:
 Para conocer la representación gráfica de algoritmos consulte:
 
 * [Diagramas de flujo](../Tema04_resolucion_problemas/3-diagramas_flujo.md)
+
+---
+
+# Buenas prácticas
+
+Al realizar pruebas de escritorio se recomienda:
+
+* Probar casos simples antes de utilizar casos complejos.
+* Utilizar valores que permitan verificar todas las condiciones del algoritmo.
+* Registrar todos los cambios de las variables.
+* Revisar paso a paso cada instrucción.
+* Verificar que las salidas coincidan con los resultados esperados.
+* Realizar varias pruebas con diferentes datos de entrada.
 
 ---
 
