@@ -79,7 +79,7 @@ El número 28 no es primo
 | -------- | -------- | ------------------------------- |
 | n        | Entero   | Número ingresado por el usuario |
 | divisor  | Entero   | Posible divisor del número      |
-| esPrimo  | Booleano | Indica si el número es primo    |
+| es_primo  | Booleano | Indica si el número es primo    |
 
 ---
 
@@ -121,27 +121,27 @@ n % divisor == 0
 INICIO
 
     Definir n, divisor Como Entero
-    Definir esPrimo Como Booleano
+    Definir es_primo Como Booleano
 
-    esPrimo = Verdadero
+    es_primo = True
 
     Escribir "Ingrese un numero entero:"
     Leer n
 
     If (n <= 1) Then
-        esPrimo = Falso
+        esPrimo = False
     End If
 
     For (divisor = 2; divisor < n; divisor++)
 
         If (n % divisor == 0) Then
-            esPrimo = Falso
+            es_primo = False
             Break
         End If
 
     End For
 
-    If (esPrimo) Then
+    If (es_primo) Then
         Mostrar "El numero ", n, " es primo"
     Else
         Mostrar "El numero ", n, " no es primo"
@@ -159,23 +159,26 @@ FIN
 ### Datos de entrada
 
 ```text
-n = 29
+n = 7
 ```
 
 ### Seguimiento
 
-| divisor | 29 % divisor | esPrimo   |
-| ------- | ------------ | --------- |
-| 2       | 1            | Verdadero |
-| 3       | 2            | Verdadero |
-| 4       | 1            | Verdadero |
-| ...     | ...          | Verdadero |
-| 28      | 1            | Verdadero |
+| Paso          | divisor | n | n % divisor | es_primo  |
+| ------------- | ------- | - | ----------- | --------- |
+| Inicial       | -       | 7 | -           | True      |
+| n <= 1 ?      | -       | 7 | -           | True      |
+| Iteración 1   | 2       | 7 | 1           | True      |
+| Iteración 2   | 3       | 7 | 1           | True      |
+| Iteración 3   | 4       | 7 | 3           | True      |
+| Iteración 4   | 5       | 7 | 2           | True      |
+| Iteración 5   | 6       | 7 | 1           | True      |
+| Fin del ciclo | -       | 7 | -           | True      |
 
 ### Resultado
 
 ```text
-El numero 29 es primo
+El numero 7 es primo
 ```
 
 ---
@@ -185,19 +188,22 @@ El numero 29 es primo
 ### Datos de entrada
 
 ```text
-n = 28
+n = 8
 ```
 
 ### Seguimiento
 
-| divisor | 28 % divisor | esPrimo |
-| ------- | ------------ | ------- |
-| 2       | 0            | Falso   |
+| Paso        | divisor | n | n % divisor | es_primo  |
+| ----------- | ------- | - | ----------- | --------- |
+| Inicial     | -       | 8 | -           | True      |
+| n <= 1 ?    | -       | 8 | -           | True      |
+| Iteración 1 | 2       | 8 | 0           | False     |
+| Break       | -       | 8 | -           | False     |
 
 ### Resultado
 
 ```text
-El numero 28 no es primo
+El numero 8 no es primo
 ```
 
 ---
@@ -212,9 +218,13 @@ n = 1
 
 ### Seguimiento
 
-| Paso   | esPrimo |
-| ------ | ------- |
-| n <= 1 | Falso   |
+
+| Paso              | divisor | n | es_primo  |
+| ----------------- | ------- | - | --------- |
+| Inicial           | -       | 1 | True      |
+| n <= 1            | -       | 1 | False     |
+| No entra al ciclo | -       | 1 | False     |
+
 
 ### Resultado
 
@@ -232,9 +242,9 @@ using namespace std;
 int main() {
     int n;
     int divisor;
-    bool esPrimo;
+    bool es_primo;
 
-    esPrimo = true;
+    es_primo = true;
 
     cout << "Ingrese un numero entero: ";
     cin >> n;
@@ -250,7 +260,7 @@ int main() {
         }
     }
 
-    if (esPrimo) {
+    if (es_primo) {
         cout << "El numero " << n << " es primo";
     } else {
         cout << "El numero " << n << " no es primo";

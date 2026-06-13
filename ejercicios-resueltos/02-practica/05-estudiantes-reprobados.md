@@ -148,7 +148,7 @@ INICIO
     aprobados = 0
     reprobados = 0
 
-    For i = 0; i < n; i++
+    For (i = 0; i < n; i++)
 
         Escribir "Ingrese la nota ", i + 1
         Leer aux
@@ -157,9 +157,9 @@ INICIO
 
     EndFor
 
-    For i = 0; i < n; i++
+    For (i = 0; i < n; i++)
 
-        If notas[i] >= 51
+        If (notas[i] >= 51) Then
 
             aprobados += 1
 
@@ -192,30 +192,47 @@ n = 5
 Notas:
 
 ```text
-45
-51
-89
-45
+80
+40
+60
 30
+90
 ```
 
-### Seguimiento
+### Primer FOR (guardar notas)
 
-| i       | nota | aprobados | reprobados |
-| ------- | ---- | --------- | ---------- |
-| Inicial | -    | 0         | 0          |
-| 0       | 45   | 0         | 1          |
-| 1       | 51   | 1         | 1          |
-| 2       | 89   | 2         | 1          |
-| 3       | 45   | 2         | 2          |
-| 4       | 30   | 2         | 3          |
+| n | i | aux | notas[]          |
+| - | - | --- | ---------------- |
+| 5 | 0 | 80  | [80]             |
+| 5 | 1 | 40  | [80,40]          |
+| 5 | 2 | 60  | [80,40,60]       |
+| 5 | 3 | 30  | [80,40,60,30]    |
+| 5 | 4 | 90  | [80,40,60,30,90] |
+
+> Al terminar: 
+
+```text
+aprobados = 0
+reprobados = 0
+notas = [80,40,60,30,90]
+```
+
+### Segundo FOR (contar aprobados y reprobados)
+
+| i | notas[i] | ¿nota >= 51? | aprobados | reprobados |
+| - | -------- | ------------ | --------- | ---------- |
+| 0 | 80       | Sí           | 1         | 0          |
+| 1 | 40       | No           | 1         | 1          |
+| 2 | 60       | Sí           | 2         | 1          |
+| 3 | 30       | No           | 2         | 2          |
+| 4 | 90       | Sí           | 3         | 2          |
 
 ### Resultado
 
 ```text
-El numero de estudiantes aprobados es: 2
+El numero de estudiantes aprobados es: 3
 
-El numero de estudiantes reprobados es: 3
+El numero de estudiantes reprobados es: 2
 ```
 
 ---
@@ -253,11 +270,9 @@ int main() {
         }
     }
 
-    cout << "El numero de estudiantes aprobados es: "
-         << aprobados << endl;
+    cout << "El numero de estudiantes aprobados es: " << aprobados << endl;
 
-    cout << "El numero de estudiantes reprobados es: "
-         << reprobados << endl;
+    cout << "El numero de estudiantes reprobados es: " << reprobados << endl;
 
     return 0;
 }

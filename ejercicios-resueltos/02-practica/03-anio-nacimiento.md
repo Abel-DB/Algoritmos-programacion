@@ -134,21 +134,21 @@ INICIO
 
     anio_nacimiento = anio_actual - edad
 
-    Para anio = anio_nacimiento Hasta anio_actual
+    for (anio = anio_nacimiento; anio <= anio_actual; anio++)
 
-        Si anio == anio_nacimiento Entonces
+        if (anio == anio_nacimiento) Then
 
             Mostrar "Anio ", anio, ": Nacio"
 
-        Sino
+        else
 
             cumplidos = anio - anio_nacimiento
 
             Mostrar "Anio ", anio, ": Cumplio ", cumplidos, " anios"
 
-        FinSi
+        EndIf
 
-    FinPara
+    EndFor
 
 FIN
 ```
@@ -162,7 +162,7 @@ FIN
 ### Datos de entrada
 
 ```text
-edad = 4
+edad = 7
 ```
 
 ### Cálculos
@@ -177,22 +177,28 @@ anio_nacimiento = 2022
 
 ### Seguimiento
 
-| Anio | Cumplidos | Salida                     |
-| ---- | --------- | -------------------------- |
-| 2022 | -         | Anio 2022: Nacio           |
-| 2023 | 1         | Anio 2023: Cumplio 1 anio  |
-| 2024 | 2         | Anio 2024: Cumplio 2 anios |
-| 2025 | 3         | Anio 2025: Cumplio 3 anios |
-| 2026 | 4         | Anio 2026: Cumplio 4 anios |
+| edad | anio_actual | anio_nacimiento | anio | cumplidos | Salida                   |
+| ---- | ----------- | --------------- | ---- | --------- | ------------------------ |
+| 7    | 2026        | 2019            | 2019 | -         | Año 2019: Nació          |
+| 7    | 2026        | 2019            | 2020 | 1         | Año 2020: Cumplió 1 año  |
+| 7    | 2026        | 2019            | 2021 | 2         | Año 2021: Cumplió 2 años |
+| 7    | 2026        | 2019            | 2022 | 3         | Año 2022: Cumplió 3 años |
+| 7    | 2026        | 2019            | 2023 | 4         | Año 2023: Cumplió 4 años |
+| 7    | 2026        | 2019            | 2024 | 5         | Año 2024: Cumplió 5 años |
+| 7    | 2026        | 2019            | 2025 | 6         | Año 2025: Cumplió 6 años |
+| 7    | 2026        | 2019            | 2026 | 7         | Año 2026: Cumplió 7 años |
 
 ### Resultado
 
 ```text
-Anio 2022: Nacio
-Anio 2023: Cumplio 1 anio
-Anio 2024: Cumplio 2 anios
-Anio 2025: Cumplio 3 anios
-Anio 2026: Cumplio 4 anios
+Año 2019: Nació
+Año 2020: Cumplió 1 año
+Año 2021: Cumplió 2 años
+Año 2022: Cumplió 3 años
+Año 2023: Cumplió 4 años
+Año 2024: Cumplió 5 años
+Año 2025: Cumplió 6 años
+Año 2026: Cumplió 7 años
 ```
 
 ---
@@ -224,8 +230,7 @@ int main() {
 
             cumplidos = anio - anio_nacimiento;
 
-            cout << "Anio " << anio << ": Cumplio "
-                 << cumplidos << " anios" << endl;
+            cout << "Anio " << anio << ": Cumplio " << cumplidos << " anios" << endl;
         }
     }
 

@@ -138,7 +138,7 @@ INICIO
 
     suma = 0
 
-    For i = 0; i < n; i++
+    For (i = 0; i < n; i++)
 
         Escribir "Ingrese la nota ", i + 1
         Leer aux
@@ -147,7 +147,7 @@ INICIO
 
     EndFor
 
-    For i = 0; i < n; i++
+    For (i = 0; i < n; i++)
 
         suma += notas[i]
 
@@ -175,37 +175,54 @@ n = 5
 Notas:
 
 ```text
-66
-47
-55
-65
-98
+80
+70
+90
+60
+100
 ```
 
-### Seguimiento
+### Primer FOR (guardar las notas)
 
-| i | aux | suma |
-| - | --- | ---- |
-| 0 | 66  | 66   |
-| 1 | 47  | 113  |
-| 2 | 55  | 168  |
-| 3 | 65  | 233  |
-| 4 | 98  | 331  |
+| n | i | aux | notas[]           |
+| - | - | --- | ----------------- |
+| 5 | 0 | 80  | [80]              |
+| 5 | 1 | 70  | [80,70]           |
+| 5 | 2 | 90  | [80,70,90]        |
+| 5 | 3 | 60  | [80,70,90,60]     |
+| 5 | 4 | 100 | [80,70,90,60,100] |
+
+> Al terminar:
+
+```text
+suma = 0
+notas = [80,70,90,60,100]
+```
+
+### Segundo FOR (sumar las notas)
+
+| i | notas[i] | suma |
+| - | -------- | ---- |
+| 0 | 80       | 80   |
+| 1 | 70       | 150  |
+| 2 | 90       | 240  |
+| 3 | 60       | 300  |
+| 4 | 100      | 400  |
 
 ### Cálculo del promedio
 
 ```text
 promedio = suma / n
 
-promedio = 331 / 5
+promedio = 400 / 5
 
-promedio = 66.2
+promedio = 80
 ```
 
 ### Resultado
 
 ```text
-El promedio es: 66.2
+El promedio es: 80
 ```
 
 ---

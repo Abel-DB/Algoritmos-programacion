@@ -145,7 +145,7 @@ INICIO
 
     invertido = 0
 
-    While num > 0
+    While (num > 0)
 
         digito = num % 10
 
@@ -155,15 +155,15 @@ INICIO
 
     EndWhile
 
-    Escribir "El numero invertido es: ", invertido
+    Mostrar "El numero invertido es: ", invertido
 
-    If aux == invertido
+    If (aux == invertido) Then
 
-        Escribir "El numero es capicua"
+        Mostrar "El numero es capicua"
 
     Else
 
-        Escribir "El numero no es capicua"
+        Mostrar "El numero no es capicua"
 
     EndIf
 
@@ -182,19 +182,27 @@ FIN
 num = 123
 ```
 
+### Valores iniciales
+
+```text
+aux = num
+aux = 123
+invertido = 0
+```
+
 ### Seguimiento
 
-| Vuelta  | num | digito | invertido |
-| ------- | --- | ------ | --------- |
-| Inicial | 123 | -      | 0         |
-| 1       | 12  | 3      | 3         |
-| 2       | 1   | 2      | 32        |
-| 3       | 0   | 1      | 321       |
+| Vuelta | num | digito = num % 10 | invertido = invertido * 10 + digito | num = num / 10 |
+| ------ | --- | ----------------- | ----------------------------------- | -------------- |
+| 1      | 123 | 3                 | 3                                   | 12             |
+| 2      | 12  | 2                 | 32                                  | 1              |
+| 3      | 1   | 1                 | 321                                 | 0              |
 
 ### Comparación
 
 ```text
-123 == 321
+aux == invertido
+123 == 321 = False
 ```
 
 Resultado:
@@ -220,19 +228,27 @@ El numero no es capicua
 num = 121
 ```
 
+### Valores iniciales
+
+```text
+aux = num
+aux = 121
+invertido = 0
+```
+
 ### Seguimiento
 
-| Vuelta  | num | digito | invertido |
-| ------- | --- | ------ | --------- |
-| Inicial | 121 | -      | 0         |
-| 1       | 12  | 1      | 1         |
-| 2       | 1   | 2      | 12        |
-| 3       | 0   | 1      | 121       |
+| Vuelta | num | digito = num % 10 | invertido = invertido * 10 + digito | num = num / 10 |
+| ------ | --- | ----------------- | ----------------------------------- | -------------- |
+| 1      | 121 | 1                 | 1                                   | 12             |
+| 2      | 12  | 2                 | 12                                  | 1              |
+| 3      | 1   | 1                 | 121                                 | 0              |
 
 ### Comparación
 
 ```text
-121 == 121
+aux == invertido
+121 == 121 = True
 ```
 
 Resultado:

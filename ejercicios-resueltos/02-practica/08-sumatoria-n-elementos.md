@@ -132,11 +132,11 @@ INICIO
 
     suma = 0
 
-    For i = 1; i <= n; i++
+    For (i = 1; i <= n; i++)
 
         aux = 1
 
-        For j = 1; j <= i; j++
+        For (j = 1; j <= i; j++)
 
             aux = aux * i
 
@@ -165,41 +165,41 @@ n = 3
 
 ### Seguimiento
 
-| i | aux (i^i) | suma |
-| - | --------- | ---- |
-| 1 | 1         | 1    |
-| 2 | 4         | 5    |
-| 3 | 27        | 32   |
+| i | j   | aux | suma |
+| - | --- | --- | ---- |
+| 1 | 1   | 1   | 0    |
+| 1 | Fin | 1   | 1    |
+| 2 | 1   | 2   | 1    |
+| 2 | 2   | 4   | 1    |
+| 2 | Fin | 4   | 5    |
+| 3 | 1   | 3   | 5    |
+| 3 | 2   | 9   | 5    |
+| 3 | 3   | 27  | 5    |
+| 3 | Fin | 27  | 32   |
+
+> Como leerla:
+
+```text
+i = 1
+- j se ejecuta 1 vez.
+- aux queda en 1.
+- suma pasa de 0 a 1.
+
+i = 2
+- j se ejecuta 2 veces.
+- aux pasa por 2 y luego 4.
+- suma pasa de 1 a 5.
+
+i = 3
+- j se ejecuta 3 veces.
+- aux pasa por 3, 9 y 27.
+- suma pasa de 5 a 32.
+```
 
 ### Resultado
 
 ```text
 Σ = 32
-```
-
----
-
-## Caso 2
-
-### Datos de entrada
-
-```text
-n = 4
-```
-
-### Seguimiento
-
-| i | aux (i^i) | suma |
-| - | --------- | ---- |
-| 1 | 1         | 1    |
-| 2 | 4         | 5    |
-| 3 | 27        | 32   |
-| 4 | 256       | 288  |
-
-### Resultado
-
-```text
-Σ = 288
 ```
 
 ---

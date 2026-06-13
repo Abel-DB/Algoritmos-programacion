@@ -1,4 +1,4 @@
-# Calcular y mostrar los factores primos de un número
+# Factores Primos de un Número
 
 ## Enunciado
 
@@ -34,15 +34,25 @@ Porque:
 | ---- | ------ |
 | n    | Entero |
 
+---
+
 ## Proceso
 
 1. Solicitar un número entero.
 2. Leer el valor de n.
-3. Buscar los divisores primos de n.
-4. Almacenar cada factor primo en un arreglo.
-5. Dividir el número por el factor encontrado.
-6. Repetir el proceso hasta que el número sea 1.
-7. Mostrar los factores primos almacenados.
+3. Crear un arreglo para almacenar los factores primos.
+4. Inicializar el divisor en 2.
+5. Inicializar el índice del arreglo en 0.
+6. Verificar si el divisor divide exactamente al número.
+7. Si divide exactamente, almacenar el divisor como factor primo.
+8. Dividir el número por el divisor.
+9. Si no divide exactamente, incrementar el divisor.
+10. Continuar el proceso hasta que el número sea 1.
+11. Recorrer el arreglo de factores primos.
+12. Mostrar los factores almacenados.
+13. Finalizar el algoritmo.
+
+---
 
 ## Salidas
 
@@ -52,60 +62,44 @@ Porque:
 
 ---
 
-# Diseño de la Solución
+# Variables Utilizadas
 
-## Secuencia lógica
-
-1. Solicitar un número entero.
-2. Leer el valor de n.
-3. Crear un arreglo para almacenar los factores primos.
-4. Inicializar el divisor en 2.
-5. Verificar si el divisor divide exactamente al número.
-6. Si divide exactamente, almacenar el divisor como factor primo.
-7. Dividir el número por el divisor.
-8. Repetir mientras el número siga siendo divisible.
-9. Incrementar el divisor cuando ya no sea divisor exacto.
-10. Continuar hasta que el número sea 1.
-11. Mostrar los factores primos almacenados.
-12. Finalizar el algoritmo.
+| Variable   | Tipo   | Descripción                    |
+| ---------- | ------ | ------------------------------ |
+| n          | Entero | Número ingresado               |
+| divisor    | Entero | Posible factor primo           |
+| i          | Entero | Índice del arreglo             |
+| j          | Entero | Índice para mostrar el arreglo |
+| factores[] | Array  | Almacena los factores primos   |
 
 ---
 
-## Variables utilizadas
+# Operadores Utilizados
 
-| Variable   | Tipo    | Descripción                  |
-| ---------- | ------- | ---------------------------- |
-| n          | Entero  | Número ingresado             |
-| divisor    | Entero  | Posible factor primo         |
-| i          | Entero  | Índice del arreglo           |
-| factores[] | Arreglo | Almacena los factores primos |
-
----
-
-## Operadores utilizados
-
-| Operador | Tipo       | Uso                      |
-| -------- | ---------- | ------------------------ |
-| =        | Asignación | Asignar valores          |
-| %        | Aritmético | Verificar divisibilidad  |
-| /        | Aritmético | Reducir el número        |
-| ==       | Relacional | Comparar divisibilidad   |
-| !=       | Relacional | Controlar ciclos         |
-| ++       | Incremento | Avanzar divisor e índice |
+| Operador | Tipo       | Uso                       |
+| -------- | ---------- | ------------------------- |
+| =        | Asignación | Asignar valores           |
+| %        | Aritmético | Verificar divisibilidad   |
+| /        | Aritmético | Reducir el número         |
+| ==       | Relacional | Comparar divisibilidad    |
+| !=       | Relacional | Controlar el while        |
+| <        | Relacional | Controlar el for          |
+| ++       | Incremento | Avanzar índices y divisor |
 
 ---
 
-## Estructuras utilizadas
+# Estructuras Utilizadas
 
-| Estructura         | Uso                          |
-| ------------------ | ---------------------------- |
-| Secuencial         | Leer datos y asignar valores |
-| Condicional (if)   | Verificar divisibilidad      |
-| Repetitiva (while) | Buscar factores primos       |
+| Estructura         | Uso                              |
+| ------------------ | -------------------------------- |
+| Secuencial         | Lectura y asignaciones           |
+| Condicional (if)   | Verificar divisibilidad          |
+| Repetitiva (while) | Buscar factores primos           |
+| Repetitiva (for)   | Mostrar los factores almacenados |
 
 ---
 
-## Fórmulas utilizadas
+# Fórmulas Utilizadas
 
 ### Verificación de divisibilidad
 
@@ -126,7 +120,7 @@ n = n / divisor
 ```text
 INICIO
 
-    Definir n, divisor, i Como Entero
+    Definir n, divisor, i, j Como Entero
     Definir factores[] Como Array
 
     Escribir "Ingrese un numero: "
@@ -135,9 +129,9 @@ INICIO
     divisor = 2
     i = 0
 
-    While n != 1
+    While (n != 1)
 
-        If n % divisor == 0
+        If (n % divisor == 0) Then
 
             factores[i] = divisor
 
@@ -153,11 +147,11 @@ INICIO
 
     EndWhile
 
-    Escribir "Factores primos: "
+    Mostrar "Factores primos: "
 
-    For i = 0; i < cantidadFactores; i++
+    For (j = 0; j < i; j++)
 
-        Mostrar factores[i]
+        Mostrar factores[j]
 
     EndFor
 
@@ -173,28 +167,30 @@ FIN
 ### Datos de entrada
 
 ```text
-n = 28
+n = 12
 ```
 
 ### Seguimiento
 
-| n  | divisor | factor almacenado |
-| -- | ------- | ----------------- |
-| 28 | 2       | 2                 |
-| 14 | 2       | 2                 |
-| 7  | 7       | 7                 |
-| 1  | -       | Fin               |
+| Vuelta | n  | divisor | n % divisor | factores[i] | i | Acción           |
+| ------ | -- | ------- | ----------- | ----------- | - | ---------------- |
+| 1      | 12 | 2       | 0           | 2           | 1 | Guarda 2 y n = 6 |
+| 2      | 6  | 2       | 0           | 2           | 2 | Guarda 2 y n = 3 |
+| 3      | 3  | 2       | 1           | -           | 2 | divisor = 3      |
+| 4      | 3  | 3       | 0           | 3           | 3 | Guarda 3 y n = 1 |
 
-### Arreglo
+> Al finalizar:
 
 ```text
-factores = [2, 2, 7]
+factores = [2, 2, 3]
+i = 3
+n = 1
 ```
 
 ### Resultado
 
 ```text
-2, 2, 7
+2, 2, 3
 ```
 
 ---
@@ -204,29 +200,30 @@ factores = [2, 2, 7]
 ### Datos de entrada
 
 ```text
-n = 60
+n = 18
 ```
 
 ### Seguimiento
 
-| n  | divisor | factor almacenado |
-| -- | ------- | ----------------- |
-| 60 | 2       | 2                 |
-| 30 | 2       | 2                 |
-| 15 | 3       | 3                 |
-| 5  | 5       | 5                 |
-| 1  | -       | Fin               |
+| Vuelta | n  | divisor | n % divisor | factores[i] | i | Acción           |
+| ------ | -- | ------- | ----------- | ----------- | - | ---------------- |
+| 1      | 18 | 2       | 0           | 2           | 1 | Guarda 2 y n = 9 |
+| 2      | 9  | 2       | 1           | -           | 1 | divisor = 3      |
+| 3      | 9  | 3       | 0           | 3           | 2 | Guarda 3 y n = 3 |
+| 4      | 3  | 3       | 0           | 3           | 3 | Guarda 3 y n = 1 |
 
-### Arreglo
+> Al finalizar:
 
 ```text
-factores = [2, 2, 3, 5]
+factores = [2, 3, 3]
+i = 3
+n = 1
 ```
 
 ### Resultado
 
 ```text
-2, 2, 3, 5
+2, 3, 3
 ```
 
 ---
@@ -239,12 +236,12 @@ factores = [2, 2, 3, 5]
 using namespace std;
 
 int main() {
-    int n, divisor, i;
+    int n, divisor, i, j;
 
     cout << "Ingrese un numero: ";
     cin >> n;
 
-    int factores[100];
+    int factores[n];
 
     divisor = 2;
     i = 0;
@@ -266,8 +263,8 @@ int main() {
 
     cout << "Factores primos: ";
 
-    for (int j = 0; j < i; j++) {
-        cout << factores[j] << " ";
+    for (j = 0; j < i; j++) {
+        cout << factores[j] << ", ";
     }
 
     cout << endl;

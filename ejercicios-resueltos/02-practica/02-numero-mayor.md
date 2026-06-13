@@ -139,7 +139,7 @@ INICIO
     Escribir "Ingrese la cantidad de numeros:"
     Leer n
 
-    For i = 0; i < n; i++
+    For (i = 0; i < n; i++)
 
         Escribir "Ingrese el numero ", i + 1
         Leer aux
@@ -150,9 +150,9 @@ INICIO
 
     mayor = numeros[0]
 
-    For i = 1; i < n; i++
+    For (i = 1; i < n; i++)
 
-        If numeros[i] > mayor Then
+        If (numeros[i] > mayor) Then
 
             mayor = numeros[i]
 
@@ -169,8 +169,6 @@ FIN
 
 # Prueba de Escritorio
 
-## Caso 1
-
 ### Datos de entrada
 
 ```text
@@ -180,56 +178,39 @@ n = 5
 Números ingresados:
 
 ```text
-[4, 8, 9, 1, 13]
+[8, 3, 12, 7, 5]
 ```
 
-### Seguimiento
+### Primer FOR (carga de datos)
 
-| i       | numeros[i] | mayor |
-| ------- | ---------- | ----- |
-| Inicial | 4          | 4     |
-| 1       | 8          | 8     |
-| 2       | 9          | 9     |
-| 3       | 1          | 9     |
-| 4       | 13         | 13    |
+| n | i | aux | numeros[]    |
+| - | - | --- | ------------ |
+| 5 | 0 | 8   | [8]          |
+| 5 | 1 | 3   | [8,3]        |
+| 5 | 2 | 12  | [8,3,12]     |
+| 5 | 3 | 7   | [8,3,12,7]   |
+| 5 | 4 | 5   | [8,3,12,7,5] |
+
+> Luego: 
+
+```text
+mayor = numeros[0] = 8
+```
+
+### Segundo FOR (busqueda del mayor)
+
+| n | i | numeros[i] | mayor |
+| - | - | ---------- | ----- |
+| 5 | 1 | 3          | 8     |
+| 5 | 2 | 12         | 12    |
+| 5 | 3 | 7          | 12    |
+| 5 | 4 | 5          | 12    |
 
 ### Resultado
 
 ```text
-El numero mayor es 13
+El numero mayor es 12
 ```
-
----
-
-## Caso 2
-
-### Datos de entrada
-
-```text
-n = 4
-```
-
-Números ingresados:
-
-```text
-[7, 3, 2, 5]
-```
-
-### Seguimiento
-
-| i       | numeros[i] | mayor |
-| ------- | ---------- | ----- |
-| Inicial | 7          | 7     |
-| 1       | 3          | 7     |
-| 2       | 2          | 7     |
-| 3       | 5          | 7     |
-
-### Resultado
-
-```text
-El numero mayor es 7
-```
-
 ---
 
 # Implementación en C++

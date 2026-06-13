@@ -126,13 +126,13 @@ INICIO
 
     serie[0] = 1
 
-    For i = 1; i < n; i++
+    For (i = 1; i < n; i++)
 
         serie[i] = serie[i - 1] * 2
 
     EndFor
 
-    For i = 0; i < n; i++
+    For (i = 0; i < n; i++)
 
         Mostrar serie[i]
 
@@ -153,7 +153,13 @@ FIN
 n = 5
 ```
 
-### Seguimiento
+### Datos iniciales
+
+```text
+serie[0] = 1
+```
+
+### Primer FOR 
 
 | i | serie[i] |
 | - | -------- |
@@ -162,6 +168,26 @@ n = 5
 | 2 | 4        |
 | 3 | 8        |
 | 4 | 16       |
+
+> Porque:
+
+```text
+serie[1] = 1 * 2 = 2
+serie[2] = 2 * 2 = 4
+serie[3] = 4 * 2 = 8
+serie[4] = 8 * 2 = 16
+```
+
+### Segundo FOR (Mostrar la serie)
+
+| i | Mostrar serie[i] |
+| - | ---------------- |
+| 0 | 1                |
+| 1 | 2                |
+| 2 | 4                |
+| 3 | 8                |
+| 4 | 16               |
+    
 
 ### Resultado
 

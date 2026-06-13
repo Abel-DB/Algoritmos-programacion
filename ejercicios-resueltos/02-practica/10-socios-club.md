@@ -1,4 +1,4 @@
-# Registro de socios de un club utilizando struct
+# Registro de Socios de un Club
 
 ## Enunciado
 
@@ -28,14 +28,20 @@ Se debe mostrar el porcentaje de socios de cada categoría:
 | apellido | Cadena |
 | edad     | Entero |
 
+---
+
 ## Proceso
 
 1. Solicitar la cantidad de socios.
-2. Registrar nombre, apellido y edad de cada socio.
-3. Clasificar cada socio según su edad.
-4. Contar la cantidad de socios por categoría.
-5. Calcular el porcentaje de cada categoría.
-6. Mostrar los resultados.
+2. Leer el valor de n.
+3. Registrar nombre, apellido y edad de cada socio.
+4. Almacenar los datos en una estructura.
+5. Clasificar cada socio según su edad.
+6. Contar la cantidad de socios por categoría.
+7. Calcular el porcentaje de cada categoría.
+8. Mostrar los resultados.
+
+---
 
 ## Salidas
 
@@ -48,25 +54,7 @@ Se debe mostrar el porcentaje de socios de cada categoría:
 
 ---
 
-# Diseño de la Solución
-
-## Secuencia lógica
-
-1. Solicitar la cantidad de socios.
-2. Leer el valor de n.
-3. Crear una estructura para almacenar los datos del socio.
-4. Inicializar los contadores de categorías en 0.
-5. Ingresar nombre, apellido y edad de cada socio.
-6. Clasificar al socio según su edad.
-7. Incrementar el contador correspondiente.
-8. Repetir el proceso para todos los socios.
-9. Calcular el porcentaje de cada categoría.
-10. Mostrar los porcentajes obtenidos.
-11. Finalizar el algoritmo.
-
----
-
-## Variables utilizadas
+# Variables Utilizadas
 
 | Variable        | Tipo   | Descripción                      |
 | --------------- | ------ | -------------------------------- |
@@ -83,7 +71,7 @@ Se debe mostrar el porcentaje de socios de cada categoría:
 
 ---
 
-## Estructura utilizada
+# Estructura Utilizada
 
 ```cpp
 struct Socio {
@@ -95,7 +83,7 @@ struct Socio {
 
 ---
 
-## Operadores utilizados
+# Operadores Utilizados
 
 | Operador | Tipo       | Uso                    |
 | -------- | ---------- | ---------------------- |
@@ -108,42 +96,58 @@ struct Socio {
 
 ---
 
-## Estructuras utilizadas
+# Estructuras Utilizadas
 
-| Estructura                 | Uso                         |
-| -------------------------- | --------------------------- |
-| Secuencial                 | Lectura y cálculos          |
-| Condicional (if - else if) | Clasificación de categorías |
-| Repetitiva (for)           | Recorrer socios             |
-| Struct                     | Almacenar datos de socios   |
+| Estructura                 | Uso                       |
+| -------------------------- | ------------------------- |
+| Secuencial                 | Lectura y cálculos        |
+| Condicional (if - else if) | Clasificar categorías     |
+| Repetitiva (for)           | Recorrer socios           |
+| Struct                     | Almacenar datos de socios |
 
 ---
 
-## Fórmulas utilizadas
+# Fórmulas Utilizadas
 
-### Porcentaje de mayores
-
-```text
-(mayores * 100.0) / n
-```
-
-### Porcentaje de juveniles
+### Porcentaje de Mayores
 
 ```text
-(juveniles * 100.0) / n
+porMayores = (mayores * 100.0) / n
 ```
 
-### Porcentaje de pre-juveniles
+### Porcentaje de Juveniles
 
 ```text
-(prejuveniles * 100.0) / n
+porJuveniles = (juveniles * 100.0) / n
 ```
 
-### Porcentaje de niños
+### Porcentaje de Pre-juveniles
 
 ```text
-(ninos * 100.0) / n
+porPrejuveniles = (prejuveniles * 100.0) / n
 ```
+
+### Porcentaje de Niños
+
+```text
+porNinos = (ninos * 100.0) / n
+```
+
+---
+
+# Secuencia Lógica
+
+1. Solicitar la cantidad de socios.
+2. Leer el valor de n.
+3. Crear una estructura para almacenar los datos del socio.
+4. Inicializar los contadores de categorías en 0.
+5. Ingresar nombre, apellido y edad de cada socio.
+6. Clasificar al socio según su edad.
+7. Incrementar el contador correspondiente.
+8. Repetir el proceso para todos los socios.
+9. Calcular los porcentajes de cada categoría.
+10. Mostrar los porcentajes obtenidos.
+11. Finalizar el algoritmo.
 
 ---
 
@@ -152,52 +156,66 @@ struct Socio {
 ```text
 INICIO
 
+    Definir Socio
+        nombre : cadena
+        apellido : cadena
+        edad : entero
+    FinDefinir
+
     Definir n, i Como Entero
     Definir mayores, juveniles, prejuveniles, ninos Como Entero
-    Definir porMayores, porJuveniles, porPrejuveniles, porNinos Como Real
+    Definir por_mayores, por_juveniles, por_prejuveniles, por_ninos Como Real
 
     mayores = 0
     juveniles = 0
     prejuveniles = 0
     ninos = 0
 
+    Escribir "Ingrese la cantidad de socios: "
     Leer n
 
-    Para i = 0 Hasta n - 1
+    Socio socios[n]
 
-        Leer nombre
-        Leer apellido
-        Leer edad
+    For (i = 0; i < n; i++)
 
-        Si edad >= 21 Entonces
+        Escribir "Nombre: "
+        Leer socios[i].nombre
+
+        Escribir "Apellido: "
+        Leer socios[i].apellido
+
+        Escribir "Edad: "
+        Leer socios[i].edad
+
+        If (socios[i].edad >= 21) Then
 
             mayores++
 
-        Sino Si edad >= 16 Entonces
+        Else If (socios[i].edad >= 16) Then
 
             juveniles++
 
-        Sino Si edad >= 12 Entonces
+        Else If (socios[i].edad >= 12) Then
 
             prejuveniles++
 
-        Sino
+        Else
 
             ninos++
 
-        FinSi
+        EndIf
 
-    FinPara
+    EndFor
 
-    porMayores = (mayores * 100.0) / n
-    porJuveniles = (juveniles * 100.0) / n
-    porPrejuveniles = (prejuveniles * 100.0) / n
-    porNinos = (ninos * 100.0) / n
+    por_mayores = (mayores * 100.0) / n
+    por_juveniles = (juveniles * 100.0) / n
+    por_prejuveniles = (prejuveniles * 100.0) / n
+    por_ninos = (ninos * 100.0) / n
 
-    Mostrar porMayores
-    Mostrar porJuveniles
-    Mostrar porPrejuveniles
-    Mostrar porNinos
+    Mostrar por_mayores
+    Mostrar por_juveniles
+    Mostrar por_prejuveniles
+    Mostrar por_ninos
 
 FIN
 ```
@@ -208,30 +226,42 @@ FIN
 
 ## Datos de entrada
 
-| Nombre | Apellido | Edad |
-| ------ | -------- | ---- |
-| Juan   | Perez    | 25   |
-| Ana    | Lopez    | 18   |
-| Luis   | Garcia   | 14   |
-| Pedro  | Rojas    | 10   |
+| i | Nombre | Apellido | Edad |
+| - | ------ | -------- | ---- |
+| 0 | Juan   | Pérez    | 25   |
+| 1 | Ana    | López    | 18   |
+| 2 | Carlos | Ruiz     | 14   |
+| 3 | María  | Flores   | 10   |
+| 4 | Pedro  | Gómez    | 22   |
+
 
 ### Conteo
 
-| Categoría     | Cantidad |
-| ------------- | -------- |
-| Mayores       | 1        |
-| Juveniles     | 1        |
-| Pre-juveniles | 1        |
-| Niños         | 1        |
+| i | Edad | Categoría  | Mayores | Juveniles | Prejuveniles | Niños |
+| - | ---- | ---------- | ------- | --------- | ------------ | ----- |
+| 0 | 25   | Mayor      | 1       | 0         | 0            | 0     |
+| 1 | 18   | Juvenil    | 1       | 1         | 0            | 0     |
+| 2 | 14   | Prejuvenil | 1       | 1         | 1            | 0     |
+| 3 | 10   | Niño       | 1       | 1         | 1            | 1     |
+| 4 | 22   | Mayor      | 2       | 1         | 1            | 1     |
+
+| Variable     | Valor |
+| ------------ | ----- |
+| mayores      | 2     |
+| juveniles    | 1     |
+| prejuveniles | 1     |
+| ninos        | 1     |
+| n            | 5     |
+
 
 ### Porcentajes
 
 | Categoría     | Porcentaje |
 | ------------- | ---------- |
-| Mayores       | 25%        |
-| Juveniles     | 25%        |
-| Pre-juveniles | 25%        |
-| Niños         | 25%        |
+| Mayores       | 40%        |
+| Juveniles     | 20%        |
+| Pre-juveniles | 20%        |
+| Niños         | 20%        |
 
 ---
 
@@ -250,8 +280,8 @@ struct Socio {
 };
 
 int main() {
-    int n, i;
-    int mayores, juveniles, prejuveniles, ninos;
+    int n, i, mayores, juveniles, prejuveniles, ninos;
+    double por_mayores, por_juveniles, por_prejuveniles, por_ninos;
 
     mayores = 0;
     juveniles = 0;
@@ -292,15 +322,15 @@ int main() {
         }
     }
 
-    double porMayores = (mayores * 100.0) / n;
-    double porJuveniles = (juveniles * 100.0) / n;
-    double porPrejuveniles = (prejuveniles * 100.0) / n;
-    double porNinos = (ninos * 100.0) / n;
+    por_mayores = (mayores * 100.0) / n;
+    por_juveniles = (juveniles * 100.0) / n;
+    por_prejuveniles = (prejuveniles * 100.0) / n;
+    por_ninos = (ninos * 100.0) / n;
 
-    cout << "\nPorcentaje de Mayores: " << porMayores << "%" << endl;
-    cout << "Porcentaje de Juveniles: " << porJuveniles << "%" << endl;
-    cout << "Porcentaje de Pre-juveniles: " << porPrejuveniles << "%" << endl;
-    cout << "Porcentaje de Ninos: " << porNinos << "%" << endl;
+    cout << "\nPorcentaje de Mayores: " << por_mayores << "%" << endl;
+    cout << "Porcentaje de Juveniles: " << por_juveniles << "%" << endl;
+    cout << "Porcentaje de Pre-juveniles: " << por_prejuveniles << "%" << endl;
+    cout << "Porcentaje de Ninos: " << por_ninos << "%" << endl;
 
     return 0;
 }
