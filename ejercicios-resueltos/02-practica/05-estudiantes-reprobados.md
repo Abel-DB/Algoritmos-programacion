@@ -171,8 +171,8 @@ INICIO
 
     EndFor
 
-    Escribir "El numero de estudiantes aprobados es: ", aprobados
-    Escribir "El numero de estudiantes reprobados es: ", reprobados
+    Mostrar "El numero de estudiantes aprobados es: ", aprobados
+    Mostrar "El numero de estudiantes reprobados es: ", reprobados
 
 FIN
 ```
