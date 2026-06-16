@@ -77,6 +77,34 @@ r = 14
 
 ---
 
+## Diagrama de llamada a una función
+
+Cuando una función es invocada, el control de ejecución se transfiere temporalmente a ella. Una vez finalizada su tarea, devuelve un resultado y el programa continúa su ejecución.
+
+```mermaid
+flowchart LR
+    A[Programa Principal]
+    B[Llamar funcion]
+    C[Ejecutar funcion]
+    D[Retornar resultado]
+    E[Continuar programa]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+```
+
+### Explicación
+
+1. El programa principal realiza la llamada a la función.
+2. La función recibe el control de ejecución.
+3. Se ejecutan las instrucciones internas.
+4. La función devuelve un resultado.
+5. El programa principal continúa con la siguiente instrucción.
+
+---
+
 ## Consideraciones
 
 - Una función debe estar declarada antes de ser utilizada.

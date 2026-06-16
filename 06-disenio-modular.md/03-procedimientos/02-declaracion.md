@@ -4,13 +4,9 @@
 
 La declaración es la definición formal de un procedimiento dentro de un programa.
 
-En ella se especifican:
+Durante su declaración se establece la estructura que tendrá el procedimiento para que pueda ser utilizado posteriormente.
 
-- El nombre del procedimiento.
-- Los parámetros que recibirá.
-- Las instrucciones que ejecutará.
-
-Una vez declarado, el procedimiento puede ser invocado desde cualquier parte del programa.
+Un procedimiento debe ser declarado antes de ser invocado.
 
 ---
 
@@ -46,15 +42,15 @@ Permite identificar al procedimiento dentro del programa.
 Procedimiento MostrarMenu()
 ```
 
-Se recomienda utilizar nombres descriptivos.
+Se recomienda utilizar nombres descriptivos que indiquen claramente la tarea que realiza.
 
-### Correcto
+#### Correcto
 
 ```text
 Procedimiento MostrarMenu()
 ```
 
-### Incorrecto
+#### Incorrecto
 
 ```text
 Procedimiento P1()
@@ -64,7 +60,7 @@ Procedimiento P1()
 
 ### Lista de parámetros
 
-Los parámetros son datos que el procedimiento recibe para realizar una tarea.
+Corresponde a los datos que el procedimiento puede recibir para realizar una tarea determinada.
 
 ```text
 Procedimiento MostrarSuma(a, b)
@@ -72,25 +68,28 @@ Procedimiento MostrarSuma(a, b)
 
 En este caso:
 
-- `a` es un parámetro.
-- `b` es un parámetro.
+* `a` es un parámetro.
+* `b` es un parámetro.
 
 ---
 
 ### Cuerpo del procedimiento
 
-Contiene las instrucciones que serán ejecutadas.
+Contiene las instrucciones que ejecutará el procedimiento.
 
 ```text
 suma <- a + b
+
 Mostrar suma
 ```
+
+Es la parte donde se realiza el procesamiento de los datos.
 
 ---
 
 ### Fin del procedimiento
 
-Indica que la definición ha terminado.
+Indica que la definición del procedimiento ha finalizado.
 
 ```text
 FinProcedimiento
@@ -108,7 +107,15 @@ Procedimiento Saludar()
 FinProcedimiento
 ```
 
-Este procedimiento muestra un mensaje en pantalla.
+### Funcionamiento
+
+Al ejecutarse, el procedimiento muestra un mensaje en pantalla.
+
+### Salida
+
+```text
+Hola Mundo
+```
 
 ---
 
@@ -124,11 +131,19 @@ Procedimiento MostrarSuma(a, b)
 FinProcedimiento
 ```
 
+### Funcionamiento
+
 Si:
 
 ```text
 a = 6
 b = 8
+```
+
+Entonces:
+
+```text
+suma <- 6 + 8
 ```
 
 La salida será:
@@ -142,44 +157,36 @@ La salida será:
 ## Diagrama de la estructura de un procedimiento
 
 ```text
-┌───────────────────────────┐
-│ Procedimiento MostrarSuma │
-├───────────────────────────┤
-│ suma <- a + b             │
-│ Mostrar suma              │
-└───────────────────────────┘
+┌──────────────────────────────┐
+│ Procedimiento MostrarSuma()  │
+├──────────────────────────────┤
+│ suma <- a + b                │
+│ Mostrar suma                 │
+└──────────────────────────────┘
 ```
 
 ---
 
-## Diferencia con una función
+## Representación con Mermaid
 
-### Función
+```mermaid
+flowchart TD
+    A["Procedimiento MostrarSuma(a, b)"]
+    B["suma ← a + b"]
+    C["Mostrar suma"]
+    D["FinProcedimiento"]
 
-```text
-Funcion Sumar(a, b)
-
-    Retornar a + b
-
-FinFuncion
+    A --> B
+    B --> C
+    C --> D
 ```
-
-Devuelve un valor mediante `Retornar`.
-
-### Procedimiento
-
-```text
-Procedimiento MostrarSuma(a, b)
-
-    Mostrar a + b
-
-FinProcedimiento
-```
-
-Realiza una acción sin necesidad de devolver un valor.
 
 ---
 
 ## Resumen
 
-La declaración de un procedimiento consiste en definir su nombre, parámetros e instrucciones. A diferencia de las funciones, los procedimientos no están obligados a devolver un valor y suelen utilizarse para ejecutar acciones dentro del programa.
+La declaración de un procedimiento consiste en definir su nombre, parámetros e instrucciones dentro de un bloque independiente.
+
+Una vez declarado, el procedimiento podrá ser invocado desde otras partes del programa para ejecutar una tarea específica.
+
+La correcta declaración de procedimientos favorece la modularidad, reutilización y organización del código.

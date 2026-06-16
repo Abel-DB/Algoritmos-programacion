@@ -142,6 +142,34 @@ La función devolverá:
 
 ---
 
+## Diagrama de la estructura de una función
+
+La siguiente representación muestra las etapas principales durante la ejecución de una función.
+
+```mermaid
+flowchart TD
+    A([Inicio de la funcion])
+    B[Recibir parametros]
+    C[Ejecutar instrucciones]
+    D[Retornar resultado]
+    E([Fin de la funcion])
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+```
+
+### Explicación
+
+1. La función inicia su ejecución.
+2. Recibe los parámetros necesarios.
+3. Ejecuta las instrucciones definidas en su cuerpo.
+4. Devuelve un resultado mediante la instrucción `Retornar`.
+5. Finaliza su ejecución.
+
+---
+
 ## Resumen
 
 La declaración de una función consiste en definir su estructura mediante un nombre, parámetros, instrucciones y una instrucción de retorno.
