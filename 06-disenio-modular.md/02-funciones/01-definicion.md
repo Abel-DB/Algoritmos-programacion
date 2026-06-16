@@ -4,7 +4,7 @@
 
 Una función es un subprograma que realiza una tarea específica dentro de un programa.
 
-Recibe datos mediante parámetros, ejecuta un conjunto de instrucciones y devuelve un único resultado al programa que la invocó.
+Puede recibir datos mediante parámetros, ejecutar un conjunto de instrucciones y devolver un valor al programa que la invocó.
 
 Las funciones permiten reutilizar código y dividir problemas complejos en tareas más pequeñas y fáciles de mantener.
 
@@ -12,11 +12,13 @@ Las funciones permiten reutilizar código y dividir problemas complejos en tarea
 
 ## Características
 
+Las funciones poseen las siguientes características:
+
 - Poseen un nombre único.
 - Pueden recibir uno o varios parámetros.
 - Realizan una tarea específica.
-- Devuelven un único valor mediante una instrucción de retorno.
-- Pueden ser invocadas desde cualquier parte del programa.
+- Devuelven un valor mediante una instrucción de retorno.
+- Pueden ser invocadas desde diferentes partes del programa.
 
 ---
 
@@ -46,7 +48,7 @@ Funcion Sumar()
 
 ### Parámetros
 
-Son los datos que recibe la función para realizar su tarea.
+Son los datos que recibe la función para realizar una tarea.
 
 ```text
 Funcion Sumar(a, b)
@@ -54,7 +56,7 @@ Funcion Sumar(a, b)
 
 ### Cuerpo
 
-Conjunto de instrucciones que ejecuta la función.
+Es el conjunto de instrucciones que ejecuta la función.
 
 ```text
 resultado <- a + b
@@ -62,7 +64,7 @@ resultado <- a + b
 
 ### Valor de retorno
 
-Resultado que devuelve la función al finalizar su ejecución.
+Es el resultado que la función devuelve al finalizar su ejecución.
 
 ```text
 Retornar resultado
@@ -71,6 +73,8 @@ Retornar resultado
 ---
 
 ## Ejemplo
+
+La siguiente función recibe dos números, realiza una suma y devuelve el resultado.
 
 ```text
 Funcion Sumar(a, b)
@@ -97,16 +101,20 @@ entonces devolverá:
 
 ---
 
-## Ventajas de utilizar funciones
+## Importante
 
-- Evitan la repetición de código.
-- Facilitan el mantenimiento.
-- Mejoran la organización del programa.
-- Permiten reutilizar soluciones.
-- Hacen más legible el código.
+Una función se diferencia de un procedimiento porque devuelve un valor como resultado de su ejecución.
+
+```text
+edad <- CalcularEdad(fechaNacimiento)
+```
+
+En este caso, la función `CalcularEdad()` devuelve un valor que se almacena en la variable `edad`.
 
 ---
 
 ## Resumen
 
-Una función es un subprograma que recibe datos, realiza un procesamiento y devuelve un único resultado. Su principal objetivo es reutilizar código y dividir problemas complejos en tareas más pequeñas.
+Una función es un subprograma que puede recibir datos, realizar un procesamiento y devolver un valor como resultado.
+
+Las funciones favorecen la reutilización del código, mejoran la organización de los programas y facilitan su mantenimiento.

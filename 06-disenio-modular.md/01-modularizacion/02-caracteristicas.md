@@ -43,7 +43,7 @@ Los valores `a` y `b` son parámetros de entrada.
 
 ## 3. Cabecera y cuerpo
 
-Todo módulo está compuesto por dos partes:
+Todo módulo está compuesto por dos partes.
 
 ### Cabecera
 
@@ -74,19 +74,11 @@ FinFuncion
 
 ---
 
-## 4. Facilita el trabajo en equipo
+## 4. Responsabilidad única
 
-La división del programa en módulos permite que varios programadores trabajen simultáneamente en diferentes partes del sistema.
+Cada módulo debe encargarse de realizar una única tarea específica.
 
-Cada integrante puede desarrollar un módulo específico sin afectar directamente a los demás.
-
----
-
-## 5. Realiza una tarea específica
-
-Cada módulo debe tener una única responsabilidad.
-
-Esto mejora la organización y facilita el mantenimiento del código.
+Esto mejora la organización del programa y facilita su mantenimiento.
 
 ### Correcto
 
@@ -102,11 +94,19 @@ Funcion CalcularPromedioYGuardarYMostrar()
 
 ---
 
-## 6. Intercambio de información
+## 5. Intercambio de información
 
 Los módulos pueden recibir datos, procesarlos y devolver resultados.
 
-La comunicación entre módulos permite construir programas más complejos a partir de componentes simples.
+La comunicación entre módulos permite construir programas complejos a partir de componentes simples e independientes.
+
+### Ejemplo
+
+```text
+promedio <- CalcularPromedio(nota1, nota2, nota3)
+```
+
+El módulo recibe datos, realiza un procesamiento y devuelve un resultado.
 
 ---
 
@@ -117,6 +117,5 @@ Las principales características del diseño modular son:
 - Nombre único.
 - Parámetros de comunicación.
 - Cabecera y cuerpo.
-- Facilita el trabajo en equipo.
-- Una tarea específica por módulo.
+- Responsabilidad única.
 - Intercambio de información entre módulos.

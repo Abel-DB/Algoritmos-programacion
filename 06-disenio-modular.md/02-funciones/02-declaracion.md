@@ -2,16 +2,11 @@
 
 ## ¿Qué es la declaración de una función?
 
-La declaración es la forma en que se define una función dentro de un programa.
+La declaración de una función es el proceso mediante el cual se define una función dentro de un programa.
 
-En ella se especifican:
+Durante su declaración se establece la estructura que tendrá la función para que pueda ser utilizada posteriormente.
 
-- El nombre de la función.
-- Los parámetros que recibirá.
-- Las instrucciones que ejecutará.
-- El valor que devolverá.
-
-Una función debe ser declarada antes de ser utilizada.
+Una función debe ser declarada antes de ser invocada.
 
 ---
 
@@ -49,15 +44,15 @@ Identifica la función dentro del programa.
 Funcion Sumar()
 ```
 
-Se recomienda utilizar nombres descriptivos.
+Se recomienda utilizar nombres descriptivos que indiquen claramente la tarea que realiza la función.
 
-### Correcto
+#### Correcto
 
 ```text
 Funcion CalcularPromedio()
 ```
 
-### Incorrecto
+#### Incorrecto
 
 ```text
 Funcion F1()
@@ -67,7 +62,7 @@ Funcion F1()
 
 ### Lista de parámetros
 
-Son los datos que recibe la función para realizar su tarea.
+Corresponde a los datos que la función puede recibir para realizar una tarea determinada.
 
 ```text
 Funcion Sumar(a, b)
@@ -88,23 +83,23 @@ Contiene las instrucciones que ejecutará la función.
 resultado <- a + b
 ```
 
+Es la parte donde se realiza el procesamiento de los datos.
+
 ---
 
 ### Retorno
 
-Permite devolver un resultado al programa que llamó a la función.
+Permite devolver un resultado al programa que realizó la llamada.
 
 ```text
 Retornar resultado
 ```
 
-Una función devuelve un único valor.
-
 ---
 
 ### Fin de la función
 
-Indica que la definición ha terminado.
+Indica que la definición de la función ha finalizado.
 
 ```text
 FinFuncion
@@ -147,20 +142,8 @@ La función devolverá:
 
 ---
 
-## Diagrama de la estructura de una función
-
-```text
-┌───────────────────────────┐
-│ Funcion Sumar(a, b)       │
-├───────────────────────────┤
-│ resultado <- a + b        │
-├───────────────────────────┤
-│ Retornar resultado        │
-└───────────────────────────┘
-```
-
----
-
 ## Resumen
 
-La declaración de una función consiste en definir su nombre, parámetros, instrucciones y valor de retorno. Una vez declarada, podrá ser utilizada desde cualquier parte del programa mediante una llamada.
+La declaración de una función consiste en definir su estructura mediante un nombre, parámetros, instrucciones y una instrucción de retorno.
+
+Una vez declarada, la función podrá ser utilizada desde otras partes del programa mediante una llamada.

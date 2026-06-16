@@ -6,7 +6,7 @@ El diseño modular es una metodología de programación que consiste en dividir 
 
 Un programa modular se organiza alrededor de un **módulo principal** que coordina la ejecución del resto de módulos.
 
-Cuando el módulo principal invoca a otro módulo, el control de ejecución se transfiere a dicho módulo. Una vez finalizada su ejecución, el control regresa al punto desde donde fue llamado.
+Cuando el módulo principal invoca a otro módulo, el control de ejecución se transfiere temporalmente a este. Una vez finalizada su tarea, el control retorna al módulo que realizó la llamada.
 
 ---
 
@@ -34,13 +34,25 @@ Cada módulo puede, a su vez, llamar a otros módulos si es necesario.
 
 ---
 
-## Objetivos del diseño modular
+## Ejemplo
 
-- Dividir problemas complejos en partes más pequeñas.
-- Reutilizar código.
-- Facilitar el mantenimiento.
-- Mejorar la legibilidad de los programas.
-- Permitir el desarrollo colaborativo.
+Supongamos un programa que calcula el promedio de las notas de un estudiante.
+
+```text
+Programa Principal
+│
+├── LeerNotas()
+├── CalcularPromedio()
+└── MostrarResultado()
+```
+
+Cada módulo realiza una tarea específica:
+
+- `LeerNotas()` obtiene las calificaciones.
+- `CalcularPromedio()` realiza el cálculo.
+- `MostrarResultado()` presenta el resultado al usuario.
+
+El programa principal coordina la ejecución de estos módulos.
 
 ---
 
