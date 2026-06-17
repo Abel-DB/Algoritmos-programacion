@@ -211,17 +211,14 @@ Fin
 
 ```mermaid
 flowchart TD
+    A[/Leer clave/]
+    B{"clave == 1234"}
+    C["Escribir 'Acceso permitido'"]
 
-A[/Leer clave/]
+    A --> B
 
-B{clave == 1234}
-
-C[Escribir "Acceso permitido"]
-
-A --> B
-
-B -->|Falso| A
-B -->|Verdadero| C
+    B -->|Falso| A
+    B -->|Verdadero| C
 ```
 
 ### Prueba de escritorio

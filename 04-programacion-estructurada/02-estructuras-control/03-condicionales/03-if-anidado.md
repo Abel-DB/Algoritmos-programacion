@@ -133,35 +133,27 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer nota/]
+    C{"nota >= 51"}
+    D{"nota >= 80"}
+    E["Escribir 'Excelente'"]
+    F["Escribir 'Aprobado'"]
+    G["Escribir 'Reprobado'"]
+    H([Fin])
 
-A([Inicio])
+    A --> B
+    B --> C
 
-B[/Leer nota/]
+    C -->|Verdadero| D
+    C -->|Falso| G
 
-C{nota >= 51}
+    D -->|Verdadero| E
+    D -->|Falso| F
 
-D{nota >= 80}
-
-E[Escribir "Excelente"]
-
-F[Escribir "Aprobado"]
-
-G[Escribir "Reprobado"]
-
-H([Fin])
-
-A --> B
-B --> C
-
-C -->|Verdadero| D
-C -->|Falso| G
-
-D -->|Verdadero| E
-D -->|Falso| F
-
-E --> H
-F --> H
-G --> H
+    E --> H
+    F --> H
+    G --> H
 ```
 
 ### Prueba de escritorio

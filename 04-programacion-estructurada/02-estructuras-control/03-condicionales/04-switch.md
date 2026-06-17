@@ -146,32 +146,27 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer dia/]
+    C{"¿dia?"}
+    D["Escribir 'Lunes'"]
+    E["Escribir 'Martes'"]
+    F["Escribir 'Miércoles'"]
+    G["Escribir 'Día inválido'"]
+    H([Fin])
 
-A([Inicio])
+    A --> B
+    B --> C
 
-B[/Leer dia/]
+    C -->|1| D
+    C -->|2| E
+    C -->|3| F
+    C -->|Otro| G
 
-C{dia}
-
-D[Escribir "Lunes"]
-E[Escribir "Martes"]
-F[Escribir "Miércoles"]
-G[Escribir "Día inválido"]
-
-H([Fin])
-
-A --> B
-B --> C
-
-C -->|1| D
-C -->|2| E
-C -->|3| F
-C -->|Otro| G
-
-D --> H
-E --> H
-F --> H
-G --> H
+    D --> H
+    E --> H
+    F --> H
+    G --> H
 ```
 
 ### Prueba de escritorio

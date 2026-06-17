@@ -206,40 +206,30 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer cantidad de numeros/]
+    C[/Ingresar numeros en el array/]
+    D["mayor = numeros"]
+    E["Recorrer array"]
+    F{"¿numeros > mayor?"}
+    G["Actualizar mayor"]
+    H["Mostrar mayor"]
+    I([Fin])
 
-A([Inicio])
+    A --> B
+    B --> C
+    C --> D
+    D --> E
 
-B[/Leer cantidad de numeros/]
+    E --> F
 
-C[/Ingresar numeros en el array/]
+    F -->|Sí| G
+    G --> E
 
-D[mayor = numeros[0]]
+    F -->|No| E
 
-E[Recorrer array]
-
-F{numeros[i] > mayor}
-
-G[Actualizar mayor]
-
-H[Mostrar mayor]
-
-I([Fin])
-
-A --> B
-B --> C
-C --> D
-D --> E
-
-E --> F
-
-F -->|Sí| G
-G --> E
-
-F -->|No| E
-
-E --> H
-
-H --> I
+    E --> H
+    H --> I
 ```
 
 ---

@@ -181,37 +181,28 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer n/]
+    C["serie[0] = 1"]
+    D["i = 1"]
+    E{"i < n"}
+    F["serie[i] = serie[i-1] * 2"]
+    G["i++"]
+    H["Mostrar serie"]
+    I([Fin])
 
-A([Inicio])
+    A --> B
+    B --> C
+    C --> D
 
-B[/Leer n/]
+    D --> E
 
-C[serie[0] = 1]
+    E -->|Sí| F
+    F --> G
+    G --> E
 
-D[i = 1]
-
-E{i < n}
-
-F[serie[i] = serie[i-1] * 2]
-
-G[i++]
-
-H[Mostrar serie]
-
-I([Fin])
-
-A --> B
-B --> C
-C --> D
-
-D --> E
-
-E -->|Sí| F
-F --> G
-G --> E
-
-E -->|No| H
-H --> I
+    E -->|No| H
+    H --> I
 ```
 
 ---

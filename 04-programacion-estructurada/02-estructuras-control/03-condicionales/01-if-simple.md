@@ -92,24 +92,17 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer edad/]
+    C{"edad >= 18"}
+    D["Escribir 'Mayor de edad'"]
+    E([Fin])
 
-A([Inicio])
-
-B[/Leer edad/]
-
-C{edad >= 18}
-
-D[Escribir "Mayor de edad"]
-
-E([Fin])
-
-A --> B
-B --> C
-
-C -->|Verdadero| D
-C -->|Falso| E
-
-D --> E
+    A --> B
+    B --> C
+    C -->|Verdadero| D
+    C -->|Falso| E
+    D --> E
 ```
 
 ### Prueba de escritorio
@@ -188,24 +181,17 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer numero/]
+    C{"numero > 0"}
+    D["Escribir 'Número positivo'"]
+    E([Fin])
 
-A([Inicio])
-
-B[/Leer numero/]
-
-C{numero > 0}
-
-D[Escribir "Número positivo"]
-
-E([Fin])
-
-A --> B
-B --> C
-
-C -->|Verdadero| D
-C -->|Falso| E
-
-D --> E
+    A --> B
+    B --> C
+    C -->|Verdadero| D
+    C -->|Falso| E
+    D --> E
 ```
 
 ### Prueba de escritorio

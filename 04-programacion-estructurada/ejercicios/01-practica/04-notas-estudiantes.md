@@ -196,48 +196,36 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B["Crear vector nota[4]"]
+    C[/Leer las 3 notas/]
+    D["Calcular promedio"]
+    E["Guardar promedio en nota[3]"]
+    F{"Evaluar promedio"}
+    G["Deficiente"]
+    H["Regular"]
+    I["Notable"]
+    J["Excelente"]
+    K["Mostrar promedio y desempeño"]
+    L([Fin])
 
-A([Inicio])
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
 
-B[Crear vector nota[4]]
+    F -->|0 - 50| G
+    F -->|51 - 70| H
+    F -->|71 - 90| I
+    F -->|91 - 100| J
 
-C[/Leer las 3 notas/]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
 
-D[Calcular promedio]
-
-E[Guardar promedio en nota[3]]
-
-F{Evaluar promedio}
-
-G[Deficiente]
-
-H[Regular]
-
-I[Notable]
-
-J[Excelente]
-
-K[Mostrar promedio y desempeño]
-
-L([Fin])
-
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-
-F -->|0 - 50| G
-F -->|51 - 70| H
-F -->|71 - 90| I
-F -->|91 - 100| J
-
-G --> K
-H --> K
-I --> K
-J --> K
-
-K --> L
+    K --> L
 ```
 
 ---

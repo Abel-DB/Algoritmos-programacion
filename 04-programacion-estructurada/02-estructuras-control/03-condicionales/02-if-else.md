@@ -102,27 +102,19 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer nota/]
+    C{"nota >= 51"}
+    D["Escribir 'Aprobado'"]
+    E["Escribir 'Reprobado'"]
+    F([Fin])
 
-A([Inicio])
-
-B[/Leer nota/]
-
-C{nota >= 51}
-
-D[Escribir "Aprobado"]
-
-E[Escribir "Reprobado"]
-
-F([Fin])
-
-A --> B
-B --> C
-
-C -->|Verdadero| D
-C -->|Falso| E
-
-D --> F
-E --> F
+    A --> B
+    B --> C
+    C -->|Verdadero| D
+    C -->|Falso| E
+    D --> F
+    E --> F
 ```
 
 ### Prueba de escritorio
@@ -205,27 +197,19 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer numero/]
+    C{"numero % 2 == 0"}
+    D["Escribir 'Par'"]
+    E["Escribir 'Impar'"]
+    F([Fin])
 
-A([Inicio])
-
-B[/Leer numero/]
-
-C{numero % 2 == 0}
-
-D[Escribir "Par"]
-
-E[Escribir "Impar"]
-
-F([Fin])
-
-A --> B
-B --> C
-
-C -->|Verdadero| D
-C -->|Falso| E
-
-D --> F
-E --> F
+    A --> B
+    B --> C
+    C -->|Verdadero| D
+    C -->|Falso| E
+    D --> F
+    E --> F
 ```
 
 ### Prueba de escritorio

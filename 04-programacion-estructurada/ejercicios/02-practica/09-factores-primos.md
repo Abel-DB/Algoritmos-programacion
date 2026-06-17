@@ -214,39 +214,30 @@ Fin
 
 ```mermaid
 flowchart TD
+    A([Inicio])
+    B[/Leer n/]
+    C["divisor = 2<br>i = 0"]
+    D{"n != 1"}
+    E{"n % divisor == 0"}
+    F["factores[i] = divisor<br>i++<br>n = n / divisor"]
+    G["divisor++"]
+    H["Mostrar factores"]
+    I([Fin])
 
-A([Inicio])
+    A --> B
+    B --> C
+    C --> D
 
-B[/Leer n/]
+    D -->|Sí| E
 
-C[divisor = 2<br>i = 0]
+    E -->|Sí| F
+    E -->|No| G
 
-D{n != 1}
+    F --> D
+    G --> D
 
-E{n % divisor == 0}
-
-F[factores[i] = divisor<br>i++<br>n = n / divisor]
-
-G[divisor++]
-
-H[Mostrar factores]
-
-I([Fin])
-
-A --> B
-B --> C
-C --> D
-
-D -->|Sí| E
-
-E -->|Sí| F
-E -->|No| G
-
-F --> D
-G --> D
-
-D -->|No| H
-H --> I
+    D -->|No| H
+    H --> I
 ```
 
 ---
