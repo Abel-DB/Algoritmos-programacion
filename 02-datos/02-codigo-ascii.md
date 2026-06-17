@@ -82,61 +82,52 @@ Los primeros códigos ASCII fueron diseñados para controlar dispositivos de ent
 
 ---
 
-# Relación con C++
+# Conversión entre caracteres y números
 
-En C++, el tipo de dato `char` almacena un carácter utilizando su código ASCII correspondiente.
+Cada carácter posee una representación numérica asociada.
 
-### Ejemplo
+Por ejemplo:
 
-```cpp
-#include <iostream>
+| Carácter | Valor ASCII |
+| -------- | ----------- |
+| A        | 65          |
+| B        | 66          |
+| C        | 67          |
+| 1        | 49          |
+| 2        | 50          |
+| 3        | 51          |
 
-using namespace std;
-
-int main() {
-    char letra = 'A';
-
-    cout << letra << endl;
-    cout << (int)letra << endl;
-
-    return 0;
-}
-```
-
-### Salida
-
-```text
-A
-65
-```
+Gracias a esta representación, los sistemas informáticos pueden almacenar y procesar texto utilizando valores numéricos.
 
 ---
 
-# Conversión entre caracteres y números
+# Relación entre caracteres y números
 
-Los caracteres pueden convertirse a su valor ASCII y viceversa.
+Los caracteres pueden ordenarse y compararse utilizando sus valores ASCII.
 
-### Ejemplo
-
-```cpp
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    char letra = 'B';
-
-    cout << (int)letra << endl;
-
-    return 0;
-}
-```
-
-### Resultado
+Por ejemplo:
 
 ```text
-66
+A → 65
+B → 66
+C → 67
 ```
+
+Como 66 es mayor que 65, el carácter B se encuentra después de A.
+
+---
+
+# Curiosidades
+
+Debido a que los caracteres poseen valores numéricos asociados, es posible establecer relaciones entre ellos.
+
+| Relación           |
+| ------------------ |
+| A está antes que B |
+| a está antes que b |
+| 0 está antes que 1 |
+
+Estas relaciones permiten ordenar texto y realizar comparaciones entre caracteres.
 
 ---
 
@@ -149,43 +140,32 @@ El código ASCII se utiliza en:
 * Conversión de datos.
 * Comunicaciones entre sistemas.
 * Archivos de texto.
+* Ordenamiento de caracteres.
 
 ---
 
 # Errores comunes
 
-| Error                              | Descripción                        |
-| ---------------------------------- | ---------------------------------- |
-| Confundir caracteres con números   | '1' es diferente de 1              |
-| Ignorar mayúsculas y minúsculas    | 'A' y 'a' poseen valores distintos |
-| Utilizar valores ASCII incorrectos | Produce resultados inesperados     |
-
----
-
-# Curiosidades
-
-| Expresión | Resultado |
-| --------- | --------- |
-| 'A' + 1   | 'B'       |
-| 'a' + 1   | 'b'       |
-| '0' + 1   | '1'       |
-
-Esto es posible porque los caracteres se almacenan internamente como números.
+| Error                              | Descripción                              |
+| ---------------------------------- | ---------------------------------------- |
+| Confundir caracteres con números   | El carácter 1 es diferente del número 1. |
+| Ignorar mayúsculas y minúsculas    | A y a poseen valores distintos.          |
+| Utilizar valores ASCII incorrectos | Produce resultados inesperados.          |
 
 ---
 
 # Conclusión
 
-El código ASCII es un estándar fundamental para la representación de caracteres en las computadoras. Comprender su funcionamiento facilita el manejo de texto, caracteres y conversiones dentro de los programas.
+El código ASCII es un estándar fundamental para la representación de caracteres en las computadoras. Comprender su funcionamiento facilita el manejo de texto, caracteres y conversiones dentro de algoritmos y sistemas informáticos.
 
 ---
 
 # Resumen
 
-| Concepto    | Idea principal                                    |
-| ----------- | ------------------------------------------------- |
-| ASCII       | Sistema de codificación de caracteres.            |
-| Carácter    | Representado mediante un valor numérico.          |
-| char        | Tipo de dato utilizado para almacenar caracteres. |
-| Conversión  | Permite obtener el valor numérico de un carácter. |
-| Importancia | Base para el procesamiento de texto.              |
+| Concepto     | Idea principal                                                          |
+| ------------ | ----------------------------------------------------------------------- |
+| ASCII        | Sistema de codificación de caracteres.                                  |
+| Carácter     | Representado mediante un valor numérico.                                |
+| Conversión   | Relación entre caracteres y números.                                    |
+| Aplicaciones | Procesamiento y almacenamiento de texto.                                |
+| Importancia  | Base para la representación de caracteres en los sistemas informáticos. |

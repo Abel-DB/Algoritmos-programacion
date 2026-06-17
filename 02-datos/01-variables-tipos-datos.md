@@ -2,7 +2,7 @@
 
 ## ¿Qué es una variable?
 
-Una **variable** es un espacio de memoria utilizado para almacenar información que puede cambiar durante la ejecución de un programa.
+Una **variable** es un espacio utilizado para almacenar información que puede cambiar durante la resolución de un problema o la ejecución de un algoritmo.
 
 Cada variable posee:
 
@@ -19,10 +19,10 @@ Las variables permiten:
 * Almacenar información.
 * Realizar cálculos.
 * Manipular datos.
-* Interactuar con el usuario.
+* Resolver problemas.
 * Construir algoritmos y programas.
 
-Sin variables sería imposible guardar información temporal durante la ejecución de un programa.
+Sin variables sería imposible guardar información temporal durante la ejecución de una solución.
 
 ---
 
@@ -38,7 +38,7 @@ Sin variables sería imposible guardar información temporal durante la ejecuci�
 
 ```text
 Nombre : edad
-Tipo   : int
+Tipo   : Entero
 Valor  : 20
 ```
 
@@ -48,10 +48,10 @@ Valor  : 20
 
 | Regla                             | Ejemplo            |
 | --------------------------------- | ------------------ |
-| Debe comenzar con una letra o `_` | edad, _contador    |
-| No puede contener espacios        | nombre_usuario     |
-| No puede usar palabras reservadas | int, while, if     |
+| Debe comenzar con una letra       | edad               |
+| No debe contener espacios         | nombre_usuario     |
 | Debe ser descriptiva              | promedio, cantidad |
+| Debe relacionarse con el problema | salario, notaFinal |
 
 ---
 
@@ -61,7 +61,7 @@ Valor  : 20
 edad
 nombre
 promedio
-cantidadEstudiantes
+cantidad_estudiantes
 ```
 
 ---
@@ -71,8 +71,8 @@ cantidadEstudiantes
 ```text
 2edad
 mi nombre
-while
-int
+@
+#
 ```
 
 ---
@@ -81,176 +81,242 @@ int
 
 | Recomendación                        | Ejemplo                            |
 | ------------------------------------ | ---------------------------------- |
-| Utilizar nombres descriptivos        | promedioFinal                      |
-| Evitar abreviaturas confusas         | cantidadEstudiantes                |
+| Utilizar nombres descriptivos        | promedio_final                      |
+| Evitar abreviaturas confusas         | cantidad_estudiantes                |
 | Mantener un estilo consistente       | utilizar siempre el mismo criterio |
-| Relacionar el nombre con el problema | salario, nota, totalVentas         |
+| Relacionar el nombre con el problema | salario, nota, total_ventas         |
 
-## Información complementaria
+---
 
-Para conocer las convenciones de nombres utilizadas en proyectos de C++, consulte:
+# Constantes
 
-- [Convenciones de nombres](../herramientas/01-convensiones-nombres.md)
+## ¿Qué es una constante?
+
+Una **constante** es un dato cuyo valor permanece fijo durante la ejecución de un algoritmo o programa.
+
+A diferencia de una variable, una constante no está diseñada para cambiar su valor.
+
+---
+
+# Importancia
+
+Las constantes permiten:
+
+* Representar valores permanentes.
+* Mejorar la claridad de los algoritmos.
+* Evitar modificaciones accidentales.
+* Facilitar el mantenimiento de las soluciones.
+
+---
+
+# Ejemplos de constantes
+
+| Constante   | Significado                    |
+| ----------- | ------------------------------ |
+| PI          | Valor aproximado de π          |
+| DIAS_SEMANA | Cantidad de días de una semana |
+| IVA         | Porcentaje de impuesto         |
+
+---
+
+# Diferencia entre variable y constante
+
+| Variable                                | Constante                          |
+| --------------------------------------- | ---------------------------------- |
+| Su valor puede cambiar.                 | Su valor permanece fijo.           |
+| Almacena información variable.          | Representa información permanente. |
+| Puede modificarse durante la ejecución. | No debería modificarse.            |
+
+---
+
+# Ejemplo conceptual
+
+## Problema
+
+Calcular el área de un círculo.
+
+### Constante
+
+```text
+PI = 3.1416
+```
+
+### Variable
+
+```text
+radio
+```
+
+### Fórmula
+
+```text
+Área = PI × radio²
+```
 
 ---
 
 # ¿Qué es un tipo de dato?
 
-Un **tipo de dato** define la clase de información que una variable puede almacenar.
+Un **tipo de dato** define la naturaleza de la información que puede almacenarse en una variable o constante.
 
-Determina:
-
-* El espacio utilizado en memoria.
-* El rango de valores permitidos.
-* Las operaciones que pueden realizarse.
+Los tipos de datos permiten representar distintos tipos de información dentro de una solución.
 
 ---
 
 # Clasificación de tipos de datos
 
-## Tipos enteros
+## Datos numéricos
 
-Se utilizan para almacenar números sin decimales.
+Representan cantidades y valores matemáticos.
 
-| Tipo      | Tamaño aproximado | Rango aproximado    | Uso principal       |
-| --------- | ----------------- | ------------------- | ------------------- |
-| short     | 2 bytes           | -32,768 a 32,767    | Valores pequeños    |
-| int       | 4 bytes           | ±2 mil millones     | Uso general         |
-| long      | 4 u 8 bytes       | Depende del sistema | Valores grandes     |
-| long long | 8 bytes           | Muy amplio          | Valores muy grandes |
+### Enteros
 
----
+No poseen parte decimal.
 
-## Tipos reales
+#### Ejemplos
 
-Se utilizan para almacenar números con decimales.
-
-| Tipo        | Tamaño aproximado | Precisión                  |
-| ----------- | ----------------- | -------------------------- |
-| float       | 4 bytes           | ~7 dígitos significativos  |
-| double      | 8 bytes           | ~15 dígitos significativos |
-| long double | 8 a 16 bytes      | Mayor precisión            |
-
----
-
-## Tipos de caracteres
-
-Se utilizan para almacenar un único carácter.
-
-| Tipo | Tamaño aproximado | Ejemplo       |
-| ---- | ----------------- | ------------- |
-| char | 1 byte            | 'A', 'b', '9' |
-
----
-
-## Tipos de texto
-
-Se utilizan para almacenar cadenas de caracteres.
-
-| Tipo   | Descripción             | Ejemplo      |
-| ------ | ----------------------- | ------------ |
-| string | Secuencia de caracteres | "Hola Mundo" |
-
----
-
-## Tipos lógicos
-
-Se utilizan para representar condiciones verdaderas o falsas.
-
-| Tipo | Tamaño aproximado | Valores posibles |
-| ---- | ----------------- | ---------------- |
-| bool | 1 byte            | true, false      |
-
-> **Nota:** Los tamaños y rangos pueden variar según el compilador y la arquitectura del sistema.
-
----
-
-# Declaración de variables en C++
-
-## Sintaxis general
-
-```cpp
-tipo nombre;
+```text
+10
+25
+-8
+0
 ```
 
-### Ejemplos
+### Reales
 
-```cpp
-int edad;
-float promedio;
-char inicial;
-bool activo;
-string nombre;
+Poseen parte decimal.
+
+#### Ejemplos
+
+```text
+3.14
+8.5
+-12.75
 ```
 
 ---
 
-# Inicialización de variables
+## Datos alfanuméricos
 
-Consiste en asignar un valor inicial al momento de declararlas.
+Representan caracteres y texto.
 
-### Ejemplos
+### Carácter
 
-```cpp
-int edad = 20;
-float promedio = 85.5;
-char letra = 'A';
-bool activo = true;
-string nombre = "Juan";
+Representa un único símbolo.
+
+#### Ejemplos
+
+```text
+A
+b
+7
+$
+```
+
+### Cadena de caracteres
+
+Representa una secuencia de caracteres.
+
+#### Ejemplos
+
+```text
+Hola
+Programación
+Juan Pérez
 ```
 
 ---
 
-# Relación entre variable y memoria
+## Datos lógicos
 
-Cuando se declara una variable, el sistema reserva un espacio de memoria para almacenar su valor.
+Representan condiciones o estados.
+
+### Valores posibles
+
+```text
+Verdadero
+Falso
+```
+
+---
+
+# Importancia de los tipos de datos
+
+Los tipos de datos permiten:
+
+* Organizar la información.
+* Representar distintos tipos de valores.
+* Evitar errores conceptuales.
+* Facilitar el diseño de algoritmos.
+
+---
+
+# Ejemplo
+
+## Problema
+
+Registrar información de un estudiante.
+
+| Dato     | Tipo   |
+| -------- | ------ |
+| Nombre   | Cadena |
+| Edad     | Entero |
+| Promedio | Real   |
+| Aprobado | Lógico |
+
+---
+
+# Relación entre variable y valor
+
+Durante la ejecución de un algoritmo, las variables almacenan información que puede cambiar.
 
 ```text
 Variable      Valor
 edad          20
 promedio      85.5
-activo        true
+aprobado      Verdadero
 ```
 
 ---
 
 # Errores comunes
 
-| Error                    | Descripción                           |
-| ------------------------ | ------------------------------------- |
-| Nombre poco descriptivo  | Dificulta la comprensión del código.  |
-| Usar palabras reservadas | Genera errores de compilación.        |
-| Tipo incorrecto          | Produce resultados inesperados.       |
-| No inicializar variables | Puede generar valores indeterminados. |
+| Error                              | Descripción                             |
+| ---------------------------------- | --------------------------------------- |
+| Nombre poco descriptivo            | Dificulta la comprensión del algoritmo. |
+| Utilizar un tipo incorrecto        | Produce resultados inesperados.         |
+| Confundir variables con constantes | Puede generar errores de diseño.        |
+| Representar mal la información     | Dificulta la solución del problema.     |
 
 ---
 
 # Aplicaciones
 
-Las variables se utilizan en:
+Las variables y tipos de datos se utilizan en prácticamente cualquier algoritmo:
 
 * Sistemas bancarios.
 * Videojuegos.
 * Aplicaciones móviles.
 * Sistemas empresariales.
 * Programas científicos.
-* Bases de datos.
+* Sistemas educativos.
 
 ---
 
 # Conclusión
 
-Las variables permiten almacenar y manipular información dentro de un programa. Su correcto uso, junto con la elección adecuada de tipos de datos, constituye una de las bases fundamentales de la programación.
+Las variables permiten almacenar información necesaria para resolver problemas, mientras que los tipos de datos permiten representar adecuadamente esa información. El uso correcto de ambos conceptos constituye una de las bases fundamentales de la programación y del diseño de algoritmos.
 
 ---
 
 # Resumen
 
-| Concepto       | Idea principal                                |
-| -------------- | --------------------------------------------- |
-| Variable       | Espacio de memoria para almacenar datos.      |
-| Componentes    | Nombre, tipo y valor.                         |
-| Tipos de datos | Enteros, reales, caracteres, texto y lógicos. |
-| Declaración    | Define una variable dentro del programa.      |
-| Inicialización | Asigna un valor inicial.                      |
-| Importancia    | Permite almacenar y manipular información.    |
+| Concepto            | Idea principal                                                        |
+| ------------------- | --------------------------------------------------------------------- |
+| Variable            | Almacena información que puede cambiar.                               |
+| Constante           | Representa información que permanece fija.                            |
+| Tipo de dato        | Define la naturaleza de la información almacenada.                    |
+| Datos numéricos     | Enteros y reales.                                                     |
+| Datos alfanuméricos | Caracteres y cadenas.                                                 |
+| Datos lógicos       | Verdadero o falso.                                                    |
+| Importancia         | Permiten representar y manipular información para resolver problemas. |

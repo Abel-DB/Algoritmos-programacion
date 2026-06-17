@@ -2,19 +2,19 @@
 
 ## ¿Qué es un operador?
 
-Un **operador** es un símbolo que permite realizar una operación sobre uno o más operandos (datos o variables) para obtener un resultado.
+Un **operador** es un símbolo que permite realizar una operación sobre uno o más operandos para obtener un resultado.
 
-### Ejemplo
+### Ejemplo conceptual
 
-```cpp
-int suma = 5 + 3;
+```text
+5 + 3 = 8
 ```
 
 En este caso:
 
-* `5` y `3` son operandos.
-* `+` es el operador.
-* `8` es el resultado.
+* 5 y 3 son operandos.
+* * es el operador.
+* 8 es el resultado.
 
 ---
 
@@ -25,22 +25,21 @@ Los operadores permiten:
 * Realizar cálculos.
 * Comparar valores.
 * Evaluar condiciones.
-* Modificar variables.
+* Asignar resultados.
 * Construir expresiones complejas.
 
-Son fundamentales para el desarrollo de algoritmos y programas.
+Son fundamentales para el desarrollo de algoritmos y la resolución de problemas.
 
 ---
 
 # Clasificación de operadores
 
-| Tipo                    | Función                            |
-| ----------------------- | ---------------------------------- |
-| Aritméticos             | Realizan operaciones matemáticas.  |
-| Relacionales            | Comparan valores.                  |
-| Lógicos                 | Combinan condiciones.              |
-| Asignación              | Asignan valores a variables.       |
-| Incremento y decremento | Modifican variables en una unidad. |
+| Tipo         | Función                            |
+| ------------ | ---------------------------------- |
+| Aritméticos  | Realizan operaciones matemáticas.  |
+| Relacionales | Comparan valores.                  |
+| Lógicos      | Combinan condiciones.              |
+| Asignación   | Almacenan resultados en variables. |
 
 ---
 
@@ -48,28 +47,25 @@ Son fundamentales para el desarrollo de algoritmos y programas.
 
 Se utilizan para realizar operaciones matemáticas.
 
-| Operador | Descripción    | Ejemplo |
-| -------- | -------------- | ------- |
-| +        | Suma           | a + b   |
-| -        | Resta          | a - b   |
-| *        | Multiplicación | a * b   |
-| /        | División       | a / b   |
-| %        | Módulo (resto) | a % b   |
+| Operador | Descripción      |
+| -------- | ---------------- |
+| +        | Suma             |
+| -        | Resta            |
+| *        | Multiplicación   |
+| /        | División         |
+| %        | Módulo o residuo |
 
 ---
 
-## Ejemplo
+## Ejemplos
 
-```cpp
-int a = 10;
-int b = 3;
-
-cout << a + b << endl; // 13
-cout << a - b << endl; // 7
-cout << a * b << endl; // 30
-cout << a / b << endl; // 3
-cout << a % b << endl; // 1
-```
+| Expresión | Resultado |
+| --------- | --------- |
+| 5 + 3     | 8         |
+| 10 - 4    | 6         |
+| 6 × 2     | 12        |
+| 8 ÷ 2     | 4         |
+| 10 % 3    | 1         |
 
 ---
 
@@ -77,100 +73,101 @@ cout << a % b << endl; // 1
 
 Permiten almacenar valores en variables.
 
-| Operador | Descripción         | Ejemplo |
-| -------- | ------------------- | ------- |
-| =        | Asignación simple   | a = 5   |
-| +=       | Suma y asigna       | a += 2  |
-| -=       | Resta y asigna      | a -= 2  |
-| *=       | Multiplica y asigna | a *= 2  |
-| /=       | Divide y asigna     | a /= 2  |
-| %=       | Módulo y asigna     | a %= 2  |
+## Asignación simple
+
+```text
+edad ← 20
+```
+
+La variable recibe el valor indicado.
 
 ---
 
 ## Ejemplo
 
-```cpp
-int numero = 10;
-
-numero += 5; // 15
-numero -= 2; // 13
-numero *= 2; // 26
+```text
+total ← 150
+promedio ← 85.5
+nombre ← "Juan"
 ```
 
 ---
 
 # Operadores relacionales
 
-Comparan dos valores y devuelven un resultado lógico.
+Permiten comparar dos valores.
+
+El resultado de una comparación es un valor lógico:
+
+```text
+Verdadero
+Falso
+```
+
+---
 
 | Operador | Significado       |
 | -------- | ----------------- |
 | ==       | Igual a           |
-| !=       | Distinto de       |
+| ≠        | Diferente de      |
 | >        | Mayor que         |
 | <        | Menor que         |
-| >=       | Mayor o igual que |
-| <=       | Menor o igual que |
+| ≥        | Mayor o igual que |
+| ≤        | Menor o igual que |
 
 ---
 
-## Ejemplo
+## Ejemplos
 
-```cpp
-int a = 10;
-int b = 20;
-
-cout << (a < b) << endl;
-cout << (a == b) << endl;
-```
+| Expresión | Resultado |
+| --------- | --------- |
+| 10 > 5    | Verdadero |
+| 7 < 3     | Falso     |
+| 8 = 8     | Verdadero |
+| 4 ≠ 4     | Falso     |
 
 ---
 
 # Operadores lógicos
 
-Permiten combinar expresiones lógicas.
-
-| Operador | Significado |
-| -------- | ----------- |
-| &&       | AND (Y)     |
-| ||       | OR (O)      |
-| !        | NOT (NO)    |
+Permiten combinar condiciones.
 
 ---
 
-## Ejemplo
+## Operador AND (Y)
 
-```cpp
-int edad = 20;
-bool estudiante = true;
+El resultado es verdadero únicamente cuando todas las condiciones son verdaderas.
 
-cout << (edad >= 18 && estudiante);
-```
-
----
-
-# Operadores de incremento y decremento
-
-Permiten aumentar o disminuir una unidad.
-
-| Operador | Descripción     |
-| -------- | --------------- |
-| ++       | Incrementa en 1 |
-| --       | Decrementa en 1 |
+| A | B | A Y B |
+| - | - | ----- |
+| V | V | V     |
+| V | F | F     |
+| F | V | F     |
+| F | F | F     |
 
 ---
 
-## Ejemplo
+## Operador OR (O)
 
-```cpp
-int contador = 5;
+El resultado es verdadero cuando al menos una condición es verdadera.
 
-contador++;
-contador--;
+| A | B | A O B |
+| - | - | ----- |
+| V | V | V     |
+| V | F | V     |
+| F | V | V     |
+| F | F | F     |
 
-cout << contador;
-```
+---
+
+## Operador NOT (NO)
+
+Invierte el valor lógico.
+
+| A | NO A |
+| - | ---- |
+| V | F    |
+| F | V    |
 
 ---
 
@@ -178,34 +175,35 @@ cout << contador;
 
 Cuando una expresión contiene varios operadores, algunos se ejecutan antes que otros.
 
-| Prioridad | Operadores             |
-| --------- | ---------------------- |
-| Alta      | (), ++, --             |
-| Media     | *, /, %                |
-| Baja      | +, -                   |
-| Muy baja  | Relacionales y lógicos |
+## Prioridad general
+
+1. Paréntesis.
+2. Multiplicación, división y módulo.
+3. Suma y resta.
+4. Operadores relacionales.
+5. Operadores lógicos.
 
 ---
 
 ## Ejemplo
 
-```cpp
-int resultado = 5 + 3 * 2;
+```text
+5 + 3 × 2
 ```
 
 Primero:
 
 ```text
-3 * 2 = 6
+3 × 2 = 6
 ```
 
-Luego:
+Después:
 
 ```text
 5 + 6 = 11
 ```
 
-Resultado:
+Resultado final:
 
 ```text
 11
@@ -218,45 +216,38 @@ Resultado:
 Los operadores se utilizan en:
 
 * Cálculos matemáticos.
+* Procesamiento de información.
 * Validación de datos.
+* Comparación de valores.
 * Toma de decisiones.
-* Control de flujo.
-* Manipulación de variables.
+* Resolución de problemas.
 
 ---
 
 # Errores comunes
 
-| Error                                | Descripción                              |
-| ------------------------------------ | ---------------------------------------- |
-| Confundir `=` con `==`               | Asignación y comparación son diferentes. |
-| División entre enteros               | Puede perder decimales.                  |
-| Olvidar la precedencia               | Produce resultados inesperados.          |
-| Uso incorrecto de operadores lógicos | Condiciones erróneas.                    |
-
----
-
-# Información complementaria
-
-Los operadores relacionales y lógicos serán utilizados ampliamente en:
-
-- [Instrucciones de control](../Tema05_instrucciones_control/)
+| Error                                | Descripción                     |
+| ------------------------------------ | ------------------------------- |
+| Ignorar la precedencia               | Produce resultados incorrectos. |
+| Utilizar operadores inadecuados      | Genera soluciones erróneas.     |
+| Confundir asignación con comparación | Produce errores lógicos.        |
+| Combinar incorrectamente condiciones | Resultados inesperados.         |
 
 ---
 
 # Conclusión
 
-Los operadores permiten realizar cálculos, comparaciones y evaluaciones lógicas dentro de un programa. Su correcta utilización es esencial para desarrollar soluciones eficientes y resolver problemas de forma adecuada.
+Los operadores permiten manipular datos, realizar cálculos y evaluar condiciones dentro de un algoritmo. Su correcta utilización constituye una base fundamental para la construcción de soluciones eficientes.
 
 ---
 
 # Resumen
 
-| Concepto                | Idea principal                     |
-| ----------------------- | ---------------------------------- |
-| Aritméticos             | Operaciones matemáticas.           |
-| Asignación              | Almacenamiento de valores.         |
-| Relacionales            | Comparación de datos.              |
-| Lógicos                 | Combinación de condiciones.        |
-| Incremento y decremento | Modificación de variables.         |
-| Importancia             | Base de la lógica de programación. |
+| Concepto     | Idea principal                                            |
+| ------------ | --------------------------------------------------------- |
+| Aritméticos  | Realizan operaciones matemáticas.                         |
+| Asignación   | Almacenan valores en variables.                           |
+| Relacionales | Comparan información.                                     |
+| Lógicos      | Combinan condiciones.                                     |
+| Precedencia  | Define el orden de evaluación.                            |
+| Importancia  | Base para la resolución de problemas mediante algoritmos. |
