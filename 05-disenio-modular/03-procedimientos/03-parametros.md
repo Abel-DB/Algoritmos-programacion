@@ -224,22 +224,17 @@ mostrarDatos("Ana", 20)
 
 ```mermaid
 flowchart TD
+    A["MostrarSuma(6, 8)"]
+    B["a = 6"]
+    C["b = 8"]
+    D["Ejecutar procedimiento"]
+    E["Escribir 14"]
 
-A[MostrarSuma(6, 8)]
-
-B[a = 6]
-
-C[b = 8]
-
-D[Ejecutar procedimiento]
-
-E[Escribir 14]
-
-A --> B
-A --> C
-B --> D
-C --> D
-D --> E
+    A --> B
+    A --> C
+    B --> D
+    C --> D
+    D --> E
 ```
 
 ---

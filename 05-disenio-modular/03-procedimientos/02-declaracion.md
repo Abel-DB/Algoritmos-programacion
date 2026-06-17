@@ -204,18 +204,14 @@ suma = 6 + 8
 
 ```mermaid
 flowchart TD
+    A["Procedimiento mostrarSuma(a, b)"]
+    B["suma = a + b"]
+    C["Escribir suma"]
+    D["FinProcedimiento"]
 
-A[Procedimiento mostrarSuma(a, b)]
-
-B[suma = a + b]
-
-C[Escribir suma]
-
-D[FinProcedimiento]
-
-A --> B
-B --> C
-C --> D
+    A --> B
+    B --> C
+    C --> D
 ```
 
 ---
